@@ -1,0 +1,154 @@
+html{
+	background: url("../images/backgrounds/BF04.jpg") no-repeat center center fixed; 
+	transition: background 1s linear;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: Arial;
+}
+
+body{
+}
+#container{
+	width:97%;
+	height:95%;
+	margin:auto;
+	margin-top:20px;
+	overflow:;
+}
+
+section{
+	background-color:rgba(0,0,0,0.7);
+	float:left;
+	overflow:auto;
+	margin:0.3%;
+	color:white;
+	overflow:hidden;
+}
+
+#colLeft{
+	width: 30%;
+	height: 75%;
+	text-align: center;
+	float: left;
+	background-color: rgba(0,0,0,0);
+}
+.box{
+	background-color:rgba(0,0,0,0.7);
+	position: relative;
+	width: 100%;		/* desired width */
+}
+img.box{
+	width: 600px;
+	height: 600px;
+}
+.box:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+.instagramContent{
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#instaInstrucs {
+	background-color:rgba(0,0,0,0.7);
+	padding:0px;
+	margin-top:3%;
+	height:100%;
+	font-size: 150%;
+	
+	
+}
+
+
+#colMid1, #colMid2 {
+	width: 52.2%;
+	float: left;
+	height: 37.18%;
+	font-size: 160%;
+}
+
+#slideContainer {
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px;
+}
+#slideContainerTwo {
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px;
+}
+
+#colRight {
+	width: 45.5%;
+	height: 98%;
+	float: right;
+	line-height: 60%;
+}
+
+#colRight h1, #colRight h3,#colRight h4{
+	font-size:130%;
+}
+
+#agendaPadding {
+	padding-left: 8px;
+}
+
+h1.#colRight {
+	font-size: 150%;
+}
+
+#colFoot {
+	width: 52.2%;
+	height: 22%;
+	float: left;
+}
+
+.agendaContainer {
+	display: inline !important;
+	margin-top: 0px !important;
+}
+
+.happeningAgenda {
+	width: 100%;
+	height: 100px;
+	/*
+	margin-top: 0px;
+
+	background-color:rgba(255,255,255,0.2);*/
+}
+
+.happeningAgenda h1{
+
+}
+.pendingAgenda {
+	width: 100%;
+	height: 100px;
+	/*
+	margin-top: 0px;
+
+	background-color:rgba(0,0,0,0.7);*/
+}
+
+/*#footerContainer {
+	position: relative;
+	top: -80%;
+	left: 30%;
+	width: auto;
+	background-color: rgb(1,0,0);
+}*/
+
+#footerContainer {
+	float: right;
+	text-align: left;
+	width: auto;
+	margin-top: 50px;
+	z-index: 2;
+}

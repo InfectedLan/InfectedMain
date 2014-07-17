@@ -1,0 +1,311 @@
+body {	
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+	color: #FFFFFF;
+}
+
+/* Objects */
+header {
+	position: fixed;
+    top: 0;
+	left: 0;
+	width: 100%;
+	background: url('../images/header.png');
+	background-repeat: repeat-x;
+	opacity: 0.90;
+	filter: alpha(opacity=90); /* For IE8 and earlier */
+	border-bottom: 1px solid #AD0000;
+	z-index: 1;
+}
+
+#main {
+	width: 1100px;
+	padding: 0;
+	margin: 0 auto 0 auto;
+}
+
+footer {
+	position: fixed;
+    bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 130px;
+	background-image: url('../images/footer.png');
+	background-repeat: repeat-x;
+	opacity: 0.9;
+	filter: alpha(opacity=9); /* For IE8 and earlier */
+	border-top: 1px solid #AD0000;
+	z-index: 1;
+}
+
+/* Drop-down Menu */
+#menu {
+	width: 1100px;
+	margin: 0 auto 0 auto;
+	padding: 0;
+}
+
+#menu a {
+	color: #FFFFFF;
+}
+
+#menu .has-sub a {
+	margin-bottom: 3px;
+	padding-left: 10px;
+}
+
+#menu .active {
+	border-bottom: 3px solid #AD0000;
+}
+
+#menu .last a {
+	margin: 0;
+}
+
+#menu ul {
+	list-style-type: none;
+	height: 35px;
+	margin: 0;
+	padding: 0;
+}
+
+#menu li {
+	float: left;
+}
+
+#menu li a {
+	text-decoration: none;
+	display: block;
+	font-weight: normal;
+	line-height: 32px;
+	margin: 0 100px 0 0;
+	padding: 0;
+	text-align: center;
+}
+
+#menu > ul > li > a:hover {
+	border-bottom: 3px solid #AD0000;
+}
+
+#menu .has-sub > a:hover {
+	border: none;
+}
+
+#menu li > a:hover, #menu ul li:hover > a {
+	/* Change hover color on links here */
+}
+
+#menu li ul {
+	position: fixed;
+	height: auto;
+	display: none;
+	background: #000000;
+	border-left: 1px solid #AD0000;
+	border-right: 1px solid #AD0000;
+	border-bottom: 1px solid #AD0000;
+	border-top: 1px solid #000000;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+}
+
+#menu li:hover ul {
+	display: block;
+}
+
+#menu li li {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menu li ul a {
+	display: block;
+	height: 35px;
+	margin: 0;
+	padding: 0 10px 0 10px;
+	font-size: 12px;
+	text-align: left;
+}
+
+#menu li ul a:hover, #menu li ul li:hover > a {
+	outline: 1px solid #AD0000;
+}
+
+/* General */
+#main .content {
+	float: left;
+	width: 78%;
+	margin: 45px 0 130px 0;
+}
+
+#main .content > article {
+	width: 47%;
+	padding: 1%;
+}
+
+#main .content article > h3, #main .content article > p {
+	margin: 0;
+	padding: 0;
+}
+
+#main .content article p, #main .content article a {
+	font-size: 11pt;
+}
+
+#main .content article a {
+	color: #FFFFFF;
+}
+
+#main .content .contentTitleBox, #main .content .contentBox, #main .content .contentLeftBox, #main .content .contentRightBox {
+	float: left;
+	background: rgba(0, 0, 0, .64);
+	outline: 1px solid #000000;
+}
+
+#main .content .contentLeftImageBox, #main .content .contentRightImageBox {
+	float: left;
+}
+
+#main .content .contentLeftBox, #main .content .contentRightBox {
+	height: 200px;
+}
+
+#main .content .contentLeftImageBox, #main .content .contentRightImageBox  {
+	height: 218px;
+}
+
+#main .content img {
+	width: 49%;
+}
+
+#main .content .contentTitleBox {
+	width: 99%;
+	margin: 0 0 1% 0;
+	text-align: center;
+}
+
+#main .content .contentTitleBox > h1 {
+	margin: 10px;
+}
+
+#main .content .contentLeftBox {
+	margin: 0 1% 1% 0;
+}
+
+#main .content .contentRightBox {
+	margin: 0 0 1% 0;
+}
+
+#main .content .contentLeftImageBox {
+	margin: 0 1% 1% 0;
+}
+
+#main .content .contentRightImageBox {
+	margin: 0 0 1% 0;
+}
+
+#main .content .contentBox {
+	width: 97%;
+	margin: 0 0 1% 0;
+}
+
+#main .sponsors {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: 225px;
+	background: rgba(0, 0, 0, .64);
+	outline: 1px solid #000000;
+	margin: 45px 0 135px 308px;
+	padding: 0;
+	text-align: center;
+	list-style-type: none;
+}
+
+#main .sponsors p {
+	font-size: 11pt;
+}
+
+#main .sponsors img {
+	margin: 15px;
+}
+
+#main .login {
+	margin: auto 0 auto 0;
+}
+
+#footer {
+	width: 1100px;
+	margin: 0 auto 0 auto;
+}
+
+#footer .logo {
+	float: left;
+	margin: 20px 0 0 0;
+}
+
+#footer .logo img {
+	width: 300px;
+}
+
+#footer .userText {
+	margin: 50px 0 0 50px;
+}
+
+#footer .infoText {
+	text-align: right;
+}
+
+#footer .infoText a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#footer .infoText .infoTextUser, #footer .infoText .infoTextContact, #footer .infoText .infoTextNext {
+	float: right;
+}
+
+#footer .infoText .infoTextUser, #footer .infoText .infoTextContact {
+	margin-right: 50px;
+}
+
+table.table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+table.table tr:nth-child(odd)	{
+	background: rgba(0, 0, 0, .48);
+}
+
+table.table tr:nth-child(even)	{
+	background: rgba(0, 0, 0, .16);
+}
+
+table.table th{
+	border: 1px solid #000000;
+	padding: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	vertical-align: top;
+}
+
+table.table th a:link, table.table th a:visited{
+	
+}
+
+table.table th a:hover, table.table th a:active{
+	color:#EE872A;
+}
+
+table.table td {
+	border: 1px solid #000000;
+	padding: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	vertical-align: top;
+}
