@@ -1,6 +1,6 @@
 <?php
-require_once '/../../../api/handlers/AgendaHandler.php';
-require_once '/../../../api/handlers/EventHandler.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api/handlers/AgendaHandler.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api/handlers/EventHandler.php';
 
 echo '<div class="contentTitleBox">';
 	echo '<h1>Agenda</h1>';

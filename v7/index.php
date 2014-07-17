@@ -1,5 +1,5 @@
 <?php
-require_once 'site.php';
+require_once 'Site.php';
 
 // Execute the site.
 $site = new Site();

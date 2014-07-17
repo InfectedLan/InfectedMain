@@ -1,7 +1,7 @@
 <?php
-require_once '/../../../api/Utils.php';
-require_once '/../../../api/handlers/MainPageHandler.php';
-require_once '/../../../api/handlers/GameApplicationHandler.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api/Utils.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api/handlers/MainPageHandler.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api/handlers/GameApplicationHandler.php';
 
 $id = isset($_GET['id']) ? $_GET['id'] : 0;
 

@@ -1,5 +1,5 @@
 <?php
-require_once '/../../../api/handlers/GameHandler.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api/handlers/GameHandler.php';
 ?>
 
 <div class="contentTitleBox">

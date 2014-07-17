@@ -1,8 +1,8 @@
 <?php
-require_once '/../../api/Settings.php';
-require_once '/../../api/Utils.php';
-require_once '/../../api/handlers/GameHandler.php';
-require_once '/../../api/handlers/MainPageHandler.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api/Settings.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api/Utils.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api/handlers/GameHandler.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api/handlers/MainPageHandler.php';
 
 class Site {
 	// Variable definitions.
@@ -98,7 +98,7 @@ class Site {
 							$this->viewArticle($this->articleName);
 						} else {
 							// Since non page or article where specified, view the default page.
-							$this->viewPage(Settings::defaultPage);
+							$this->viewPage(reset(MainPageHandler::getMainPages())->getName());
 						}
 					echo '</section>';
 					echo '<ul class="sponsors">';
@@ -142,8 +142,8 @@ class Site {
 								$event = EventHandler::getCurrentEvent();
 								
 								echo '<p><b>Neste Lan er:</b><br>';
-								echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . Utils::getMonthFromInt(date('m', $event->getEndTime())) . '<br>';
-								echo 'Dørene åpner ' . date('H:i', $event->getStartTime()) . '<br>';
+								echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . Utils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation() . '<br>';
+								echo 'Dørene åpner kl.' . date('H:i', $event->getStartTime()) . '<br>';
 								
 								if ($event->getParticipants() || $event->getPrice()) {
 									echo $event->getParticipants(). ' Deltakere<br>';
