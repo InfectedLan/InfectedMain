@@ -2,7 +2,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/api/handlers/MainPageHandler.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/api/handlers/GameHandler.php';
 
-$page = MainPageHandler::getMainPageByName('competitions-general');
+$page = MainPageHandler::getPageByName('competitions-general');
 
 if ($page != null) {
 	echo '<div class="contentTitleBox">';

@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
 	
 	if ($game != null && $game->isPublished()) {
 		// Get the page from the database.
-		$page = MainPageHandler::getMainPageByName($game->getName());
+		$page = MainPageHandler::getPageByName($game->getName());
 		
 		if ($page != null) {
 			if (isset($_GET['message'])) {

@@ -98,7 +98,7 @@ class Site {
 							$this->viewArticle($this->articleName);
 						} else {
 							// Since non page or article where specified, view the default page.
-							$this->viewPage(reset(MainPageHandler::getMainPages())->getName());
+							$this->viewPage(reset(MainPageHandler::getPages())->getName());
 						}
 					echo '</section>';
 					echo '<ul class="sponsors">';
@@ -179,7 +179,7 @@ class Site {
 		
 		if (isset($_GET['viewPage'])) {
 			// Fetch the page object from the database.
-			$page = MainPageHandler::getMainPageByName($this->pageName);
+			$page = MainPageHandler::getPageByName($this->pageName);
 			
 			if ($page != null) {
 				$title .= $space . $page->getTitle();
@@ -204,7 +204,7 @@ class Site {
 	
 	private function viewPage($pageName) {
 		// Fetch the page object from the database and display it.
-		$page = MainPageHandler::getMainPageByName($pageName);
+		$page = MainPageHandler::getPageByName($pageName);
 		
 		if ($page != null) {
 			$page->display();
