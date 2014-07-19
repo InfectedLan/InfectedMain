@@ -1,6 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/api/handlers/mainpagehandler.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/api/handlers/gamehandler.php';
+require_once 'handlers/mainpagehandler.php';
+require_once 'handlers/gamehandler.php';
 
 $page = MainPageHandler::getPageByName('competitions-general');
 
