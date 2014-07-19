@@ -116,7 +116,7 @@ class Site {
 											'<li><a href="http://www.asker.kommune.no/" target="_blank"><img src="images/sponsors/asker_kommune.png" width="80%"></a></li>');					
 						
 						// Choose sponsors or contributors.
-						$sponsorOrContributor = $_SESSION['sponsors'] ? $_SESSION['sponsors'] : false;
+						$sponsorOrContributor = isset($_SESSION['sponsors']) ? $_SESSION['sponsors'] : false;
 						
 						if (isset($_SESSION['sponsors'])) {
 							$list = !$_SESSION['sponsors'] ? $sponsorList : $contributorList;
