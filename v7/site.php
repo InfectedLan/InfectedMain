@@ -3,6 +3,7 @@ require_once 'utils.php';
 require_once 'settings.php';
 require_once 'handlers/gamehandler.php';
 require_once 'handlers/mainpagehandler.php';
+require_once 'handlers/eventhandler.php';
 
 class Site {
 	// Variable definitions.
@@ -142,7 +143,7 @@ class Site {
 								$event = EventHandler::getCurrentEvent();
 								
 								echo '<p><b>Neste Lan er:</b><br>';
-								echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . Utils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation() . '<br>';
+								echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . Utils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . '<br>';
 								echo 'Dørene åpner kl.' . date('H:i', $event->getStartTime()) . '<br>';
 								
 								if ($event->getParticipants() || $event->getPrice()) {
