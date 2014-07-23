@@ -8,12 +8,10 @@ require_once 'handlers/eventhandler.php';
 class Site {
 	// Variable definitions.
 	private $pageName;
-	private $articleName;
 	
 	public function Site() {
 		// Set the variables.
 		$this->pageName = isset($_GET['viewPage']) ? $_GET['viewPage'] : null;
-		$this->articleName = isset($_GET['viewArticle']) ? $_GET['viewArticle'] : null;
 	}
 	
 	// Execute the site.
@@ -94,9 +92,6 @@ class Site {
 						if (isset($_GET['viewPage'])) {
 						// View the page specified by "pageName" variable.
 							$this->viewPage($this->pageName);
-						} else if (isset($_GET['viewArticle'])) {
-							// View the article specified by "articleName" variable;
-							$this->viewArticle($this->articleName);
 						} else {
 							// Since non page or article where specified, view the default page.
 							$this->viewPage(reset(MainPageHandler::getPages())->getName());
@@ -175,7 +170,8 @@ class Site {
 	
 	// Generates title based on current page / article.
 	private function getTitle() {
-		$title = Settings::name;
+		$theme = EventHandler::getCurrentEvent()->getTheme();
+		$title = $theme != null ? Settings::name . ' ' . $theme : Settings::name;
 		$space = ' - ';
 		
 		if (isset($_GET['viewPage'])) {
@@ -184,19 +180,6 @@ class Site {
 			
 			if ($page != null) {
 				$title .= $space . $page->getTitle();
-			}
-		} else if (isset($_GET['viewArticle'])) {
-			// Fetch the article object from the database.
-			$page = ArticleHandler::getArticleByName($this->articleName);
-			
-			if ($article != null) {
-				$title .= $space . $article->getTitle();
-			}
-		} else {
-			$theme = EventHandler::getCurrentEvent()->getTheme();
-		
-			if ($theme != null) {
-				$title .= $space . $theme;
 			}
 		}
 		
@@ -222,37 +205,6 @@ class Site {
 					echo 'Siden du ser etter finnes ikke.';
 				echo '</article>';
 			}
-		}
-	}
-	
-	private function viewArticle($articleName) {
-		// Fetch the article object from the database and display it.
-		$article = ArticleHandler::getArticleByName($articleName);
-		
-		if ($article != null) {
-			$article->display();
-		} else {
-			echo '<article>';
-				echo '<h1>Artikkel ble ikke funnet!</h1>';
-				echo 'Artikkelen du ser etter finnes ikke.';
-			echo '</article>';
-		}
-	}
-	
-	private function viewArticles() {
-		// Fetch the article list from the database.
-		$articleList = ArticleHandler::getArticles();
-		
-		if (!empty($articleList)) {
-			// Loop through the articles and add it to the article view.
-			foreach ($articleList as $value) {
-				$value->display();
-			}
-		} else {
-			echo '<article>';
-				echo '<h1>Ingen artikkler funnet!</h1>';
-				echo 'Det finnes ingen artikkler ennå.';
-			echo '</article>';
 		}
 	}
 }
