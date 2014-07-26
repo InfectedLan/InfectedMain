@@ -1,8 +1,8 @@
 <?php
-require_once 'handlers/mainpagehandler.php';
+require_once 'handlers/pagehandler.php';
 require_once 'handlers/gamehandler.php';
 
-$page = MainPageHandler::getPageByName('competitions-general');
+$page = PageHandler::getPageByName('competitions-general');
 
 if ($page != null) {
 	echo '<div class="contentTitleBox">';

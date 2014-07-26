@@ -1,6 +1,6 @@
 <?php
 require_once 'utils.php';
-require_once 'handlers/mainpagehandler.php';
+require_once 'handlers/pagehandler.php';
 require_once 'handlers/gameapplicationhandler.php';
 
 $id = isset($_GET['id']) ? $_GET['id'] : 0;
@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
 	
 	if ($game != null && $game->isPublished()) {
 		// Get the page from the database.
-		$page = MainPageHandler::getPageByName($game->getName());
+		$page = PageHandler::getPageByName($game->getName());
 		
 		if ($page != null) {
 			if (isset($_GET['message'])) {
