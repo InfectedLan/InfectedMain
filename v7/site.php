@@ -2,7 +2,7 @@
 require_once 'utils.php';
 require_once 'settings.php';
 require_once 'handlers/gamehandler.php';
-require_once 'handlers/mainpagehandler.php';
+require_once 'handlers/pagehandler.php';
 require_once 'handlers/eventhandler.php';
 
 class Site {
@@ -94,7 +94,7 @@ class Site {
 							$this->viewPage($this->pageName);
 						} else {
 							// Since non page or article where specified, view the default page.
-							$this->viewPage(reset(MainPageHandler::getPages())->getName());
+							$this->viewPage(reset(PageHandler::getPages())->getName());
 						}
 					echo '</section>';
 					echo '<ul class="sponsors">';
@@ -176,7 +176,7 @@ class Site {
 		
 		if (isset($_GET['viewPage'])) {
 			// Fetch the page object from the database.
-			$page = MainPageHandler::getPageByName($this->pageName);
+			$page = PageHandler::getPageByName($this->pageName);
 			
 			if ($page != null) {
 				$title .= $space . $page->getTitle();
@@ -188,7 +188,7 @@ class Site {
 	
 	private function viewPage($pageName) {
 		// Fetch the page object from the database and display it.
-		$page = MainPageHandler::getPageByName($pageName);
+		$page = PageHandler::getPageByName($pageName);
 		
 		if ($page != null) {
 			$page->display();
