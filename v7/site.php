@@ -19,6 +19,7 @@ class Site {
 		echo '<!DOCTYPE html>';
 		echo '<html>';
 			echo '<head>';
+				echo '<base href="/v7/">';
 				echo '<title>' . $this->getTitle() . '</title>';
 				echo '<meta name="description" content="' . Settings::description . '">';
 				echo '<meta name="keywords" content="' . Settings::keywords . '">';
@@ -40,47 +41,47 @@ class Site {
 				echo '<header>';
 					echo '<nav id="menu">';
 						echo '<ul>';
-							echo '<li class="has-sub"><a href="index.php?viewPage=information"><span>Informasjon</span></a>';
+							echo '<li class="has-sub"><a href="pages/information.html"><span>Informasjon</span></a>';
 								echo '<ul>';
-									echo '<li><a href="index.php?viewPage=information"><span>Generelt</span></a></li>';
-									echo '<li><a href="index.php?viewPage=rules-and-security"><span>Regler og sikkerhet</span></a></li>';
-									echo '<li><a href="index.php?viewPage=parents-and-guardians"><span>For foreldre og foresatte</span></a></li>';
-									echo '<li class="last"><a href="index.php?viewPage=packing-list"><span>Pakkeliste</span></a></li>';
+									echo '<li><a href="pages/information.html"><span>Generelt</span></a></li>';
+									echo '<li><a href="pages/rules-and-security.html"><span>Regler og sikkerhet</span></a></li>';
+									echo '<li><a href="pages/parents-and-guardians.html"><span>For foreldre og foresatte</span></a></li>';
+									echo '<li class="last"><a href="pages/packing-list.html"><span>Pakkeliste</span></a></li>';
 								echo '</ul>';
 							echo '</li>';
 							echo '<li><a href="https://tickets.infected.no/" target="_blank"><span>Billetter</span></a></li>';
-							echo '<li class="has-sub"><a href="index.php?viewPage=competitions"><span>Konkurranser</span></a>';
+							echo '<li class="has-sub"><a href="pages/competitions.html"><span>Konkurranser</span></a>';
 								echo '<ul>';
-									echo '<li><a href="index.php?viewPage=competitions"><span>Generelt</span></a></li>';
-									echo '<li><a href="index.php?viewPage=gameapplication"><span>Clan registrering</span></a></li>';
+									echo '<li><a href="pages/competitions.html"><span>Generelt</span></a></li>';
+									echo '<li><a href="pages/gameapplication.html"><span>Clan registrering</span></a></li>';
 									
 									$gameList = GameHandler::getPublishedGames();
 									
 									foreach ($gameList as $game) {
 										if ($game != end($gameList)) {
-											echo '<li><a href="index.php?viewPage=game&id=' . $game->getId() . '"><span>' . $game->getTitle() . '</span></a></li>';
+											echo '<li><a href="pages/game/id/' . $game->getId() . '.html"><span>' . $game->getTitle() . '</span></a></li>';
 										} else {
-											echo '<li class="last"><a href="index.php?viewPage=game&id=' . $game->getId() . '"><span>' . $game->getTitle() . '</span></a></li>';
+											echo '<li class="last"><a href="pages/game/id/' . $game->getId() . '.html"><span>' . $game->getTitle() . '</span></a></li>';
 										}
 									}
 								echo '</ul>';
 							echo '</li>';
 							if ($this->pageName == 'agenda') {
-								echo '<li><a class="active" href="index.php?viewPage=agenda"><span>Agenda</span></a></li>';
+								echo '<li><a class="active" href="pages/agenda.html"><span>Agenda</span></a></li>';
 							} else {
-								echo '<li><a href="index.php?viewPage=agenda"><span>Agenda</span></a></li>';
+								echo '<li><a href="pages/agenda.html"><span>Agenda</span></a></li>';
 							}
 							
 							if ($this->pageName == 'about') {
-								echo '<li><a class="active" href="index.php?viewPage=about"><span>Om Infected</span></a></li>';
+								echo '<li><a class="active" href="pages/about.html"><span>Om Infected</span></a></li>';
 							} else {
-								echo '<li><a href="index.php?viewPage=about"><span>Om Infected</span></a></li>';
+								echo '<li><a href="pages/about.html"><span>Om Infected</span></a></li>';
 							}
 							
 							if ($this->pageName == 'contact') {
-								echo '<li><a class="active" href="index.php?viewPage=contact"><span>Kontakt</span></a></li>';
+								echo '<li><a class="active" href="pages/contact.html"><span>Kontakt</span></a></li>';
 							} else {
-								echo '<li><a href="index.php?viewPage=contact"><span>Kontakt</span></a></li>';
+								echo '<li><a href="pages/contact.html"><span>Kontakt</span></a></li>';
 							}
 							
 							echo '<li class="last"><a href="https://crew.infected.no/" target="_blank"><span>Crew</span></a></li>';
