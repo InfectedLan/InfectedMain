@@ -137,15 +137,13 @@ class Site {
 						echo '<section class="infoText">';
 							echo '<div class="infoTextNext">';
 								$event = EventHandler::getCurrentEvent();
+								$ticketText = $event->getTicketCount() > 1 ? 'billeter' : 'billett';
 								
 								echo '<p><b>Neste Lan er:</b><br>';
 								echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . Utils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . '<br>';
-								echo 'Dørene åpner kl.' . date('H:i', $event->getStartTime()) . '<br>';
-								
-								if ($event->getParticipants() || $event->getPrice()) {
-									echo $event->getParticipants(). ' Deltakere<br>';
-									echo 'Pris: ' . $event->getPrice() . ',-</p>';
-								}
+								echo 'Det er ' . $event->getParticipants(). ' deltakere, og ' . $event->getTicketCount() . ' ' . $ticketText . ' igjen<br>';
+								echo 'Dørene åpner kl.' . date('H:i', $event->getStartTime()). '<br>';
+								echo 'Pris per billett: ' . $event->getPrice() . ',-</p>';
 							echo '</div>';
 							echo '<div class="infoTextContact">';
 								echo '<p><b>Noe du lurer på?</b><br>';
