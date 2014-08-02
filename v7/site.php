@@ -190,7 +190,11 @@ class Site {
 		$page = PageHandler::getPageByName($pageName);
 		
 		if ($page != null) {
-			$page->display();
+			// Format the page as HTML.
+			echo '<div class="contentTitleBox">';
+				echo '<h1>' . $page->getTitle() . '</h1>';
+			echo '</div>';
+			echo $page->getContent();
 		} else {
 			$directory = 'pages/';
 			$fileName = $directory . $pageName . '.php';
