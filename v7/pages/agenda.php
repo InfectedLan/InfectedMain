@@ -12,12 +12,12 @@ if (!empty($agendaList)) {
 	$event = EventHandler::getCurrentEvent();
 	$day = 0;
 
-	foreach ($agendaList as $agenda) { // 
-		if ($day != date('d', $agenda->getDatetime())) {
+	foreach ($agendaList as $agenda) {
+		if ($day != date('d', $agenda->getStart())) {
 			echo '</table>';
 			echo '</article>';
 			echo '<article class="contentBox">';
-				echo '<h3>' . Utils::getDayFromInt(date('N', $agenda->getDatetime())) . ' ' . date('d.m', $agenda->getDatetime()) . '</h3>';
+				echo '<h3>' . Utils::getDayFromInt(date('N', $agenda->getStart())) . ' ' . date('d.m', $agenda->getStart()) . '</h3>';
 			
 				echo '<table class="table">';
 					echo '<tr>';
@@ -28,8 +28,8 @@ if (!empty($agendaList)) {
 		}
 		
 		echo '<tr>';
-			echo '<td>' . date('H:i', $agenda->getDatetime()) . '</td>';
-			echo '<td>' . $agenda->getName() . '</td>';
+			echo '<td>' . date('H:i', $agenda->getStart()) . '</td>';
+			echo '<td>' . $agenda->getTitle() . '</td>';
 			echo '<td>' . $agenda->getDescription() . '</td>';
 		echo '</tr>';
 		
@@ -37,7 +37,7 @@ if (!empty($agendaList)) {
 			echo '</table>';
 			echo '</article>';
 		} else {
-			$day = date('d', $agenda->getDatetime());
+			$day = date('d', $agenda->getStart());
 		}
 	}
 } else {
