@@ -42,7 +42,7 @@ if (!empty($agendaList)) {
 	}
 } else {
 	echo '<article class="contentBox">';
-		echo '<p>Agenda\'en har ikke blitt publisert enda, men den kommer snart!</p>';
+		echo '<p>Agenda\'en for kommende arrangement har ikke blitt publisert enda!</p>';
 	echo '</article>';
 }
 ?>
