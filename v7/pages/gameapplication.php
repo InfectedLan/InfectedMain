@@ -6,9 +6,10 @@ require_once 'handlers/gamehandler.php';
 	<h1>Clan registrering</h1>
 </div>
 <article class="contentBox">
+	<script src="scripts/game-application.js"></script>
 	<p>Registrer din clan her. Dere må registrere dere en gang per spill dere skal spille compo i.</p><br>
-
-	<form name="input" action="scripts/process_gameApplication.php?action=1" method="post">
+	
+	<form class="game-application-add" name="input"  method="post">
 		<table>
 			<tr>
 				<td>Clanen's navn:</td>
@@ -40,12 +41,18 @@ require_once 'handlers/gamehandler.php';
 					<?php
 					$gameList = GameHandler::getPublishedGames();
 					
-					foreach ($gameList as $game) {
-						if ($game->getDeadline() > date('U')) {
-							echo '<input type="radio" name="game" value="' . $game->getId() . '">' . $game->getTitle() . '<br>';
-						} else {
-							echo $game->getTitle() . ' (Påmeldingsfristen er ute!)<br>';
+					if (!empty($gameList)) {
+						foreach ($gameList as $game) {
+							if ($game->getDeadline() > date('U')) {
+								echo '<input type="radio" name="gameId" value="' . $game->getId() . '">' . $game->getTitle() . '<br>';
+							} else {
+								echo $game->getTitle() . ' (Påmeldingsfristen er ute!)<br>';
+							}
 						}
+					} else {
+						echo '<article class="contentBox">';
+							echo '<p>Ingen spill publisert enda, prøv igjen senere.</p>';
+						echo '</article>';
 					}
 					?>
 				</td>

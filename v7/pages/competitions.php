@@ -10,13 +10,18 @@ if ($page != null) {
 	echo '</div>';
 	echo '<article class="contentBox">';
 		echo '<p><b>Det blir compoer i:</b></p>';
-		echo '<ul>';
-			$gameList = GameHandler::getGames();
-			
-			foreach ($gameList as $game) {
-				echo '<li>' . $game->getTitle() . ' (' . $game->getMode() . ') ' . $game->getPrice() . ',- ' . $game->getDescription() . '</li>';
-			}
-		echo '</ul>';
+		
+		$gameList = GameHandler::getGames();
+		
+		if (!empty($gameList)) {
+			echo '<ul>';
+				foreach ($gameList as $game) {
+					echo '<li>' . $game->getTitle() . ' (' . $game->getMode() . ') ' . $game->getPrice() . ',- ' . $game->getDescription() . '</li>';
+				}
+			echo '</ul>';
+		} else {
+			echo '<p>Ingen spill er lagt til i systemet enda.</p>';
+		}
 	echo '</article>';
 	
 	echo $page->getContent();

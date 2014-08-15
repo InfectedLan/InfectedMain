@@ -1,6 +1,7 @@
 <?php
 require_once 'utils.php';
 require_once 'handlers/pagehandler.php';
+require_once 'handlers/eventhandler.php';
 require_once 'handlers/gameapplicationhandler.php';
 
 $id = isset($_GET['id']) ? $_GET['id'] : 0;
@@ -32,7 +33,7 @@ if (isset($_GET['id'])) {
 		}
 
 		// Add the application list for this game.
-		$gameApplicationList = GameApplicationHandler::getGameApplications($game->getId());
+		$gameApplicationList = GameApplicationHandler::getGameApplicationsForEvent($game, EventHandler::getCurrentEvent());
 		
 		echo '<article class="contentBox">';
 			echo '<h3>Påmeldte claner</h3>';
