@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$('.game-application-add').submit(function(e) {
 		e.preventDefault();
-		$.getJSON('../json/addGameApplication.php' + '?' + $(this).serialize(), function(data){
+		$.getJSON('../api/json/addGameApplication.php' + '?' + $(this).serialize(), function(data){
 			if (data.result) {
 				$(location).attr('href', 'pages/competitions.html');
 			} else {

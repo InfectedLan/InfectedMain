@@ -36,8 +36,8 @@ class Site {
 						echo 'background-position: center;';
 					echo '}';
 				echo '</style>';
-				echo '<script src="scripts/jquery.js"></script>';
-				echo '<script src="scripts/jquery.form.min.js"></script>';
+				echo '<script src="../api/scripts/jquery.js"></script>';
+				echo '<script src="../api/scripts/jquery.form.min.js"></script>';
 			echo '</head>';
 			echo '<body>';
 				echo '<header>';
