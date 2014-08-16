@@ -9,7 +9,7 @@ class Site {
 	// Variable definitions.
 	private $pageName;
 	
-	public function Site() {
+	public function __construct() {
 		// Set the variables.
 		$this->pageName = isset($_GET['viewPage']) ? $_GET['viewPage'] : null;
 	}
