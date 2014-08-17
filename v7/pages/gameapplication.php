@@ -1,44 +1,42 @@
 <?php
 require_once 'handlers/gamehandler.php';
-?>
 
-<div class="contentTitleBox">
-	<h1>Clan registrering</h1>
-</div>
-<article class="contentBox">
-	<script src="scripts/game-application.js"></script>
-	<p>Registrer din clan her. Dere må registrere dere en gang per spill dere skal spille compo i.</p><br>
+echo '<div class="contentTitleBox">';
+	echo '<h1>Clan registrering</h1>';
+echo '</div>';
+echo '<article class="contentBox">';
+	echo '<script src="scripts/game-application.js"></script>';
+	echo '<p>Registrer din clan her. Dere må registrere dere en gang per spill dere skal spille compo i.</p><br>';
 	
-	<form class="game-application-add" name="input"  method="post">
-		<table>
-			<tr>
-				<td>Clanen's navn:</td>
-				<td><input type="text" name="name"></td>
-			</tr>
-			<tr>
-				<td>Clan tag:</td>
-				<td><input type="text" name="tag"></td>
-			</tr>
-			<tr>
-				<td>Kontaktperson's navn:</td>
-				<td><input type="text" name="contactname"></td>
-			</tr>
-			<tr>
-				<td>Kontaktperson's nick:</td>
-				<td><input type="text" name="contactnick"></td>
-			</tr>
-			<tr>
-				<td>Telefon:</td>
-				<td><input type="text" name="phone"></td>
-			</tr>
-			<tr>
-				<td>E-post:</td>
-				<td><input type="email" name="email"></td>
-			</tr>
-			<tr>
-				<td>Spill:</td>
-				<td>
-					<?php
+	echo '<form class="game-application-add" method="post">';
+		echo '<table>';
+			echo '<tr>';
+				echo '<td>Clanen\'s navn:</td>';
+				echo '<td><input type="text" name="name" required></td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<td>Clan tag:</td>';
+				echo '<td><input type="text" name="tag" required></td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<td>Kontaktperson\'s navn:</td>';
+				echo '<td><input type="text" name="contactname" required></td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<td>Kontaktperson\'s nick:</td>';
+				echo '<td><input type="text" name="contactnick" required></td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<td>Telefon:</td>';
+				echo '<td><input type="tel" name="phone" required></td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<td>E-post:</td>';
+				echo '<td><input type="email" name="email" required></td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<td>Spill:</td>';
+				echo '<td>';
 					$gameList = GameHandler::getPublishedGames();
 					
 					if (!empty($gameList)) {
@@ -54,12 +52,12 @@ require_once 'handlers/gamehandler.php';
 							echo '<p>Ingen spill publisert enda, prøv igjen senere.</p>';
 						echo '</article>';
 					}
-					?>
-				</td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Meld på"></td>
-			</tr>
-		</table>
-	</form>
-</article>
+				echo '</td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<td><input type="submit" value="Meld på"></td>';
+			echo '</tr>';
+		echo '</table>';
+	echo '</form>';
+echo '</article>';
+?>
