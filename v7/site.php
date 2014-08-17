@@ -11,7 +11,7 @@ class Site {
 	
 	public function __construct() {
 		// Set the variables.
-		$this->pageName = isset($_GET['viewPage']) ? $_GET['viewPage'] : null;
+		$this->pageName = isset($_GET['page']) ? $_GET['page'] : null;
 	}
 	
 	// Execute the site.
@@ -92,7 +92,7 @@ class Site {
 				echo '</header>';
 				echo '<div id="main">';
 					echo '<section class="content">';
-						if (isset($_GET['viewPage'])) {
+						if (isset($_GET['page'])) {
 						// View the page specified by "pageName" variable.
 							$this->viewPage($this->pageName);
 						} else {
@@ -175,7 +175,7 @@ class Site {
 		$title = $theme != null ? Settings::name . ' ' . $theme : Settings::name;
 		$space = ' - ';
 		
-		if (isset($_GET['viewPage'])) {
+		if (isset($_GET['page'])) {
 			// Fetch the page object from the database.
 			$page = PageHandler::getPageByName($this->pageName);
 			
