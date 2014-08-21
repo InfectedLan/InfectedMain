@@ -143,7 +143,7 @@ class Site {
 								
 								echo '<p><b>Neste Lan er:</b><br>';
 								echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . Utils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . '<br>';
-								echo 'Det er ' . $event->getParticipants(). ' deltakere, og ' . $event->getTicketCount() . ' ' . $ticketText . ' igjen<br>';
+								echo 'Det er ' . $event->getAvailableTickets() . ' av ' . $event->getParticipants() . ' ' . $ticketText . ' igjen<br>';
 								echo 'Dørene åpner kl.' . date('H:i', $event->getStartTime()). '<br>';
 								echo 'Pris per billett: ' . $event->getTicketType()->getPrice() . ',-</p>';
 							echo '</div>';
