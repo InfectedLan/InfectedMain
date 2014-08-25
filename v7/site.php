@@ -111,17 +111,17 @@ class Site {
 					echo '</section>';
 					echo '<ul class="sponsors">';
 						$sponsorList = array('<li><p>Sponsorer:</p></li>', 
-											'<li><a href="http://www.paloaltonetworks.com/" target="_blank"><img src="images/sponsors/palo_alto.png" width="80%"></a></li>', 
-											'<li><a href="http://www.kvantel.no/" target="_blank"><img src="images/sponsors/kvantel.png" width="50%"></a></li>', 
-											'<li><a href="http://www.webhuset.no/" target="_blank"><img src="images/sponsors/webhuset.png" width="80%"></a></li>', 
-											'<li><a href="http://www.cocio.no/" target="_blank"><img src="images/sponsors/cocio.png" width="40%"></a></li>', 
-											'<li><a href="http://www.proisp.no/" target="_blank"><img src="images/sponsors/proisp.png" width="50%"></a></li>');
+											'<li><a href="http://www.paloaltonetworks.com/" target="_blank"><img src="images/sponsors/palo_alto.png" alt="Palo Alto" style="width: 80%;"></a></li>', 
+											'<li><a href="http://www.kvantel.no/" target="_blank"><img src="images/sponsors/kvantel.png" alt="Kvantel" style="width: 50%;"></a></li>', 
+											'<li><a href="http://www.webhuset.no/" target="_blank"><img src="images/sponsors/webhuset.png" alt="Webhuset" style="width: 80%;"></a></li>', 
+											'<li><a href="http://www.cocio.no/" target="_blank"><img src="images/sponsors/cocio.png" alt="Cocio" style="width: 40%;"></a></li>', 
+											'<li><a href="http://www.proisp.no/" target="_blank"><img src="images/sponsors/proisp.png" alt="ProISP" style="width: 50%;"></a></li>');
 											
 						$contributorList = array('<li><p>Samarbeidspartnere:</p></li>', 
-											'<li><a href="http://www.bleiker.vgs.no/" target="_blank"><img src="images/sponsors/bleiker.png" width="80%"></a></li>', 
-											'<li><a href="http://www.konsept-it.no/" target="_blank"><img src="images/sponsors/konsept_it.png" width="80%"></a></li>', 
-											'<li><a href="http://www.askerkulturhus.no/huset/radar/" target="_blank"><img src="images/sponsors/radar.png" width="80%"></a></li>', 
-											'<li><a href="http://www.asker.kommune.no/" target="_blank"><img src="images/sponsors/asker_kommune.png" width="80%"></a></li>');					
+											'<li><a href="http://www.bleiker.vgs.no/" target="_blank"><img src="images/sponsors/bleiker.png" alt="Bleiker VGS" style="width: 80%;"></a></li>', 
+											'<li><a href="http://www.konsept-it.no/" target="_blank"><img src="images/sponsors/konsept_it.png" alt="Konsept IT" style="width: 80%;"></a></li>', 
+											'<li><a href="http://www.askerkulturhus.no/huset/radar/" target="_blank"><img src="images/sponsors/radar.png" alt="Radar Cafe" style="width: 80%;"></a></li>', 
+											'<li><a href="http://www.asker.kommune.no/" target="_blank"><img src="images/sponsors/asker_kommune.png" alt="Asker Kommune" style="width: 80%;"></a></li>');					
 						
 						// Choose sponsors or contributors.
 						$sponsorOrContributor = isset($_SESSION['sponsors']) ? $_SESSION['sponsors'] : false;
@@ -143,9 +143,9 @@ class Site {
 				echo '<footer>';
 					echo '<div id="footer">';
 						echo '<div class="logo">';
-							echo '<a href="."><img src="images/infected_logo.png"></a>';
+							echo '<a href="."><img src="images/infected_logo.png" alt="Infected"></a>';
 						echo '</div>';
-						echo '<section class="infoText">';
+						echo '<div class="infoText">';
 							echo '<div class="infoTextNext">';
 								$event = EventHandler::getCurrentEvent();
 								$ticketText = $event->getTicketCount() > 1 ? 'billeter' : 'billett';
@@ -162,7 +162,7 @@ class Site {
 								echo 'Telefon: 99 76 77 45<br>';
 								echo 'Addresse: Strøket 15a, Asker</p>';
 							echo '</div>';
-						echo '</section>';
+						echo '</div>';
 					echo '</div>';
 				echo '</footer>';
 			echo '</body>';
