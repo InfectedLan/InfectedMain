@@ -11,7 +11,7 @@ class Site {
 	
 	public function __construct() {
 		// Set the variables.
-		$this->pageName = isset($_GET['page']) ? $_GET['page'] : null;
+		$this->pageName = isset($_GET['page']) ? $_GET['page'] : reset(PageHandler::getPages())->getName();
 	}
 	
 	// Execute the site.
@@ -101,13 +101,8 @@ class Site {
 				echo '</header>';
 				echo '<div id="main">';
 					echo '<section class="content">';
-						if (isset($_GET['page'])) {
 						// View the page specified by "pageName" variable.
-							$this->viewPage($this->pageName);
-						} else {
-							// Since non page or article where specified, view the default page.
-							$this->viewPage(reset(PageHandler::getPages())->getName());
-						}
+						$this->viewPage($this->pageName);
 					echo '</section>';
 					echo '<ul class="sponsors">';
 						$sponsorList = array('<li><p>Sponsorer:</p></li>', 
