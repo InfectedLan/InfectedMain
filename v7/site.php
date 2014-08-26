@@ -25,8 +25,8 @@ class Site {
 				echo '<meta name="keywords" content="' . Settings::keywords . '">';
 				echo '<meta name="author" content="' . implode(', ', Settings::$authors) . '">'; // TODO: Select all authors in this?
 				echo '<meta charset="UTF-8">';
-				echo '<link rel="stylesheet" type="text/css" href="style/style.css">';
 				echo '<link rel="shortcut icon" href="images/favicon.ico">';
+				echo '<link rel="stylesheet" type="text/css" href="style/style.css">';
 				echo '<style>';
 					echo 'body {';
 						echo 'background: #000000 url(\'' . $this->getBackground() . '\');';
