@@ -147,9 +147,9 @@ class Site {
 								
 								echo '<p><b>Neste Lan er:</b><br>';
 								echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . Utils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . '<br>';
-								echo 'Det er ' . $event->getAvailableTickets() . ' av ' . $event->getParticipants() . ' ' . $ticketText . ' igjen<br>';
+								echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen<br>';
 								echo 'Dørene åpner kl.' . date('H:i', $event->getStartTime()). '<br>';
-								echo 'Pris per billett: ' . $event->getTicketType()->getPrice() . ',-</p>';
+								echo 'Pris per billett: ' . $event->getTicketType()->getPrice() . ',- inkludert medlemskap i Radar.</p>';
 							echo '</div>';
 							echo '<div class="infoTextContact">';
 								echo '<p><b>Noe du lurer på?</b><br>';
