@@ -60,7 +60,7 @@ class Site {
 									echo '<li class="last"><a href="pages/packing-list.html"><span>Pakkeliste</span></a></li>';
 								echo '</ul>';
 							echo '</li>';
-							echo '<li><a href="http://tickets.infectedlan.no/" target="_blank"><span>Billetter</span></a></li>';
+							echo '<li><a href="https://tickets.infected.no/" target="_blank"><span>Billetter</span></a></li>';
 							echo '<li class="has-sub"><a href="pages/competitions.html"><span>Konkurranser</span></a>';
 								echo '<ul>';
 									echo '<li><a href="pages/competitions.html"><span>Generelt</span></a></li>';
@@ -95,7 +95,7 @@ class Site {
 								echo '<li><a href="pages/contact.html"><span>Kontakt</span></a></li>';
 							}
 							
-							echo '<li class="last"><a href="http://crew.infectedlan.no/" target="_blank"><span>Crew</span></a></li>';
+							echo '<li class="last"><a href="https://crew.infected.no/" target="_blank"><span>Crew</span></a></li>';
 						echo '</ul>';
 					echo '</nav>';
 				echo '</header>';
