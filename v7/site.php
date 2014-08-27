@@ -44,9 +44,9 @@ class Site {
 					echo 'm=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)';
 					echo '})(window,document,\'script\',\'//www.google-analytics.com/analytics.js\',\'ga\');';
 
-					echo 'ga(\'create\', \'UA-54129988-1\', \'auto\');';
+					echo 'ga(\'create\', \'UA-54254513-1\', \'auto\');';
 					echo 'ga(\'send\', \'pageview\');';
-				echo '</script>';
+				echo '</script>';		
 			echo '</head>';
 			echo '<body>';
 				echo '<header>';
