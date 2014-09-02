@@ -11,7 +11,7 @@ class Site {
 	
 	public function __construct() {
 		// Set the variables.
-		$this->pageName = isset($_GET['page']) ? $_GET['page'] : reset(PageHandler::getPages())->getName();
+		$this->pageName = isset($_GET['page']) ? $_GET['page'] : 'home';
 	}
 	
 	// Execute the site.
@@ -36,8 +36,7 @@ class Site {
 						echo 'background-position: center;';
 					echo '}';
 				echo '</style>';
-				echo '<script src="../api/scripts/jquery.js"></script>';
-				echo '<script src="../api/scripts/jquery.form.min.js"></script>';
+				echo '<script src="../api/scripts/jquery-1.11.1.min.js"></script>';
 				echo '<script>';
 					echo '(function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){';
 					echo '(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),';
