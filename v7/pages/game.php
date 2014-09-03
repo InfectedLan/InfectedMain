@@ -26,7 +26,13 @@ if (isset($_GET['id'])) {
 			echo '</div>';
 				
 			echo '<article class="contentBox">';
-				echo '<b>Påmeldingsfristen er ' . Utils::getDayFromInt(date('N', $game->getDeadLine())) . ' ' . date('d.m.Y', $game->getDeadLine()) . ' klokken ' . date('H:i', $game->getDeadLine()) . '.</b>';
+				$now = strtotime(date('Y-m-d H:i:s'));
+				
+				if ($game->isBookingTime()) {
+					echo '<b>Påmeldingsfristen er ' . Utils::getDayFromInt(date('w', $game->getEndTime())) . ' ' . date('d.m.Y', $game->getEndTime()) . ' klokken ' . date('H:i', $game->getEndTime()) . '.</b>';
+				} else {
+					echo '<b>Påmeldingen åpner ' . Utils::getDayFromInt(date('w', $game->getStartTime())) . ' ' . date('d.m.Y', $game->getStartTime()) . ' klokken ' . date('H:i', $game->getStartTime()) . '.</b>';
+				}
 			echo '</article>';
 			
 			echo $page->getContent();

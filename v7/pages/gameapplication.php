@@ -41,16 +41,20 @@ echo '<article class="contentBox">';
 					
 					if (!empty($gameList)) {
 						foreach ($gameList as $game) {
-							if ($game->getDeadline() > date('U')) {
+							$now = strtotime(date('Y-m-d H:i:s'));
+									
+							if ($game->isBookingTime()) {
 								echo '<input type="radio" name="gameId" value="' . $game->getId() . '">' . $game->getTitle() . '<br>';
 							} else {
-								echo $game->getTitle() . ' (Påmeldingsfristen er ute!)<br>';
+								if ($now < $game->getStartTime()) {
+									echo $game->getTitle() . ' (Påmeldingen har ikke åpnet enda.)<br>';
+								} else if ($now > $game->getEndTime()) {
+									echo $game->getTitle() . ' (Påmeldingsfristen er ute.)<br>';
+								}
 							}
 						}
 					} else {
-						echo '<article class="contentBox">';
-							echo '<p>Ingen spill publisert enda, prøv igjen senere.</p>';
-						echo '</article>';
+						echo '<p>Ingen spill publisert enda, prøv igjen senere.</p>';
 					}
 				echo '</td>';
 			echo '</tr>';
