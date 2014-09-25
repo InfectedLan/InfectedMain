@@ -63,7 +63,7 @@ class Site {
 							echo '<li class="has-sub"><a href="pages/competitions.html"><span>Konkurranser</span></a>';
 								echo '<ul>';
 									echo '<li><a href="pages/competitions.html"><span>Generelt</span></a></li>';
-									echo '<li><a href="pages/gameapplication.html"><span>Clan registrering</span></a></li>';
+									echo '<li><a href="https://compo.infected.no/index.php"><span>Comporegistrering</span></a></li>';
 									
 									$gameList = GameHandler::getPublishedGames();
 									
