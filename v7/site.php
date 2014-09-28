@@ -144,11 +144,16 @@ class Site {
 								$event = EventHandler::getCurrentEvent();
 								$ticketText = $event->getTicketCount() > 1 ? 'billeter' : 'billett';
 								
-								echo '<p><b>Neste Lan er:</b><br>';
-								echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . Utils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . '<br>';
-								echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen<br>';
-								echo 'Dørene åpner kl.' . date('H:i', $event->getStartTime()). '<br>';
-								echo 'Pris per billett: ' . $event->getTicketType()->getPrice() . ',- inkludert medlemskap i Radar.</p>';
+								echo '<p>';
+									echo '<b>Neste Lan er:</b><br>';
+									echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . Utils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . '<br>';
+									echo 'Dørene åpner kl.' . date('H:i', $event->getStartTime()). '<br>';
+									
+									if ($event->isBookingTime()) {
+										echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen<br>';
+										echo 'Pris per billett: ' . $event->getTicketType()->getPrice() . ',- inkludert medlemskap i Radar.<br>';
+									}
+								echo '</p>';
 							echo '</div>';
 							echo '<div class="infoTextContact">';
 								echo '<p><b>Noe du lurer på?</b><br>';
