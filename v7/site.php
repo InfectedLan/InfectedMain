@@ -26,7 +26,7 @@ class Site {
 				echo '<meta name="author" content="halvors and petterroea">';
 				echo '<meta charset="UTF-8">';
 				echo '<link rel="shortcut icon" href="images/favicon.ico">';
-				echo '<link rel="stylesheet" type="text/css" href="style/style.css">';
+				echo '<link rel="stylesheet" type="text/css" href="styles/style.css">';
 				echo '<style>';
 					echo 'body {';
 						echo 'background: #000000 url(\'' . $this->getBackground() . '\');';
