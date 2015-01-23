@@ -2,7 +2,6 @@
 require_once 'utils.php';
 require_once 'handlers/pagehandler.php';
 require_once 'handlers/eventhandler.php';
-require_once 'handlers/gameapplicationhandler.php';
 
 $id = isset($_GET['id']) ? $_GET['id'] : 0;
 
@@ -37,34 +36,6 @@ if (isset($_GET['id'])) {
 			
 			echo $page->getContent();
 		}
-
-		// Add the application list for this game.
-		$gameApplicationList = GameApplicationHandler::getGameApplicationsForEvent($game, EventHandler::getCurrentEvent());
-		
-		echo '<article class="contentBox">';
-			echo '<h3>Påmeldte claner</h3>';
-			
-			if (!empty($gameApplicationList)) {
-				echo '<p>Under vises en tabell over påmeldte claner i dette spillet.</p><br>';
-				echo '<table class="table">';
-					echo '<tr>';
-						echo '<th>Clan:</th>';
-						echo '<th>Tag:</th>';
-						echo '<th>Nick:</th>';
-					echo '</tr>';
-					
-					foreach ($gameApplicationList as $value) {
-						echo '<tr>';
-							echo '<td>' . $value->getName() . '</td>';
-							echo '<td>' . $value->getTag() . '</td>';
-							echo '<td>' . $value->getContactnick() . '</td>';
-						echo '</tr>';
-					}
-				echo '</table>';
-			} else {
-				echo '<p>Ingen har meldt seg på compo i dette spillet enda.</p>';
-			}
-		echo '</article>';
 	} else {
 		echo '<article class="contentBox">';
 			echo '<p>Dette spillet finnes ikke!</p>';
