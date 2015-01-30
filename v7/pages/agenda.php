@@ -6,7 +6,7 @@ echo '<div class="contentTitleBox">';
 	echo '<h1>Agenda</h1>';
 echo '</div>';
 
-$agendaList = AgendaHandler::getAgendas();
+$agendaList = AgendaHandler::getPublishedAgendas();
 
 if (!empty($agendaList)) {
 	$event = EventHandler::getCurrentEvent();
