@@ -150,8 +150,12 @@ class Site {
 									echo 'Dørene åpner kl. ' . date('H:i', $event->getStartTime()). '<br>';
 									
 									if ($event->isBookingTime()) {
-										echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen<br>';
-										echo 'Pris per billett: ' . $event->getTicketType()->getPrice() . ',- inkludert medlemskap i Radar.';
+										if (!empty($event->getAvailableTickets())) {
+											echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen<br>';
+											echo 'Pris per billett: ' . $event->getTicketType()->getPrice() . ',- inkludert medlemskap i Radar.';
+										} else {
+											echo 'Det er ingen billetter igjen.';
+										}
 									} else {
 										echo 'Billettsalget starter ' . date('d', $event->getBookingTime()) . '. ' . Utils::getMonthFromInt(date('m', $event->getBookingTime())) .' kl. '  . date('H:i', $event->getBookingTime());
 									}
