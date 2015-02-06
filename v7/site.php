@@ -104,33 +104,21 @@ class Site {
 						$this->viewPage($this->pageName);
 					echo '</section>';
 					echo '<ul class="sponsors">';
-						$sponsorList = array('<li><p>Sponsorer:</p></li>', 
-											'<li><a href="http://www.paloaltonetworks.com/" target="_blank"><img src="images/sponsors/palo_alto.png" alt="Palo Alto" style="width: 80%;"></a></li>', 
-											'<li><a href="http://www.kvantel.no/" target="_blank"><img src="images/sponsors/kvantel.png" alt="Kvantel" style="width: 50%;"></a></li>', 
-											'<li><a href="http://www.webhuset.no/" target="_blank"><img src="images/sponsors/webhuset.png" alt="Webhuset" style="width: 80%;"></a></li>', 
-											'<li><a href="http://www.cocio.no/" target="_blank"><img src="images/sponsors/cocio.png" alt="Cocio" style="width: 40%;"></a></li>', 
-											'<li><a href="http://www.proisp.no/" target="_blank"><img src="images/sponsors/proisp.png" alt="ProISP" style="width: 50%;"></a></li>');
-											
-						$contributorList = array('<li><p>Samarbeidspartnere:</p></li>', 
-											'<li><a href="http://www.bleiker.vgs.no/" target="_blank"><img src="images/sponsors/bleiker.png" alt="Bleiker VGS" style="width: 80%;"></a></li>', 
-											'<li><a href="http://www.konsept-it.no/" target="_blank"><img src="images/sponsors/konsept_it.png" alt="Konsept IT" style="width: 80%;"></a></li>', 
-											'<li><a href="http://www.askerkulturhus.no/huset/radar/" target="_blank"><img src="images/sponsors/radar.png" alt="Radar Cafe" style="width: 80%;"></a></li>', 
-											'<li><a href="http://www.asker.kommune.no/" target="_blank"><img src="images/sponsors/asker_kommune.png" alt="Asker Kommune" style="width: 80%;"></a></li>');					
+						echo '<li><p>Samarbeidspartnere og<br>';
+						echo 'Sponsorer:</p></li>';
+					
+						$sponsorList = array('<li><a href="http://www.paloaltonetworks.com/" target="_blank"><img src="images/sponsors/palo_alto.png" alt="Palo Alto" style="width: 80%;"></a></li>', 
+											 '<li><a href="http://www.kvantel.no/" target="_blank"><img src="images/sponsors/kvantel.png" alt="Kvantel" style="width: 50%;"></a></li>', 
+											 '<li><a href="http://www.webhuset.no/" target="_blank"><img src="images/sponsors/webhuset.png" alt="Webhuset" style="width: 80%;"></a></li>',
+											 '<li><a href="http://www.bleiker.vgs.no/" target="_blank"><img src="images/sponsors/bleiker.png" alt="Bleiker VGS" style="width: 80%;"></a></li>', 
+											 '<li><a href="http://www.konsept-it.no/" target="_blank"><img src="images/sponsors/konsept_it.png" alt="Konsept IT" style="width: 80%;"></a></li>', 
+											 '<li><a href="http://www.askerkulturhus.no/huset/radar/" target="_blank"><img src="images/sponsors/radar.png" alt="Radar Cafe" style="width: 80%;"></a></li>', 
+											 '<li><a href="http://www.asker.kommune.no/" target="_blank"><img src="images/sponsors/asker_kommune.png" alt="Asker Kommune" style="width: 80%;"></a></li>');					
 						
-						// Choose sponsors or contributors.
-						$sponsorOrContributor = isset($_SESSION['sponsors']) ? $_SESSION['sponsors'] : false;
+						shuffle($sponsorList);
 						
-						if (isset($_SESSION['sponsors'])) {
-							$list = !$_SESSION['sponsors'] ? $sponsorList : $contributorList;
-							$_SESSION['sponsors'] = !$_SESSION['sponsors'];
-						} else {
-							$list = $sponsorList;
-							$_SESSION['sponsors'] = true;
-						}
-						
-						// View the sponsors / contributors.
-						for ($i = 0; $i < count($list); $i++) {
-							echo $list[$i];
+						foreach ($sponsorList as $sponsor) {
+							echo $sponsor;
 						}
 					echo '</ul>';
 				echo '</div>';
