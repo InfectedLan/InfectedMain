@@ -104,8 +104,7 @@ class Site {
 						$this->viewPage($this->pageName);
 					echo '</section>';
 					echo '<ul class="sponsors">';
-						echo '<li><p>Samarbeidspartnere og<br>';
-						echo 'Sponsorer:</p></li>';
+						echo '<li><p>Samarbeidspartnere</p></li>';
 					
 						$sponsorList = array('<li><a href="http://www.paloaltonetworks.com/" target="_blank"><img src="images/sponsors/palo_alto.png" alt="Palo Alto" style="width: 80%;"></a></li>', 
 											 '<li><a href="http://www.kvantel.no/" target="_blank"><img src="images/sponsors/kvantel.png" alt="Kvantel" style="width: 50%;"></a></li>', 
