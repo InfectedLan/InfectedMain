@@ -1,6 +1,6 @@
 <?php
-require_once 'utils.php';
 require_once 'settings.php';
+require_once 'dateutils.php';
 require_once 'handlers/gamehandler.php';
 require_once 'handlers/pagehandler.php';
 require_once 'handlers/eventhandler.php';
@@ -134,7 +134,7 @@ class Site {
 								
 								echo '<p>';
 									echo '<b>Neste Lan er:</b><br>';
-									echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . Utils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . '<br>';
+									echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . '<br>';
 									echo 'Dørene åpner kl. ' . date('H:i', $event->getStartTime()). '<br>';
 									
 									if ($event->isBookingTime()) {
@@ -145,7 +145,7 @@ class Site {
 											echo 'Det er ingen billetter igjen.';
 										}
 									} else {
-										echo 'Billettsalget starter ' . date('d', $event->getBookingTime()) . '. ' . Utils::getMonthFromInt(date('m', $event->getBookingTime())) .' kl. '  . date('H:i', $event->getBookingTime());
+										echo 'Billettsalget starter ' . date('d', $event->getBookingTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getBookingTime())) .' kl. '  . date('H:i', $event->getBookingTime());
 									}
 								echo '</p>';
 							echo '</div>';
