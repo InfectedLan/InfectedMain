@@ -20,7 +20,11 @@
 
 require_once 'site.php';
 
-// Execute the site.
-$site = new Site();
-$site->execute();
+if (version_compare(PHP_VERSION, '5.6.0') >= 0) {
+	// Execute the site.
+	$site = new Site();
+	$site->execute();
+} else {
+	echo 'This version of PHP is not supported, need to be at least 5.6.0.';
+}
 ?>
