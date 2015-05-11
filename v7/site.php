@@ -19,7 +19,7 @@
  */
 
 require_once 'settings.php';
-require_once 'handlers/gamehandler.php';
+require_once 'handlers/compohandler.php';
 require_once 'handlers/pagehandler.php';
 require_once 'handlers/eventhandler.php';
 require_once 'utils/dateutils.php';
@@ -84,13 +84,13 @@ class Site {
 									echo '<li><a href="pages/competitions.html"><span>Generelt</span></a></li>';
 									echo '<li><a href="https://compo.infected.no/index.php"><span>Compo side</span></a></li>';
 									
-									$gameList = GameHandler::getPublishedGames();
+									$compoList = CompoHandler::getCompos();
 									
-									foreach ($gameList as $game) {
-										if ($game != end($gameList)) {
-											echo '<li><a href="pages/game/id/' . $game->getId() . '.html"><span>' . $game->getTitle() . '</span></a></li>';
+									foreach ($compoList as $compo) {
+										if ($compo != end($compoList)) {
+											echo '<li><a href="pages/compo/id/' . $compo->getId() . '.html"><span>' . $compo->getTitle() . '</span></a></li>';
 										} else {
-											echo '<li class="last"><a href="pages/game/id/' . $game->getId() . '.html"><span>' . $game->getTitle() . '</span></a></li>';
+											echo '<li class="last"><a href="pages/compo/id/' . $compo->getId() . '.html"><span>' . $compo->getTitle() . '</span></a></li>';
 										}
 									}
 								echo '</ul>';

@@ -19,7 +19,7 @@
  */
 
 require_once 'handlers/pagehandler.php';
-require_once 'handlers/gamehandler.php';
+require_once 'handlers/compohandler.php';
 
 $page = PageHandler::getPageByName('competitions-general');
 
@@ -28,14 +28,14 @@ if ($page != null) {
 		echo '<h1>' . $page->getTitle() . '</h1>';
 	echo '</div>';
 	echo '<article class="contentBox">';
-		echo '<p><b>Det blir compoer i:</b></p>';
+		echo '<p><b>Det blir compoer i følgende spill:</b></p>';
 		
-		$gameList = GameHandler::getGames();
+		$compoList = CompoHandler::getCompos();
 		
-		if (!empty($gameList)) {
+		if (!empty($compoList)) {
 			echo '<ul>';
-				foreach ($gameList as $game) {
-					echo '<li>' . $game->getTitle() . ' (' . $game->getMode() . ') ' . $game->getPrice() . ',- ' . $game->getDescription() . '</li>';
+				foreach ($compoList as $compo) {
+					echo '<li>' . $compo->getTitle() . ' (' . $compo->getMode() . ') ' . $compo->getPrice() . ',- ' . $compo->getDescription() . '</li>';
 				}
 			echo '</ul>';
 		} else {

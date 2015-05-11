@@ -18,27 +18,19 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-require_once 'utils.php';
+require_once 'utils/dateutils.php';
+require_once 'handlers/compohandler.php';
 require_once 'handlers/pagehandler.php';
-require_once 'handlers/eventhandler.php';
 
-$id = isset($_GET['id']) ? $_GET['id'] : 0;
-
-if (isset($_GET['id'])) {
-	$game = GameHandler::getGame($id);
+if (isset($_GET['id']) &&
+	is_numeric($_GET['id'])) {
+	$compo = CompoHandler::getCompo($_GET['id']);
 	
-	if ($game != null && $game->isPublished()) {
+	if ($compo != null) {
 		// Get the page from the database.
-		$page = PageHandler::getPageByName($game->getName());
+		$page = PageHandler::getPageByName($compo->getName());
 		
 		if ($page != null) {
-			if (isset($_GET['message'])) {
-				echo '<article class="contentBox">';
-					echo '<h3>Melding!</h3>';
-					echo '<p>Clanen din er nå påmeldt ' . $game->getTitle() . ' compo.</p>';
-				echo '</article>';
-			}
-			
 			echo '<div class="contentTitleBox">';
 				echo '<h3>' . $page->getTitle() . '</h3>';
 			echo '</div>';
@@ -47,17 +39,27 @@ if (isset($_GET['id'])) {
 				$now = strtotime(date('Y-m-d H:i:s'));
 				
 				if ($game->isBookingTime()) {
-					echo '<b>Påmeldingsfristen er ' . Utils::getDayFromInt(date('w', $game->getEndTime())) . ' ' . date('d.m.Y', $game->getEndTime()) . ' klokken ' . date('H:i', $game->getEndTime()) . '.</b>';
+					echo '<b>Påmeldingsfristen er ' . DateUtils::getDayFromInt(date('w', $game->getEndTime())) . ' ' . date('d.m.Y', $game->getEndTime()) . ' klokken ' . date('H:i', $game->getEndTime()) . '.</b>';
 				} else {
-					echo '<b>Påmeldingen åpner ' . Utils::getDayFromInt(date('w', $game->getStartTime())) . ' ' . date('d.m.Y', $game->getStartTime()) . ' klokken ' . date('H:i', $game->getStartTime()) . '.</b>';
+					echo '<b>Påmeldingen åpner ' . DateUtils::getDayFromInt(date('w', $game->getStartTime())) . ' ' . date('d.m.Y', $game->getStartTime()) . ' klokken ' . date('H:i', $game->getStartTime()) . '.</b>';
 				}
 			echo '</article>';
 			
 			echo $page->getContent();
+		} else {
+			echo '<div class="contentTitleBox">';
+				echo '<h3>En feil oppstod:</h3>';
+			echo '</div>';
+			echo '<article class="contentBox">';
+				echo '<p>Siden til denne compo\'en finnes ikke.</p>';
+			echo '</article>';
 		}
 	} else {
+		echo '<div class="contentTitleBox">';
+			echo '<h3>En feil oppstod:</h3>';
+		echo '</div>';
 		echo '<article class="contentBox">';
-			echo '<p>Dette spillet finnes ikke!</p>';
+			echo '<p>Denne compo\'en finnes ikke!</p>';
 		echo '</article>';
 	}
 }

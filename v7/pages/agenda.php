@@ -18,6 +18,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+require_once 'utils/dateutils.php';
 require_once 'handlers/agendahandler.php';
 require_once 'handlers/eventhandler.php';
 
@@ -36,7 +37,7 @@ if (!empty($agendaList)) {
 			echo '</table>';
 			echo '</article>';
 			echo '<article class="contentBox">';
-				echo '<h3>' . Utils::getDayFromInt(date('w', $agenda->getStartTime())) . ' ' . date('d.m', $agenda->getStartTime()) . '</h3>';
+				echo '<h3>' . DateUtils::getDayFromInt(date('w', $agenda->getStartTime())) . ' ' . date('d.m', $agenda->getStartTime()) . '</h3>';
 			
 				echo '<table class="table">';
 					echo '<tr>';
