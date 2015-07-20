@@ -4,22 +4,22 @@
  *
  * Copyright (C) 2015 Infected <http://infected.no/>.
  *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3.0 of the License, or (at your option) any later version.
  * 
- * This program is distributed in the hope that it will be useful,
+ * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
-
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 require_once 'handlers/pagehandler.php';
-require_once 'handlers/gamehandler.php';
+require_once 'handlers/compohandler.php';
 
 $page = PageHandler::getPageByName('competitions-general');
 
@@ -28,14 +28,14 @@ if ($page != null) {
 		echo '<h1>' . $page->getTitle() . '</h1>';
 	echo '</div>';
 	echo '<article class="contentBox">';
-		echo '<p><b>Det blir compoer i:</b></p>';
+		echo '<p><b>Det blir compoer i følgende spill:</b></p>';
 		
-		$gameList = GameHandler::getGames();
+		$compoList = CompoHandler::getCompos();
 		
-		if (!empty($gameList)) {
+		if (!empty($compoList)) {
 			echo '<ul>';
-				foreach ($gameList as $game) {
-					echo '<li>' . $game->getTitle() . ' (' . $game->getMode() . ') ' . $game->getPrice() . ',- ' . $game->getDescription() . '</li>';
+				foreach ($compoList as $compo) {
+					echo '<li>' . $compo->getTitle() . ' (' . $compo->getMode() . ') ' . $compo->getPrice() . ',- ' . $compo->getDescription() . '</li>';
 				}
 			echo '</ul>';
 		} else {

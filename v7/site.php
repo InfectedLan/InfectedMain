@@ -4,22 +4,22 @@
  *
  * Copyright (C) 2015 Infected <http://infected.no/>.
  *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3.0 of the License, or (at your option) any later version.
  * 
- * This program is distributed in the hope that it will be useful,
+ * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
-
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 require_once 'settings.php';
-require_once 'handlers/gamehandler.php';
+require_once 'handlers/compohandler.php';
 require_once 'handlers/pagehandler.php';
 require_once 'handlers/eventhandler.php';
 require_once 'utils/dateutils.php';
@@ -84,13 +84,13 @@ class Site {
 									echo '<li><a href="pages/competitions.html"><span>Generelt</span></a></li>';
 									echo '<li><a href="https://compo.infected.no/index.php"><span>Compo side</span></a></li>';
 									
-									$gameList = GameHandler::getPublishedGames();
+									$compoList = CompoHandler::getCompos();
 									
-									foreach ($gameList as $game) {
-										if ($game != end($gameList)) {
-											echo '<li><a href="pages/game/id/' . $game->getId() . '.html"><span>' . $game->getTitle() . '</span></a></li>';
+									foreach ($compoList as $compo) {
+										if ($compo != end($compoList)) {
+											echo '<li><a href="pages/compo/id/' . $compo->getId() . '.html"><span>' . $compo->getTitle() . '</span></a></li>';
 										} else {
-											echo '<li class="last"><a href="pages/game/id/' . $game->getId() . '.html"><span>' . $game->getTitle() . '</span></a></li>';
+											echo '<li class="last"><a href="pages/compo/id/' . $compo->getId() . '.html"><span>' . $compo->getTitle() . '</span></a></li>';
 										}
 									}
 								echo '</ul>';
