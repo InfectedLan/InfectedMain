@@ -8,12 +8,12 @@
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 3.0 of the License, or (at your option) any later version.
- * 
+ *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -27,12 +27,12 @@ require_once 'utils/dateutils.php';
 class Site {
 	// Variable definitions.
 	private $pageName;
-	
+
 	public function __construct() {
 		// Set the variables.
 		$this->pageName = isset($_GET['page']) ? $_GET['page'] : reset(PageHandler::getPages())->getName();
 	}
-	
+
 	// Execute the site.
 	public function execute() {
 		echo '<!DOCTYPE html>';
@@ -64,7 +64,7 @@ class Site {
 
 					echo 'ga(\'create\', \'UA-54254513-1\', \'auto\');';
 					echo 'ga(\'send\', \'pageview\');';
-				echo '</script>';		
+				echo '</script>';
 			echo '</head>';
 			echo '<body>';
 				echo '<header>';
@@ -83,9 +83,9 @@ class Site {
 								echo '<ul>';
 									echo '<li><a href="pages/competitions.html"><span>Generelt</span></a></li>';
 									echo '<li><a href="https://compo.infected.no/index.php"><span>Compo side</span></a></li>';
-									
+
 									$compoList = CompoHandler::getCompos();
-									
+
 									foreach ($compoList as $compo) {
 										if ($compo != end($compoList)) {
 											echo '<li><a href="pages/compo/id/' . $compo->getId() . '.html"><span>' . $compo->getTitle() . '</span></a></li>';
@@ -100,19 +100,19 @@ class Site {
 							} else {
 								echo '<li><a href="pages/agenda.html"><span>Agenda</span></a></li>';
 							}
-							
+
 							if ($this->pageName == 'about') {
 								echo '<li><a class="active" href="pages/about.html"><span>Om Infected</span></a></li>';
 							} else {
 								echo '<li><a href="pages/about.html"><span>Om Infected</span></a></li>';
 							}
-							
+
 							if ($this->pageName == 'contact') {
 								echo '<li><a class="active" href="pages/contact.html"><span>Kontakt</span></a></li>';
 							} else {
 								echo '<li><a href="pages/contact.html"><span>Kontakt</span></a></li>';
 							}
-							
+
 							echo '<li class="last"><a href="https://crew.infected.no/" target="_blank"><span>Crew</span></a></li>';
 						echo '</ul>';
 					echo '</nav>';
@@ -124,17 +124,16 @@ class Site {
 					echo '</section>';
 					echo '<ul class="sponsors">';
 						echo '<li><p>Samarbeidspartnere</p></li>';
-						
-						$sponsorList = array('<li><a href="http://www.webhuset.no/" target="_blank"><img src="images/sponsors/webhuset.png" alt="Webhuset" style="width: 80%;"></a></li>',
-											 '<li><a href="http://www.kvantel.no/" target="_blank"><img src="images/sponsors/kvantel.png" alt="Kvantel" style="width: 50%;"></a></li>', 
-											 '<li><a href="http://www.bleiker.vgs.no/" target="_blank"><img src="images/sponsors/bleiker.png" alt="Bleiker VGS" style="width: 80%;"></a></li>', 
-											 '<li><a href="http://www.konsept-it.no/" target="_blank"><img src="images/sponsors/konsept_it.png" alt="Konsept IT" style="width: 80%;"></a></li>', 
-											 '<li><a href="http://www.askerkulturhus.no/huset/radar/" target="_blank"><img src="images/sponsors/radar.png" alt="Radar Cafe" style="width: 80%;"></a></li>', 
-											 '<li><a href="http://www.asker.kommune.no/" target="_blank"><img src="images/sponsors/asker_kommune.png" alt="Asker Kommune" style="width: 80%;"></a></li>');					
-						
+
+						$sponsorList = array('<li><a href="http://www.kvantel.no/" target="_blank"><img src="images/sponsors/kvantel.png" alt="Kvantel" style="width: 50%;"></a></li>',
+											 					 '<li><a href="http://www.bleiker.vgs.no/" target="_blank"><img src="images/sponsors/bleiker.png" alt="Bleiker VGS" style="width: 80%;"></a></li>',
+											 				 	 '<li><a href="http://www.konsept-it.no/" target="_blank"><img src="images/sponsors/konsept_it.png" alt="Konsept IT" style="width: 80%;"></a></li>',
+											 					 '<li><a href="http://www.askerkulturhus.no/huset/radar/" target="_blank"><img src="images/sponsors/radar.png" alt="Radar Cafe" style="width: 80%;"></a></li>',
+											 					 '<li><a href="http://www.asker.kommune.no/" target="_blank"><img src="images/sponsors/asker_kommune.png" alt="Asker Kommune" style="width: 80%;"></a></li>');
+
 						// Randomize the order of the list.
 						shuffle($sponsorList);
-						
+
 						// Print every sponsor.
 						foreach ($sponsorList as $sponsor) {
 							echo $sponsor;
@@ -150,18 +149,17 @@ class Site {
 							echo '<div class="infoTextNext">';
 								$event = EventHandler::getCurrentEvent();
 								$ticketText = $event->getTicketCount() > 1 ? 'billeter' : 'billett';
-								
+
 								echo '<p>';
 									echo '<b>Neste Lan er:</b><br>';
-									echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . '<br>';
-									echo 'Dørene åpner kl. ' . date('H:i', $event->getStartTime()). '<br>';
-									
+									echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . ', dørene åpner kl. ' . date('H:i', $event->getStartTime()) . '<br>';
+									echo 'Pris per billett: ' . $event->getTicketType()->getPrice() . ',- (Inkluderer medlemskap i Radar)' . '<br>';
+
 									if ($event->isBookingTime()) {
 										if (!empty($event->getAvailableTickets())) {
-											echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen<br>';
-											echo 'Pris per billett: ' . $event->getTicketType()->getPrice() . ',- inkludert medlemskap i Radar.';
+											echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen';
 										} else {
-											echo 'Det er ingen billetter igjen.';
+											echo 'Det er ingen billetter igjen';
 										}
 									} else {
 										echo 'Billettsalget starter ' . date('d', $event->getBookingTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getBookingTime())) .' kl. '  . date('H:i', $event->getBookingTime());
@@ -180,38 +178,38 @@ class Site {
 			echo '</body>';
 		echo '</html>';
 	}
-	
+
 	// Picks randomly a background from the background directory.
 	private function getBackground() {
 		$directory = 'images/backgrounds/';
 		$suffix = 'jpg';
 		$list = glob($directory . '*.' . $suffix);
-		
+
 		return $list[rand(0, count($list) - 1)];
 	}
-	
+
 	// Generates title based on current page / article.
 	private function getTitle() {
 		$theme = EventHandler::getCurrentEvent()->getTheme();
 		$title = $theme != null ? Settings::name . ' ' . $theme : Settings::name;
 		$space = ' - ';
-		
+
 		if (isset($_GET['page'])) {
 			// Fetch the page object from the database.
 			$page = PageHandler::getPageByName($this->pageName);
-			
+
 			if ($page != null) {
 				$title .= $space . $page->getTitle();
 			}
 		}
-		
+
 		return $title;
 	}
-	
+
 	private function viewPage($pageName) {
 		// Fetch the page object from the database and display it.
 		$page = PageHandler::getPageByName($pageName);
-		
+
 		if ($page != null) {
 			// Format the page as HTML.
 			echo '<div class="contentTitleBox">';
@@ -221,7 +219,7 @@ class Site {
 		} else {
 			$directory = 'pages/';
 			$fileName = $directory . $pageName . '.php';
-			
+
 			// If page doesn't exist in the database, check if there is a .php file that do. Else an error is shown.
 			if (in_array($fileName, glob($directory . '*.php'))) {
 				include $fileName;
