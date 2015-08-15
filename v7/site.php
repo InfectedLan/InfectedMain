@@ -93,6 +93,7 @@ class Site {
 											echo '<li class="last"><a href="pages/compo/id/' . $compo->getId() . '.html"><span>' . $compo->getTitle() . '</span></a></li>';
 										}
 									}
+
 								echo '</ul>';
 							echo '</li>';
 							if ($this->pageName == 'agenda') {
@@ -153,7 +154,7 @@ class Site {
 								echo '<p>';
 									echo '<b>Neste Lan er:</b><br>';
 									echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . ', dørene åpner kl. ' . date('H:i', $event->getStartTime()) . '<br>';
-									echo 'Pris per billett: ' . $event->getTicketType()->getPrice() . ',- (Inkluderer medlemskap i Radar)' . '<br>';
+									echo 'Pris per billett: <i>' . $event->getTicketType()->getPrice() . ',-</i> (Inkluderer medlemskap i Radar)' . '<br>';
 
 									if ($event->isBookingTime()) {
 										if (!empty($event->getAvailableTickets())) {
