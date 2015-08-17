@@ -8,12 +8,12 @@
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 3.0 of the License, or (at your option) any later version.
- * 
+ *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -29,20 +29,23 @@ if ($page != null) {
 	echo '</div>';
 	echo '<article class="contentBox">';
 		echo '<p><b>Det blir compoer i følgende spill:</b></p>';
-		
+
 		$compoList = CompoHandler::getCompos();
-		
+
 		if (!empty($compoList)) {
 			echo '<ul>';
 				foreach ($compoList as $compo) {
-					echo '<li>' . $compo->getTitle() . ' (' . $compo->getMode() . ') ' . $compo->getPrice() . ',- ' . $compo->getDescription() . '</li>';
+					$mode = !empty($compo->getMode()) ? '(' . $compo->getMode() . ') ' : null;
+					$price = $compo->getPrice() > 0 ? $compo->getPrice() . ',- ' : null;
+
+					echo '<li>' . $compo->getTitle() . ' ' . $mode . $price . $compo->getDescription() . '</li>';
 				}
 			echo '</ul>';
 		} else {
 			echo '<p>Ingen spill er lagt til i systemet enda.</p>';
 		}
 	echo '</article>';
-	
+
 	echo $page->getContent();
 }
 ?>
