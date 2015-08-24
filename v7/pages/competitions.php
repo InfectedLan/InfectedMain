@@ -36,9 +36,8 @@ if ($page != null) {
 			echo '<ul>';
 				foreach ($compoList as $compo) {
 					$mode = !empty($compo->getMode()) ? '(' . $compo->getMode() . ') ' : null;
-					$price = $compo->getPrice() > 0 ? $compo->getPrice() . ',- ' : null;
 
-					echo '<li>' . $compo->getTitle() . ' ' . $mode . $price . $compo->getDescription() . '</li>';
+					echo '<li>' . $compo->getTitle() . ' ' . $mode . $compo->getDescription() . '</li>';
 				}
 			echo '</ul>';
 		} else {
