@@ -163,7 +163,9 @@ class Site {
 											echo 'Det er ingen billetter igjen';
 										}
 									} else {
-										echo 'Billettsalget starter ' . date('d', $event->getBookingTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getBookingTime())) .' kl. '  . date('H:i', $event->getBookingTime());
+										$ticketSaleStartDate = date('Y-m-d', $event->getBookingTime()) == date('Y-m-d') ? 'i dag' : date('d', $event->getBookingTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getBookingTime()));
+
+										echo 'Billettsalget starter ' . $ticketSaleStartDate . ' kl. '  . date('H:i', $event->getBookingTime());
 									}
 								echo '</p>';
 							echo '</div>';
