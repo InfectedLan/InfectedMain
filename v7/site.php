@@ -149,7 +149,7 @@ class Site {
 						echo '<div class="infoText">';
 							echo '<div class="infoTextNext">';
 								$event = EventHandler::getCurrentEvent();
-								$ticketText = $event->getTicketCount() > 1 ? 'billeter' : 'billett';
+								$ticketText = $event->getTicketCount() > 1 ? 'billetter' : 'billett';
 
 								echo '<p>';
 									echo '<b>Neste Lan er:</b><br>';
