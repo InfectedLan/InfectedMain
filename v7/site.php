@@ -78,11 +78,11 @@ class Site {
 									echo '<li class="last"><a href="pages/packing-list.html"><span>Pakkeliste</span></a></li>';
 								echo '</ul>';
 							echo '</li>';
-							echo '<li><a href="https://tickets.infected.no/" target="_blank"><span>Billetter</span></a></li>';
+							echo '<li><a href="//tickets.' . Settings::domain . '/" target="_blank"><span>Billetter</span></a></li>';
 							echo '<li class="has-sub"><a href="pages/competitions.html"><span>Konkurranser</span></a>';
 								echo '<ul>';
 									echo '<li><a href="pages/competitions.html"><span>Generelt</span></a></li>';
-									echo '<li><a href="https://compo.infected.no/index.php"><span>Compo side</span></a></li>';
+									echo '<li><a href="//compo.' . Settings::domain . '/" target="_blank"><span>Compo side</span></a></li>';
 
 									$compoList = CompoHandler::getCompos();
 
@@ -114,7 +114,7 @@ class Site {
 								echo '<li><a href="pages/contact.html"><span>Kontakt</span></a></li>';
 							}
 
-							echo '<li class="last"><a href="https://crew.infected.no/" target="_blank"><span>Crew</span></a></li>';
+							echo '<li class="last"><a href="//crew.' . Settings::domain . '/" target="_blank"><span>Crew</span></a></li>';
 						echo '</ul>';
 					echo '</nav>';
 				echo '</header>';
