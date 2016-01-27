@@ -30,7 +30,8 @@ class Site {
 
 	public function __construct() {
 		// Set the variables.
-		$this->pageName = isset($_GET['page']) ? $_GET['page'] : reset(PageHandler::getPages())->getName();
+		$page = $_GET['page'];
+		$this->pageName = isset($page) ? $page : reset(PageHandler::getPages())->getName();
 	}
 
 	// Execute the site.
