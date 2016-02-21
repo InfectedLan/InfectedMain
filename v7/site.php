@@ -30,7 +30,8 @@ class Site {
 
 	public function __construct() {
 		// Set the variables.
-		$this->pageName = isset($_GET['page']) ? $_GET['page'] : reset(PageHandler::getPages())->getName();
+		$page = $_GET['page'];
+		$this->pageName = isset($page) ? $page : reset(PageHandler::getPages())->getName();
 	}
 
 	// Execute the site.
@@ -55,7 +56,7 @@ class Site {
 						echo 'background-position: center;';
 					echo '}';
 				echo '</style>';
-				echo '<script src="../api/scripts/jquery-1.11.1.min.js"></script>';
+				echo '<script src="../api/scripts/jquery-1.11.3.min.js"></script>';
 				echo '<script>';
 					echo '(function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){';
 					echo '(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),';
@@ -78,11 +79,11 @@ class Site {
 									echo '<li class="last"><a href="pages/packing-list.html"><span>Pakkeliste</span></a></li>';
 								echo '</ul>';
 							echo '</li>';
-							echo '<li><a href="https://tickets.infected.no/" target="_blank"><span>Billetter</span></a></li>';
+							echo '<li><a href="//tickets.' . Settings::domain . '/" target="_blank"><span>Billetter</span></a></li>';
 							echo '<li class="has-sub"><a href="pages/competitions.html"><span>Konkurranser</span></a>';
 								echo '<ul>';
 									echo '<li><a href="pages/competitions.html"><span>Generelt</span></a></li>';
-									echo '<li><a href="https://compo.infected.no/index.php"><span>Compo side</span></a></li>';
+									echo '<li><a href="//compo.' . Settings::domain . '/" target="_blank"><span>Compo side</span></a></li>';
 
 									$compoList = CompoHandler::getCompos();
 
@@ -114,7 +115,7 @@ class Site {
 								echo '<li><a href="pages/contact.html"><span>Kontakt</span></a></li>';
 							}
 
-							echo '<li class="last"><a href="https://crew.infected.no/" target="_blank"><span>Crew</span></a></li>';
+							echo '<li class="last"><a href="//crew.' . Settings::domain . '/" target="_blank"><span>Crew</span></a></li>';
 						echo '</ul>';
 					echo '</nav>';
 				echo '</header>';
@@ -126,11 +127,10 @@ class Site {
 					echo '<ul class="sponsors">';
 						echo '<li><p>Samarbeidspartnere</p></li>';
 
-						$sponsorList = array('<li><a href="http://www.kvantel.no/" target="_blank"><img src="images/sponsors/kvantel.png" alt="Kvantel" style="width: 50%;"></a></li>',
-											 					 '<li><a href="http://www.bleiker.vgs.no/" target="_blank"><img src="images/sponsors/bleiker.png" alt="Bleiker VGS" style="width: 80%;"></a></li>',
-											 				 	 '<li><a href="http://www.konsept-it.no/" target="_blank"><img src="images/sponsors/konsept_it.png" alt="Konsept IT" style="width: 80%;"></a></li>',
-											 					 '<li><a href="http://www.askerkulturhus.no/huset/radar/" target="_blank"><img src="images/sponsors/radar.png" alt="Radar Cafe" style="width: 80%;"></a></li>',
-											 					 '<li><a href="http://www.asker.kommune.no/" target="_blank"><img src="images/sponsors/asker_kommune.png" alt="Asker Kommune" style="width: 80%;"></a></li>');
+						$sponsorList = ['<li><a href="http://bleiker.vgs.no/" target="_blank"><img src="images/sponsors/bleiker.png" alt="Bleiker VGS" style="width: 80%;"></a></li>',
+											 			'<li><a href="http://askerkulturhus.no/huset/radar/" target="_blank"><img src="images/sponsors/radar.png" alt="Radar Cafe" style="width: 80%;"></a></li>',
+											 			'<li><a href="http://asker.kommune.no/" target="_blank"><img src="images/sponsors/asker_kommune.png" alt="Asker Kommune" style="width: 80%;"></a></li>',
+														'<li><a href="http://meny.no/" target="_blank"><img src="images/sponsors/meny.svg" alt="Meny" style="width: 80%;"></a></li>'];
 
 						// Randomize the order of the list.
 						shuffle($sponsorList);
@@ -149,7 +149,7 @@ class Site {
 						echo '<div class="infoText">';
 							echo '<div class="infoTextNext">';
 								$event = EventHandler::getCurrentEvent();
-								$ticketText = $event->getTicketCount() > 1 ? 'billeter' : 'billett';
+								$ticketText = $event->getTicketCount() > 1 ? 'billetter' : 'billett';
 
 								echo '<p>';
 									echo '<b>Neste Lan er:</b><br>';
@@ -163,7 +163,9 @@ class Site {
 											echo 'Det er ingen billetter igjen';
 										}
 									} else {
-										echo 'Billettsalget starter ' . date('d', $event->getBookingTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getBookingTime())) .' kl. '  . date('H:i', $event->getBookingTime());
+										$ticketSaleStartDate = date('Y-m-d', $event->getBookingTime()) == date('Y-m-d') ? 'i dag' : date('d', $event->getBookingTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getBookingTime()));
+
+										echo 'Billettsalget starter ' . $ticketSaleStartDate . ' kl. '  . date('H:i', $event->getBookingTime());
 									}
 								echo '</p>';
 							echo '</div>';
