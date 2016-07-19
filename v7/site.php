@@ -83,7 +83,7 @@ class Site {
 							echo '<li class="has-sub"><a href="pages/competitions.html"><span>Konkurranser</span></a>';
 								echo '<ul>';
 									echo '<li><a href="pages/competitions.html"><span>Generelt</span></a></li>';
-									echo '<li><a href="//compo.' . Settings::domain . '/" target="_blank"><span>Compo side</span></a></li>';
+									echo '<li><a href="//compo.' . Settings::domain . '/" target="_blank"><span>Composide</span></a></li>';
 
 									$compoList = CompoHandler::getCompos();
 
