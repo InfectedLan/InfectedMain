@@ -30,8 +30,7 @@ class Site {
 
 	public function __construct() {
 		// Set the variables.
-		$page = $_GET['page'];
-		$this->pageName = isset($page) ? $page : reset(PageHandler::getPages())->getName();
+		$this->pageName = isset($_GET['page']) ? $_GET['page'] : reset(PageHandler::getPages())->getName();
 	}
 
 	// Execute the site.
@@ -83,7 +82,7 @@ class Site {
 							echo '<li class="has-sub"><a href="pages/competitions.html"><span>Konkurranser</span></a>';
 								echo '<ul>';
 									echo '<li><a href="pages/competitions.html"><span>Generelt</span></a></li>';
-									echo '<li><a href="//compo.' . Settings::domain . '/" target="_blank"><span>Compo side</span></a></li>';
+									echo '<li><a href="//compo.' . Settings::domain . '/" target="_blank"><span>Composide</span></a></li>';
 
 									$compoList = CompoHandler::getCompos();
 
@@ -153,7 +152,8 @@ class Site {
 
 								echo '<p>';
 									echo '<b>Neste Lan er:</b><br>';
-									echo date('d', $event->getStartTime()) . '. - ' . date('d', $event->getEndTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . ', dørene åpner kl. ' . date('H:i', $event->getStartTime()) . '<br>';
+
+									echo date('d', $event->getStartTime()) . '. ' . (date('m', $event->getStartTime()) != date('m', $event->getEndTime()) ? DateUtils::getMonthFromInt(date('m', $event->getStartTime())) : null) . ' - ' . date('d', $event->getEndTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle() . ', dørene åpner kl. ' . date('H:i', $event->getStartTime()) . '<br>';
 									echo 'Pris per billett: <i>' . $event->getTicketType()->getPrice() . ',-</i> (Inkluderer medlemskap i Radar)' . '<br>';
 
 									if ($event->isBookingTime()) {
@@ -163,7 +163,11 @@ class Site {
 											echo 'Det er ingen billetter igjen';
 										}
 									} else {
-										$ticketSaleStartDate = date('Y-m-d', $event->getBookingTime()) == date('Y-m-d') ? 'i dag' : date('d', $event->getBookingTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getBookingTime()));
+										$currentDate = date('Y-m-d');
+										$tomorrowDate = date('Y-m-d', strtotime('+1 day', strtotime($currentDate)));
+										$bookingDate = date('Y-m-d', $event->getBookingTime());
+										$bookingDateFormattedText = date('d', $event->getBookingTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getBookingTime()));
+										$ticketSaleStartDate = $currentDate == $bookingDate ? 'i dag' : ($tomorrowDate == $bookingDate ? 'i morgen' : $bookingDateFormattedText);
 
 										echo 'Billettsalget starter ' . $ticketSaleStartDate . ' kl. '  . date('H:i', $event->getBookingTime());
 									}
