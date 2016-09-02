@@ -1,0 +1,424 @@
+body {
+     margin:0;
+}
+
+
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    margin:0;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    a {
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        padding:10px;
+        display: inline-block;
+    }
+
+footer {
+        
+        min-height:100px; 
+        padding-bottom:25px;
+    }
+
+
+
+
+
+
+@media screen and (min-width: 0px)
+{
+    
+
+    #hamburger {
+        display: block;
+        visibility: visible;
+        position: absolute;
+        right: 0;
+    }
+    
+    body {
+        /*background-color:purple;*/
+        background-image:none;
+        background-repeat:no-repeat; 
+        background-size:100%; 
+        background-attachment: fixed; 
+    }
+
+    nav {
+        position:fixed; 
+        width:100%; 
+        
+        display: inline-flex;
+    }
+
+    .Banner_Logo {
+        height:25px; 
+        width: 81.297px; 
+        padding:10px; 
+        /*background-color:#009900;*/
+    }
+     
+     .nav_Links {
+        width: 100%; 
+        display: none;
+        top: 45px;
+        left:0;
+        right: 0;
+        position: absolute;
+    }
+
+    .Banner_Links {
+        display: table;
+    }
+
+    .Banner_Links_P {
+        line-height: 1.6em;
+    }
+
+    .Infected_logo {
+        width: 80%;
+    }
+
+    #wrapper {
+        padding-top: 100px;
+        margin:0 auto;
+    }
+
+    #Overview_Post {
+        margin-bottom:450px; 
+        margin-left: 20px; 
+        margin-right:20px;
+    }
+
+    .Banner_Post {
+        width:100%; 
+        padding-bottom:25px;
+    }
+    
+    .Banner_Post_P {
+        max-width:80%;
+    }
+
+    .Banner_Info {
+        display: inline-block; 
+        width: auto;  
+        margin: auto 10px;
+        padding-bottom:50px;
+    }
+
+    .Sponsor_h3 {
+        padding-bottom:10px; 
+        border-bottom:solid 1px; 
+        max-width:80%
+    }    
+
+    .sponsor_img {
+        max-height: 50px;
+        max-width: 90%;
+        margin:10px;
+    }
+
+
+}
+
+@media screen and (min-width: 320px)
+{
+    
+
+    #hamburger {
+        display: block;
+        visibility: visible;
+        position: absolute;
+        right: 0;
+    }
+    
+    body {
+        /*background-color:purple;*/
+        background-image:url(Resources/img/Back_660.jpg);
+        background-repeat:no-repeat; 
+        background-size:100%; 
+        background-attachment: fixed; 
+    }
+
+    nav {
+        position:fixed; 
+        width:100%;  
+        display: inline-flex;
+    }
+
+    .Banner_Logo {
+        height:25px; 
+        width: 81.297px; 
+        padding:10px; 
+        /*background-color:#009900;*/
+    }
+     
+     .nav_Links {
+        width: 100%; 
+        display: none;
+        top: 45px;
+        left:0;
+        right: 0;
+        position: absolute;
+    }
+
+    .Banner_Links {
+        display: table;
+    }
+
+    .Banner_Links_P {
+        line-height: 1.6em;
+    }
+
+    .Infected_logo {
+        height: 60px;
+        width: auto;
+    }
+
+    #wrapper {
+        padding-top: 100px;
+        margin:0 auto;
+    }
+
+    #Overview_Post {
+        margin-bottom:450px; 
+        margin-left: 20px; 
+        margin-right:20px;
+    }
+
+    .Banner_Post {
+        width:100%; 
+        padding-bottom:25px;
+    }
+    
+    .Banner_Post_P {
+        max-width:80%;
+    }
+
+    .Banner_Info {
+        display: inline-block; 
+        width: 300px;  
+        margin: auto 10px;
+        padding-bottom:50px;
+    }
+
+    .information_content {
+        margin-left:10px; 
+        margin-right:10px; 
+        margin-top:25px; 
+        margin-bottom:25px; 
+        display:table;
+    }
+
+    .information_content_icon {
+        vertical-align:middle!important;
+        margin:auto 0!important; 
+        display:table-cell!important; 
+        width:50px!important;
+        font-size: 3em!important;
+    }
+
+    .information_content_textholder {
+        vertical-align:middle; 
+        display:table-cell; 
+        padding-left:20px;
+    }
+
+    .Sponsor_h3 {
+        padding-bottom:10px; 
+        border-bottom: solid 1px; 
+        max-width:80%
+    }    
+
+    .sponsor_img {
+        height: 50px;
+        margin:10px;
+    }
+
+
+}
+
+
+@media screen and (min-width: 660px)
+{
+    
+    #hamburger {
+        display: none;
+        visibility: collapse;
+    }
+
+    body {
+        background-image:url(Resources/img/Back_660.jpg);
+        background-repeat:no-repeat; 
+        background-size:100%; 
+        background-attachment: fixed; 
+    }
+
+    nav {
+        position:fixed; 
+        width:100%; 
+        display: inline-flex;
+    }
+
+    .nav_Links {
+        width: inherit; 
+        display: block;
+        margin-left:-101.297px;
+        background-color: transparent;
+        margin-top: 0;
+        position: static;
+    }
+
+    .Banner_Links {
+        display: inline-block;
+    }
+
+    .Banner_Links_P {
+        line-height: 1.6em;
+    }
+
+    .Banner_Info {
+        display: block; 
+        width: 350px;  
+        margin: auto 50px;
+        padding-bottom:50px;
+    }
+
+    .information_content {
+        margin-left:50px; 
+        margin-right:50px; 
+        margin-top:25px; 
+        margin-bottom:25px; 
+        display:table;
+    }
+
+    .information_content_icon {
+        vertical-align:middle!important;
+        margin:auto 0!important; 
+        display:table-cell!important; 
+        width:90px!important;
+        font-size: 5em!important;
+    }    
+
+}
+
+
+@media screen and (min-width: 919px)
+{
+    
+    body {
+        background-image:url(Resources/img/Back_660.jpg); 
+        background-repeat:no-repeat; 
+        background-size:100%; 
+        background-attachment: fixed; 
+
+    }
+    
+    .Banner_Post_P {
+        max-width:60%;
+    }
+
+    .information_content {
+        margin-left:100px; 
+        margin-right:100px; 
+        margin-top:25px; 
+        margin-bottom:25px; 
+        display:table;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1390px) 
+{
+
+    body {
+        margin:0;
+        background-image:url(Resources/img/Back.jpg); 
+        background-repeat:no-repeat; 
+        background-size:100%; 
+        background-attachment: fixed; 
+    }
+
+    nav {
+        position:fixed; 
+        width:100%; 
+        display: inline-flex;
+    }
+
+
+    .Banner_Links {
+        display: inline-block;
+    }
+
+    .Banner_Links_P {
+        line-height: 1.6em;
+    }
+
+
+
+
+    .nav_Links {
+        width: inherit; 
+        margin-left:-101.297px;
+    }
+
+    .Banner_Logo {
+        height:25px; 
+        width: 81.297px; 
+        padding:10px; 
+        /*background-color:#009900;*/
+    }
+
+
+
+
+    #wrapper {
+        padding-top: 160px;
+        margin:0 auto;
+    }
+
+    .Infected_logo {
+        height: auto;
+    }
+
+    #Overview_Post {
+        margin-bottom:450px; 
+        margin-left: 20px; 
+        margin-right:20px;
+    }
+
+    .Banner_Post {
+        width:100%; 
+        padding-bottom:25px;
+    }
+    
+    .Banner_Post_P {
+        max-width:40%;
+    }
+
+    .Banner_Info {
+        display: inline-block; 
+        width: 350px;  
+        margin: auto 50px;
+        padding-bottom:50px;
+    }
+
+    .Sponsor_h3 {
+        padding-bottom:10px; 
+        border-bottom: solid 1px; 
+        max-width:40%
+    }
+
+
+
+
+}
+    
