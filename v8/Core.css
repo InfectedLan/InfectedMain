@@ -23,11 +23,14 @@ p {
 footer {
         
         min-height:100px; 
-        padding-bottom:25px;
+        /*padding-bottom:25px;*/
     }
 
 
-
+    .information_content_container {
+        padding-top:50px;
+        padding-bottom: 50px;
+    }
 
 
 
@@ -106,7 +109,7 @@ footer {
     }
 
     .Banner_Info {
-        display: inline-block; 
+        display: block; 
         width: auto;  
         margin: auto 10px;
         padding-bottom:50px;
@@ -122,6 +125,26 @@ footer {
         max-height: 50px;
         max-width: 90%;
         margin:10px;
+    }
+
+    .information_content_container {
+        padding-top:50px;
+        padding-bottom: 50px;
+    }
+
+    .agenda_container {
+    display: block;
+    }
+
+    .agenda_container_row {
+        display: table-row;
+    }
+
+    .agenda_container_row_text {
+        display: block;
+        padding: 0px;
+        margin: 10px;
+        word-wrap: break-word;
     }
 
 
@@ -208,6 +231,8 @@ footer {
         padding-bottom:50px;
     }
 
+
+
     .information_content {
         margin-left:10px; 
         margin-right:10px; 
@@ -290,6 +315,13 @@ footer {
         padding-bottom:50px;
     }
 
+    .information_content_container {
+        padding-top:50px;
+        padding-bottom: 50px;
+        margin-left:100px;
+        margin-right: 100px;
+    }
+
     .information_content {
         margin-left:50px; 
         margin-right:50px; 
@@ -305,6 +337,21 @@ footer {
         width:90px!important;
         font-size: 5em!important;
     }    
+
+    .agenda_container {
+    display: table-row-group;
+    }
+
+    .agenda_container_row {
+        display: table-row;
+    }
+
+    .agenda_container_row_text {
+        display: table-cell;
+        padding: 10px;
+        padding-left:50px;
+        padding-right:50px;
+    }
 
 }
 
@@ -324,12 +371,26 @@ footer {
         max-width:60%;
     }
 
+    .information_content_container {
+        padding-top:50px;
+        padding-bottom: 50px;
+        margin-left:200px;
+        margin-right: 200px;
+    }
+
     .information_content {
         margin-left:100px; 
         margin-right:100px; 
         margin-top:25px; 
         margin-bottom:25px; 
         display:table;
+    }
+
+    .agenda_container_row_text {
+        display: table-cell;
+        padding: 10px;
+        padding-left:50px;
+        padding-right:50px;
     }
 
 }
@@ -409,6 +470,13 @@ footer {
         width: 350px;  
         margin: auto 50px;
         padding-bottom:50px;
+    }
+
+    .agenda_container_row_text {
+        display: table-cell;
+        padding: 10px;
+        padding-left:75px;
+        padding-right:75px;
     }
 
     .Sponsor_h3 {

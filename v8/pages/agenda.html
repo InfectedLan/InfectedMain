@@ -1,127 +1,73 @@
-<!DOCTYPE html>
-<html lang="no" xmlns="http://www.w3.org/1999/xhtml">
-
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, inition-scale=1.0" />
-        <!--<meta http-equiv="refresh" content="1;">-->
-        <link href="..\Core.css" rel="stylesheet" type="text/css" />
-        <link href="..\Resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <script src="..\Resources/scripts/hamburger.js" type="text/javascript" ></script>
-
-    </head>
-    <body>
-        <nav>
-            <img class="Banner_Logo" src="..\Resources\img\infected_logo.png" />
-            <span id="hamburger" style="float:right">
-                <i style="padding:7px 10px 7px 10px; color:white;" class="fa fa-bars fa-2x" aria-hidden="true" onclick="LinksOnMobile('nav_Links_Top')"></i>
-            </span>
-            <br style="clear:both;" />
-            <center id="nav_Links_Top" class="nav_Links">
-                <a class="Banner_Links" href="#">
-                    <p class="Banner_Links_P">Billetter</p>
-                </a>
-                <a class="Banner_Links" href="#">
-                    <p class="Banner_Links_P">Agenda</p>
-                </a>
-                <a class="Banner_Links" href="#">
-                    <p class="Banner_Links_P">Konkurranser</p>
-                </a>
-                <a class="Banner_Links" href="#">
-                    <p class="Banner_Links_P">Informasjon</p>
-                </a>
-                <a class="Banner_Links" href="#">
-                    <p class="Banner_Links_P">Crew</p>
-                </a>
-            </center>
-
-           
-        </nav>
-
         <center id="wrapper">
 
-            <div id="Overview_Post">
-                <img class="Infected_logo" src="..\Resources\img\infected_logo.png" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px;" />    
-                <h1 style="color:white;">Delta på ett av Akershus største LAN party</h1>
-                <h3 style="color:white;">Vi ønsker alle som er interresert, velkommen!</h3>
-                <a class="no_a" href="#" style="background-color:#009900; margin:20px;">
-                    <p style="padding:10px;">Bestill billett</p>
-                </a>
+            <div id="Overview_Post" style="margin-bottom:150px;">
+                <i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-wpforms Foreground2" aria-hidden="true"></i>
+                <h1 style="color:white;">Agenda</h1>
+                <h3 style="color:white;">Her er oversikten over hva som vil foregå og når</h3>
             </div>
-
-
-
-            <center class="Banner_Post" style="background-color:#009900;">
-                        
-                <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
-                    <h2 style="color:white;">Gjennomføring</h2>
-                    <p class="Banner_Post_P" style="text-align:center; color:White;">Arrangementet gjennomføres første helg av høstferien og vinterferien. Dørene åpner 18:00, men det lønner seg å komme i god tid før dette om du ønsker å komme raskt i gang. Det tar tid å komme inn, og du må beregne litt ventetid.</p>
-                </center>
-
-            </center>
-
-            <center style="background-color:white; padding-top:50px; padding-bottom:50px; min-height:100px;">
-
-                <div class="Banner_Info">
-                    <i style="color:#009900;" class="fa fa-trophy fa-4x" aria-hidden="true"></i>
-                    <h3>Konkurranser</h3>
-                </div>
-
-                <div class="Banner_Info" >
-                    <i style="color:#009900;" class="fa fa-ticket fa-4x" aria-hidden="true"></i>
-                    <h3>Billetter</h3>
-                    <p style="text-align:center;">Billetter til infected kan bestilles på vår ticket side</p>
-                    <p style="text-align:center;">Prisen per billett er på: <strong>350,-</strong></p>
-                    <p style="text-align:center;">Det er <strong>150</strong> av <strong>400</strong></p>
-                    <a class="no_a" href="#" style="background-color:#009900; margin:20px;">
-                        <p style="padding:10px;">Bestill billett</p>
-                    </a>
-                </div>
-                
-                <div class="Banner_Info">
-                    <i style="color:#009900;" class="fa fa-wpforms fa-4x" aria-hidden="true"></i>
-                    <h3>Agenda</h3>
-                </div>
-
-            </center>
 
         </center>
 
-        <footer>
-            
-            <center style="padding-top: 25px;">
-                <a href="#">
-                    <p>Om</p>
-                </a>
-                <span style="border: white solid 1px;"></span>
-                <a href="#">
-                    <p>Kontakt</p>
-                </a>
-            </center>
-            
-            <center style="padding-top:10px; padding-bottom:10px;">
-                <h3 class="Sponsor_h3">Samarbeidspartnere</h3>
 
-                <img class="sponsor_img" src="..\Resources\img\radar.png" />
-                <img class="sponsor_img" src="..\Resources\img\bleiker.png" />
-                <img class="sponsor_img" src="..\Resources\img\asker_kommune.png" />
-                <img class="sponsor_img" src="..\Resources\img\meny.png" />
+        <div id="General_information" class="Background2">
+                <center class="Banner_Post">
+                            
+                    <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
+                        <i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>
+                        <h2 style="color:black;">Agendaen</h2>
+                        <p style="text-align:center; color:black;">Her finner du agendaen for dette LAN-et</p>
+                    </center>
 
-            </center>
-            
-            <center>
+                </center>
+
+                <center style="padding-bottom:25px;">
+                    <h2 style="margin:0; padding-bottom:10px;">Fredag</h2>
+                    <div class="agenda_container">
+                        <div class="agenda_container_row Background1 Foreground2">
+                            <p class="agenda_container_row_text">19:30</p>
+                            <p class="agenda_container_row_text">Påmeldingsfrist</p>
+                            <p class="agenda_container_row_text">Påmeldingsfrist for både cs og lol</p>
+                        </div>
+                        <div class="agenda_container_row Background2">
+                            <p class="agenda_container_row_text">20:15</p>
+                            <p class="agenda_container_row_text">League of Legends</p>
+                            <p class="agenda_container_row_text">Infomøte - Ved game</p>
+                        </div>
+                        <div class="agenda_container_row Background1 Foreground2">
+                            <p class="agenda_container_row_text">20:30</p>
+                            <p class="agenda_container_row_text">League of Legends</p>
+                            <p class="agenda_container_row_text">Gruppespill Runde 1</p>
+                        </div>
+                        <div class="agenda_container_row Background2">
+                            <p class="agenda_container_row_text">20:45</p>
+                            <p class="agenda_container_row_text">CS:GO</p>
+                            <p class="agenda_container_row_text">Infomøte - Ved game</p>
+                        </div>
+                        <div class="agenda_container_row Background1 Foreground2">
+                            <p class="agenda_container_row_text">21:00</p>
+                            <p class="agenda_container_row_text">CS:GO</p>
+                            <p class="agenda_container_row_text">Gruppespill Runde 1</p>
+                        </div>
+                        <div class="agenda_container_row Background2">
+                            <p class="agenda_container_row_text">21:30</p>
+                            <p class="agenda_container_row_text">League of Legends</p>
+                            <p class="agenda_container_row_text">Gruppespill Runde 2</p>
+                        </div>
+                        <div class="agenda_container_row Background1 Foreground2">
+                            <p class="agenda_container_row_text">22:00</p>
+                            <p class="agenda_container_row_text">CS:GO</p>
+                            <p class="agenda_container_row_text">Gruppespill Runde 2</p>
+                        </div>
+                        <div class="agenda_container_row Background2">
+                            <p class="agenda_container_row_text">22:30</p>
+                            <p class="agenda_container_row_text">League of Legends</p>
+                            <p class="agenda_container_row_text">Gruppespill Runde 3</p>
+                        </div>
+                        
+
+                    </div>
+                </center>
+
+
                 
-                <h3 style="color:white;">Infected Lan er også på</h3>
-                
-                <a href="https://www.facebook.com/infectedlan/?fref=ts" style="border:#3b5998 solid 1px; height: 1em; width:1em; background-color:#3b5998; border-radius:50%; margin:0 2.5px;">
-                    <i class="fa fa-facebook fa-1x" aria-hidden="true"></i>
-                </a>
-                <a href="https://twitter.com/infected_lan" style="border:#1da1f2 solid 1px; height: 1em; width:1em; background-color:#1da1f2; border-radius:50%; margin:0 2.5px;">
-                    <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
-                </a>
-            </center>
-
-        </footer>
-
-    </body>
-</html>
+        </div>

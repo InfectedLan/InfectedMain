@@ -24,10 +24,10 @@
                 <a class="Banner_Links" href="https://tickets.infected.no">
                     <p class="Banner_Links_P">Billetter</p>
                 </a>
-                <a class="Banner_Links" href="#">
+                <a class="Banner_Links" href="?pages=agenda">
                     <p class="Banner_Links_P">Agenda</p>
                 </a>
-                <a class="Banner_Links" href="#">
+                <a class="Banner_Links" href="?pages=competition">
                     <p class="Banner_Links_P">Konkurranser</p>
                 </a>
                 <a class="Banner_Links" href="?pages=onsite">
@@ -60,14 +60,16 @@
         <footer>
             
             <center style="padding-top: 25px;">
-                <a href="#">
+                <a href="?pages=about">
                     <p>Om</p>
                 </a>
                 <span style="border: white solid 1px;"></span>
-                <a href="#">
+                <a href="?pages=contact">
                     <p>Kontakt</p>
                 </a>
             </center>
+
+            
             
             <center style="padding-top:10px; padding-bottom:10px;">
                 <h3 class="Sponsor_h3">Samarbeidspartnere</h3>
@@ -75,11 +77,11 @@
                 <img class="sponsor_img" src="Resources\img\radar.png" />
                 <img class="sponsor_img" src="Resources\img\bleiker.png" />
                 <img class="sponsor_img" src="Resources\img\asker_kommune.png" />
-                <img class="sponsor_img" src="Resources\img\meny.png" />
+                <!--<img class="sponsor_img" src="Resources\img\meny.png" />-->
 
             </center>
             
-            <center>
+            <center style="padding-bottom:25px;">
                 
                 <h3 style="color:white;">Infected Lan er også på</h3>
                 
@@ -91,8 +93,8 @@
                 </a>
             </center>
 
-            <center>
-                <p style="color:white; text-align:center; margin-top:25px;">© 2016 Brage</p>
+            <center style="padding-bottom:10px; padding-top:10px; background-color:rgb(10,10,10);" >
+                <p style="color:white; text-align:center;">© 2016 Brage</p>
             </center>
         </footer>
 
