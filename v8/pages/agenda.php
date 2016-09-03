@@ -24,69 +24,57 @@ require_once 'handlers/eventhandler.php';
 
 
 echo '<center id="wrapper">';
+  echo '<div id="Overview_Post" style="margin-bottom:150px;">';
+    echo '<i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-wpforms Foreground2" aria-hidden="true"></i>';
+    echo '<h1 style="color:white;">Agenda</h1>';
+    echo '<h3 style="color:white;">Her er oversikten over hva som vil foregå og når</h3>';
+  echo '</div>';
+echo '</center>';
+echo '<div id="General_information" class="Background2">';
+  echo '<center class="Banner_Post">';
+    echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
+      echo '<i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>';
+      echo '<h2 style="color:black;">Agendaen</h2>';
+      echo '<p style="text-align:center; color:black;">Her finner du agendaen for dette LAN-et</p>';
+    echo '</center>';
+  echo '</center>';
 
-            <div id="Overview_Post" style="margin-bottom:150px;">
-                <i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-wpforms Foreground2" aria-hidden="true"></i>
-                <h1 style="color:white;">Agenda</h1>
-                <h3 style="color:white;">Her er oversikten over hva som vil foregå og når</h3>
-            </div>
+  $agendaList = AgendaHandler::getPublishedAgendas();
 
-        </center>
+  if (!empty($agendaList)) {
+  	$event = EventHandler::getCurrentEvent();
+  	$day = 0;
+    $variable = true;
 
+    echo '<center style="padding-bottom:25px;">';
+      echo '<h2 style="margin:0; padding-bottom:10px;">Fredag</h2>';
+      echo '<div class="agenda_container">';
 
-        <div id="General_information" class="Background2">
-                <center class="Banner_Post">
+      	foreach ($agendaList as $agenda) {
+          if ($variable) {
+            echo '<div class="agenda_container_row Background1 Foreground2">';
+              echo '<p class="agenda_container_row_text">' . date('H:i', $agenda->getStartTime()) . '</p>';
+              echo '<p class="agenda_container_row_text">' . $agenda->getTitle() . '</p>';
+              echo '<p class="agenda_container_row_text">' . $agenda->getDescription() . '</p>';
+            echo '</div>';
+          } else {
+            echo '<div class="agenda_container_row Background2">';
+              echo '<p class="agenda_container_row_text">' . date('H:i', $agenda->getStartTime()) . '</p>';
+              echo '<p class="agenda_container_row_text">' . $agenda->getTitle() . '</p>';
+              echo '<p class="agenda_container_row_text">' . $agenda->getDescription() . '</p>';
+            echo '</div>';
+          }
+        }
 
-                    <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
-                        <i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>
-                        <h2 style="color:black;">Agendaen</h2>
-                        <p style="text-align:center; color:black;">Her finner du agendaen for dette LAN-et</p>
-                    </center>
+      echo '</div>';
+    echo '</center>';
+  } else {
+  	echo '<article class="contentBox">';
+  		echo '<p>Agenda\'en for kommende arrangement har ikke blitt publisert enda!</p>';
+  	echo '</article>';
+  }
 
-                </center>
-
-                <?php
-                $agendaList = AgendaHandler::getPublishedAgendas();
-
-                if (!empty($agendaList)) {
-                	$event = EventHandler::getCurrentEvent();
-                	$day = 0;
-
-                	foreach ($agendaList as $agenda) {
-                		if ($day != date('d', $agenda->getStartTime())) {
-                			echo '</table>';
-                			echo '</article>';
-                			echo '<article class="contentBox">';
-                				echo '<h3>' . DateUtils::getDayFromInt(date('w', $agenda->getStartTime())) . ' den ' . date('d', $agenda->getStartTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $agenda->getStartTime())) . '</h3>';
-
-                				echo '<table class="table">';
-                					echo '<tr>';
-                						echo '<th>Når?</th>';
-                						echo '<th>Hva?</th>';
-                						echo '<th>Informasjon:</th>';
-                					echo '</tr>';
-                		}
-
-                		echo '<tr>';
-                			echo '<td>' . date('H:i', $agenda->getStartTime()) . '</td>';
-                			echo '<td>' . $agenda->getTitle() . '</td>';
-                			echo '<td>' . $agenda->getDescription() . '</td>';
-                		echo '</tr>';
-
-                		if ($agenda == end($agendaList)) {
-                			echo '</table>';
-                			echo '</article>';
-                		} else {
-                			$day = date('d', $agenda->getStartTime());
-                		}
-                	}
-                } else {
-                	echo '<article class="contentBox">';
-                		echo '<p>Agenda\'en for kommende arrangement har ikke blitt publisert enda!</p>';
-                	echo '</article>';
-                }
-
-                ?>
+                /*
                 <center style="padding-bottom:25px;">
                     <h2 style="margin:0; padding-bottom:10px;">Fredag</h2>
                     <div class="agenda_container">
@@ -130,11 +118,7 @@ echo '<center id="wrapper">';
                             <p class="agenda_container_row_text">League of Legends</p>
                             <p class="agenda_container_row_text">Gruppespill Runde 3</p>
                         </div>
-
-
                     </div>
                 </center>
-
-
-
-        </div>
+                */
+?>
