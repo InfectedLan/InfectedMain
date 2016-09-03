@@ -22,7 +22,6 @@ require_once 'utils/dateutils.php';
 require_once 'handlers/agendahandler.php';
 require_once 'handlers/eventhandler.php';
 
-
 echo '<center id="wrapper">';
   echo '<div id="Overview_Post" style="margin-bottom:150px;">';
     echo '<i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-wpforms Foreground2" aria-hidden="true"></i>';
@@ -46,79 +45,45 @@ echo '<div id="General_information" class="Background2">';
   	$day = 0;
     $variable = true;
 
-    echo '<center style="padding-bottom:25px;">';
-      echo '<h2 style="margin:0; padding-bottom:10px;">Fredag</h2>';
-      echo '<div class="agenda_container">';
-
-      	foreach ($agendaList as $agenda) {
-          if ($variable) {
-            echo '<div class="agenda_container_row Background1 Foreground2">';
-              echo '<p class="agenda_container_row_text">' . date('H:i', $agenda->getStartTime()) . '</p>';
-              echo '<p class="agenda_container_row_text">' . $agenda->getTitle() . '</p>';
-              echo '<p class="agenda_container_row_text">' . $agenda->getDescription() . '</p>';
-            echo '</div>';
-          } else {
-            echo '<div class="agenda_container_row Background2">';
-              echo '<p class="agenda_container_row_text">' . date('H:i', $agenda->getStartTime()) . '</p>';
-              echo '<p class="agenda_container_row_text">' . $agenda->getTitle() . '</p>';
-              echo '<p class="agenda_container_row_text">' . $agenda->getDescription() . '</p>';
+    	foreach ($agendaList as $agenda) {
+        if ($day != date('d', $agenda->getStartTime())) {
+          if ($agenda != reset($agendaList)) {
             echo '</div>';
           }
+
+          echo '<center style="padding-bottom:25px;">';
+          echo '<h2 style="margin:0; padding-bottom:10px;">' . DateUtils::getDayFromInt(date('w', $agenda->getStartTime())) . ' den ' . date('d', $agenda->getStartTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $agenda->getStartTime())) . '</h2>';
+          echo '<div class="agenda_container">';
         }
 
-      echo '</div>';
-    echo '</center>';
+        if ($variable) {
+          echo '<div class="agenda_container_row Background1 Foreground2">';
+            echo '<p class="agenda_container_row_text">' . date('H:i', $agenda->getStartTime()) . '</p>';
+            echo '<p class="agenda_container_row_text">' . $agenda->getTitle() . '</p>';
+            echo '<p class="agenda_container_row_text">' . $agenda->getDescription() . '</p>';
+          echo '</div>';
+        } else {
+          echo '<div class="agenda_container_row Background2">';
+            echo '<p class="agenda_container_row_text">' . date('H:i', $agenda->getStartTime()) . '</p>';
+            echo '<p class="agenda_container_row_text">' . $agenda->getTitle() . '</p>';
+            echo '<p class="agenda_container_row_text">' . $agenda->getDescription() . '</p>';
+          echo '</div>';
+        }
+
+        $variable = !$variable;
+
+        if ($agenda == end($agendaList)) {
+    			echo '</div>';
+          echo '</center>';
+    		} else {
+    			$day = date('d', $agenda->getStartTime());
+    		}
+      }
   } else {
   	echo '<article class="contentBox">';
   		echo '<p>Agenda\'en for kommende arrangement har ikke blitt publisert enda!</p>';
   	echo '</article>';
   }
 
-                /*
-                <center style="padding-bottom:25px;">
-                    <h2 style="margin:0; padding-bottom:10px;">Fredag</h2>
-                    <div class="agenda_container">
-                        <div class="agenda_container_row Background1 Foreground2">
-                            <p class="agenda_container_row_text">19:30</p>
-                            <p class="agenda_container_row_text">Påmeldingsfrist</p>
-                            <p class="agenda_container_row_text">Påmeldingsfrist for både cs og lol</p>
-                        </div>
-                        <div class="agenda_container_row Background2">
-                            <p class="agenda_container_row_text">20:15</p>
-                            <p class="agenda_container_row_text">League of Legends</p>
-                            <p class="agenda_container_row_text">Infomøte - Ved game</p>
-                        </div>
-                        <div class="agenda_container_row Background1 Foreground2">
-                            <p class="agenda_container_row_text">20:30</p>
-                            <p class="agenda_container_row_text">League of Legends</p>
-                            <p class="agenda_container_row_text">Gruppespill Runde 1</p>
-                        </div>
-                        <div class="agenda_container_row Background2">
-                            <p class="agenda_container_row_text">20:45</p>
-                            <p class="agenda_container_row_text">CS:GO</p>
-                            <p class="agenda_container_row_text">Infomøte - Ved game</p>
-                        </div>
-                        <div class="agenda_container_row Background1 Foreground2">
-                            <p class="agenda_container_row_text">21:00</p>
-                            <p class="agenda_container_row_text">CS:GO</p>
-                            <p class="agenda_container_row_text">Gruppespill Runde 1</p>
-                        </div>
-                        <div class="agenda_container_row Background2">
-                            <p class="agenda_container_row_text">21:30</p>
-                            <p class="agenda_container_row_text">League of Legends</p>
-                            <p class="agenda_container_row_text">Gruppespill Runde 2</p>
-                        </div>
-                        <div class="agenda_container_row Background1 Foreground2">
-                            <p class="agenda_container_row_text">22:00</p>
-                            <p class="agenda_container_row_text">CS:GO</p>
-                            <p class="agenda_container_row_text">Gruppespill Runde 2</p>
-                        </div>
-                        <div class="agenda_container_row Background2">
-                            <p class="agenda_container_row_text">22:30</p>
-                            <p class="agenda_container_row_text">League of Legends</p>
-                            <p class="agenda_container_row_text">Gruppespill Runde 3</p>
-                        </div>
-                    </div>
-                </center>
-                */
+echo '</div>';
 ?>

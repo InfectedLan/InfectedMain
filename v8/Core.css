@@ -395,6 +395,15 @@ footer {
 
 }
 
+@media screen and (min-width: 1068px)
+{
+    .Banner_Info {
+        display: inline-block; 
+        width: 250px;  
+        margin: auto 50px;
+        padding-bottom:50px;
+    }
+}
 
 
 @media screen and (min-width: 1390px) 
