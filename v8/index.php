@@ -1,102 +1,30 @@
-<!DOCTYPE html>
-<html lang="no" xmlns="http://www.w3.org/1999/xhtml">
+<?php
+/**
+ * This file is part of InfectedMain.
+ *
+ * Copyright (C) 2013-2016 Infected <http://infected.no/>.
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3.0 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, inition-scale=1.0" />
-        <!--<meta http-equiv="refresh" content="1;">-->
-        <link href="Core.css" rel="stylesheet" type="text/css" />
-        <link href="Color.css" rel="stylesheet" type="text/css" />
-        <link href="Resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <script src="Resources/scripts/hamburger.js" type="text/javascript" ></script>
+require_once 'site.php';
 
-    </head>
-    <body>
-        <nav>
-            <a class="Banner_Logo" href="/">
-                <img class="Banner_Logo" style="padding:0;" src="Resources\img\infected_logo.png" />
-            </a>
-            <span id="hamburger" style="float:right">
-                <i style="padding:7px 10px 7px 10px; color:white;" class="fa fa-bars fa-2x" aria-hidden="true" onclick="LinksOnMobile('nav_Links_Top')"></i>
-            </span>
-            <br style="clear:both;" />
-            <center id="nav_Links_Top" class="nav_Links">
-                <a class="Banner_Links" href="https://tickets.infected.no">
-                    <p class="Banner_Links_P">Billetter</p>
-                </a>
-                <a class="Banner_Links" href="?pages=agenda">
-                    <p class="Banner_Links_P">Agenda</p>
-                </a>
-                <a class="Banner_Links" href="?pages=competition">
-                    <p class="Banner_Links_P">Konkurranser</p>
-                </a>
-                <a class="Banner_Links" href="?pages=onsite">
-                    <p class="Banner_Links_P">Informasjon</p>
-                </a>
-                <a class="Banner_Links" href="https://crew.infected.no">
-                    <p class="Banner_Links_P">Crew</p>
-                </a>
-            </center>
-
-           
-        </nav>
-
-        <?php
-
-            $pageName = isset($_GET['pages']) ? $_GET['pages'] : 'home';
-
-            $pageDir = 'pages';
-            $fileName = $pageDir . '/' . $pageName . '.' . 'html';
-            $pageList = glob($fileName);
-
-            if (in_array($fileName, $pageList))
-            {
-                include $fileName;
-            } 
-
-
-        ?>
-
-        <footer>
-            
-            <center style="padding-top: 25px;">
-                <a href="?pages=about">
-                    <p>Om</p>
-                </a>
-                <span style="border: white solid 1px;"></span>
-                <a href="?pages=contact">
-                    <p>Kontakt</p>
-                </a>
-            </center>
-
-            
-            
-            <center style="padding-top:10px; padding-bottom:10px;">
-                <h3 class="Sponsor_h3">Samarbeidspartnere</h3>
-
-                <img class="sponsor_img" src="Resources\img\radar.png" />
-                <img class="sponsor_img" src="Resources\img\bleiker.png" />
-                <img class="sponsor_img" src="Resources\img\asker_kommune.png" />
-                <!--<img class="sponsor_img" src="Resources\img\meny.png" />-->
-
-            </center>
-            
-            <center style="padding-bottom:25px;">
-                
-                <h3 style="color:white;">Infected Lan er også på</h3>
-                
-                <a href="https://www.facebook.com/infectedlan/?fref=ts" style="border:#3b5998 solid 1px; height: 1em; width:1em; background-color:#3b5998; border-radius:50%; margin:0 2.5px;">
-                    <i class="fa fa-facebook fa-1x" aria-hidden="true"></i>
-                </a>
-                <a href="https://twitter.com/infected_lan" style="border:#1da1f2 solid 1px; height: 1em; width:1em; background-color:#1da1f2; border-radius:50%; margin:0 2.5px;">
-                    <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
-                </a>
-            </center>
-
-            <center style="padding-bottom:10px; padding-top:10px; background-color:rgb(10,10,10);" >
-                <p style="color:white; text-align:center;">© 2016 Brage</p>
-            </center>
-        </footer>
-
-    </body>
-</html>
+if (version_compare(PHP_VERSION, '5.6.0') >= 0) {
+	// Execute the site.
+	$site = new Site();
+	$site->execute();
+} else {
+	echo 'This version of PHP is not supported, need to be at least 5.6.0.';
+}
+?>

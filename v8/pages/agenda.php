@@ -24,7 +24,7 @@ require_once 'handlers/eventhandler.php';
 
 echo '<center id="wrapper">';
   echo '<div id="Overview_Post" style="margin-bottom:150px;">';
-    echo '<i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-wpforms Foreground2" aria-hidden="true"></i>';
+    echo '<i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-calendar-o Foreground2" aria-hidden="true"></i>';
     echo '<h1 style="color:white;">Agenda</h1>';
     echo '<h3 style="color:white;">Her er oversikten over hva som vil foregå og når</h3>';
   echo '</div>';
@@ -45,40 +45,43 @@ echo '<div id="General_information" class="Background2">';
   	$day = 0;
     $variable = true;
 
-    	foreach ($agendaList as $agenda) {
-        if ($day != date('d', $agenda->getStartTime())) {
-          if ($agenda != reset($agendaList)) {
-            echo '</div>';
-          }
+    echo '<center style="padding-bottom:25px;">';
 
-          echo '<center style="padding-bottom:25px;">';
-          echo '<h2 style="margin:0; padding-bottom:10px;">' . DateUtils::getDayFromInt(date('w', $agenda->getStartTime())) . ' den ' . date('d', $agenda->getStartTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $agenda->getStartTime())) . '</h2>';
-          echo '<div class="agenda_container">';
-        }
-
-        if ($variable) {
-          echo '<div class="agenda_container_row Background1 Foreground2">';
-            echo '<p class="agenda_container_row_text">' . date('H:i', $agenda->getStartTime()) . '</p>';
-            echo '<p class="agenda_container_row_text">' . $agenda->getTitle() . '</p>';
-            echo '<p class="agenda_container_row_text">' . $agenda->getDescription() . '</p>';
-          echo '</div>';
-        } else {
-          echo '<div class="agenda_container_row Background2">';
-            echo '<p class="agenda_container_row_text">' . date('H:i', $agenda->getStartTime()) . '</p>';
-            echo '<p class="agenda_container_row_text">' . $agenda->getTitle() . '</p>';
-            echo '<p class="agenda_container_row_text">' . $agenda->getDescription() . '</p>';
+  	foreach ($agendaList as $agenda) {
+      if ($day != date('d', $agenda->getStartTime())) {
+        if ($agenda != reset($agendaList)) {
           echo '</div>';
         }
 
-        $variable = !$variable;
 
-        if ($agenda == end($agendaList)) {
-    			echo '</div>';
-          echo '</center>';
-    		} else {
-    			$day = date('d', $agenda->getStartTime());
-    		}
+        echo '<div class="agenda_container">';
+        echo '<h2 style="margin:0; padding-top:10px; padding-bottom:10px;">' . DateUtils::getDayFromInt(date('w', $agenda->getStartTime())) . ' den ' . date('d', $agenda->getStartTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $agenda->getStartTime())) . '</h2>';
       }
+
+      if ($variable) {
+        echo '<div class="agenda_container_row Background1 Foreground2">';
+          echo '<p class="agenda_container_row_text">' . date('H:i', $agenda->getStartTime()) . '</p>';
+          echo '<p class="agenda_container_row_text">' . $agenda->getTitle() . '</p>';
+          echo '<p class="agenda_container_row_text">' . $agenda->getDescription() . '</p>';
+        echo '</div>';
+      } else {
+        echo '<div class="agenda_container_row Background2">';
+          echo '<p class="agenda_container_row_text">' . date('H:i', $agenda->getStartTime()) . '</p>';
+          echo '<p class="agenda_container_row_text">' . $agenda->getTitle() . '</p>';
+          echo '<p class="agenda_container_row_text">' . $agenda->getDescription() . '</p>';
+        echo '</div>';
+      }
+
+      $variable = !$variable;
+
+      if ($agenda == end($agendaList)) {
+  			echo '</div>';
+  		} else {
+  			$day = date('d', $agenda->getStartTime());
+  		}
+    }
+
+    echo '</center>';
   } else {
   	echo '<article class="contentBox">';
   		echo '<p>Agenda\'en for kommende arrangement har ikke blitt publisert enda!</p>';
