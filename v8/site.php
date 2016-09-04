@@ -38,7 +38,7 @@ class Site {
 		echo '<!DOCTYPE html>';
 		echo '<html>';
 			echo '<head>';
-				echo '<base href="/v7/">';
+				echo '<base href="/v8/">';
 				echo '<title>' . $this->getTitle() . '</title>';
 				echo '<meta name="description" content="' . Settings::description . '">';
 				echo '<meta name="keywords" content="' . Settings::keywords . '">';
@@ -59,97 +59,72 @@ class Site {
 					echo 'ga(\'send\', \'pageview\');';
 				echo '</script>';
 			echo '</head>';
+			echo '<body>';
+			echo '<nav>';
+				echo '<a class="Banner_Logo" href="/">';
+					echo '<img class="Banner_Logo" style="padding:0;" src="Resources\img\infected_logo.png">';
+				echo '</a>';
+				echo '<span id="hamburger" style="float:right">';
+					echo '<i style="padding:7px 10px 7px 10px; color:white;" class="fa fa-bars fa-2x" aria-hidden="true" onclick="LinksOnMobile(\'nav_Links_Top\')"></i>';
+				echo '</span>';
+				echo '<br style="clear:both;" />';
+				echo '<center id="nav_Links_Top" class="nav_Links">';
+					echo '<a class="Banner_Links" href="https://tickets.infected.no">';
+						echo '<p class="Banner_Links_P">Billetter</p>';
+					echo '</a>';
+					echo '<a class="Banner_Links" href="?pages=agenda">';
+						echo '<p class="Banner_Links_P">Agenda</p>';
+					echo '</a>';
+					echo '<a class="Banner_Links" href="?pages=competition">';
+						echo '<p class="Banner_Links_P">Konkurranser</p>';
+					echo '</a>';
+					echo '<a class="Banner_Links" href="?pages=onsite">';
+						echo '<p class="Banner_Links_P">Informasjon</p>';
+					echo '</a>';
+					echo '<a class="Banner_Links" href="https://crew.infected.no">';
+						echo '<p class="Banner_Links_P">Crew</p>';
+					echo '</a>';
+				echo '</center>';
+			echo '</nav>';
 
-			<body>
-					<nav>
-							<a class="Banner_Logo" href="/">
-									<img class="Banner_Logo" style="padding:0;" src="Resources\img\infected_logo.png" />
-							</a>
-							<span id="hamburger" style="float:right">
-									<i style="padding:7px 10px 7px 10px; color:white;" class="fa fa-bars fa-2x" aria-hidden="true" onclick="LinksOnMobile('nav_Links_Top')"></i>
-							</span>
-							<br style="clear:both;" />
-							<center id="nav_Links_Top" class="nav_Links">
-									<a class="Banner_Links" href="https://tickets.infected.no">
-											<p class="Banner_Links_P">Billetter</p>
-									</a>
-									<a class="Banner_Links" href="?pages=agenda">
-											<p class="Banner_Links_P">Agenda</p>
-									</a>
-									<a class="Banner_Links" href="?pages=competition">
-											<p class="Banner_Links_P">Konkurranser</p>
-									</a>
-									<a class="Banner_Links" href="?pages=onsite">
-											<p class="Banner_Links_P">Informasjon</p>
-									</a>
-									<a class="Banner_Links" href="https://crew.infected.no">
-											<p class="Banner_Links_P">Crew</p>
-									</a>
-							</center>
+			$pageName = isset($_GET['pages']) ? $_GET['pages'] : 'home';
+			$pageDir = 'pages';
+			$fileName = $pageDir . '/' . $pageName . '.' . 'php';
+			$pageList = glob($fileName);
 
+			if (in_array($fileName, $pageList)) {
+				include $fileName;
+			}
 
-					</nav>
-
-					<?php
-
-							$pageName = isset($_GET['pages']) ? $_GET['pages'] : 'home';
-
-							$pageDir = 'pages';
-							$fileName = $pageDir . '/' . $pageName . '.' . 'php';
-							$pageList = glob($fileName);
-
-							if (in_array($fileName, $pageList))
-							{
-									include $fileName;
-							}
-
-
-					?>
-
-					<footer>
-
-							<center style="padding-top: 25px;">
-									<a href="?pages=about">
-											<p>Om</p>
-									</a>
-									<span style="border: white solid 1px;"></span>
-									<a href="?pages=contact">
-											<p>Kontakt</p>
-									</a>
-							</center>
-
-
-
-							<center style="padding-top:10px; padding-bottom:10px;">
-									<h3 class="Sponsor_h3">Samarbeidspartnere</h3>
-
-									<img class="sponsor_img" src="Resources\img\radar.png" />
-									<img class="sponsor_img" src="Resources\img\bleiker.png" />
-									<img class="sponsor_img" src="Resources\img\asker_kommune.png" />
-									<!--<img class="sponsor_img" src="Resources\img\meny.png" />-->
-
-							</center>
-
-							<center style="padding-bottom:25px;">
-
-									<h3 style="color:white;">Infected Lan er også på</h3>
-
-									<a href="https://www.facebook.com/infectedlan/?fref=ts" style="border:#3b5998 solid 1px; height: 1em; width:1em; background-color:#3b5998; border-radius:50%; margin:0 2.5px;">
-											<i class="fa fa-facebook fa-1x" aria-hidden="true"></i>
-									</a>
-									<a href="https://twitter.com/infected_lan" style="border:#1da1f2 solid 1px; height: 1em; width:1em; background-color:#1da1f2; border-radius:50%; margin:0 2.5px;">
-											<i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
-									</a>
-							</center>
-
-							<center style="padding-bottom:10px; padding-top:10px; background-color:rgb(10,10,10);" >
-									<p style="color:white; text-align:center;">© 2016 Brage</p>
-							</center>
-					</footer>
-
-			</body>
-			</html>
-
+			echo '<footer>';
+				echo '<center style="padding-top: 25px;">';
+					echo '<a href="?pages=about"><p>Om</p></a>';
+					echo '<span style="border: white solid 1px;"></span>';
+					echo '<a href="?pages=contact"><p>Kontakt</p></a>';
+				echo '</center>';
+				echo '<center style="padding-top:10px; padding-bottom:10px;">';
+					echo '<h3 class="Sponsor_h3">Samarbeidspartnere</h3>';
+					echo '<img class="sponsor_img" src="Resources\img\radar.png">';
+					echo '<img class="sponsor_img" src="Resources\img\bleiker.png">';
+					echo '<img class="sponsor_img" src="Resources\img\asker_kommune.png">';
+					//<img class="sponsor_img" src="Resources\img\meny.png">
+				echo '</center>';
+				echo '<center style="padding-bottom:25px;">';
+					echo '<h3 style="color:white;">Infected Lan er også på</h3>';
+					echo '<a href="https://www.facebook.com/infectedlan/?fref=ts" style="border:#3b5998 solid 1px; height: 1em; width:1em; background-color:#3b5998; border-radius:50%; margin:0 2.5px;">';
+						echo '<i class="fa fa-facebook fa-1x" aria-hidden="true"></i>';
+					echo '</a>';
+					echo '<a href="https://twitter.com/infected_lan" style="border:#1da1f2 solid 1px; height: 1em; width:1em; background-color:#1da1f2; border-radius:50%; margin:0 2.5px;">';
+						echo '<i class="fa fa-twitter fa-1x" aria-hidden="true"></i>';
+					echo '</a>';
+				echo '</center>';
+				echo '<center style="padding-bottom:10px; padding-top:10px; background-color:rgb(10,10,10);">';
+					echo '<p style="color:white; text-align:center;">© 2016 Brage</p>';
+				echo '</center>';
+			echo '</footer>';
+		echo '</body>';
+	echo '</html>';
+}
 			/*
 			echo '<body>';
 				echo '<header>';
