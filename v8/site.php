@@ -30,7 +30,7 @@ class Site {
 
 	public function __construct() {
 		// Set the variables.
-		$this->pageName = isset($_GET['page']) ? $_GET['page'] : reset(PageHandler::getPages())->getName();
+		$this->pageName = isset($_GET['page']) ? $_GET['page'] : 'home';
 	}
 
 	// Execute the site.
@@ -45,6 +45,7 @@ class Site {
 				echo '<meta name="author" content="halvors and petterroea">';
 				echo '<meta charset="UTF-8">';
 				echo '<link rel="shortcut icon" href="images/favicon.ico">';
+				echo '<meta name="viewport" content="width=device-width, inition-scale=1.0">';
 				echo '<link href="Core.css" rel="stylesheet" type="text/css">';
 				echo '<link href="Color.css" rel="stylesheet" type="text/css">';
 				echo '<link href="Resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">';
@@ -65,7 +66,7 @@ class Site {
 					echo '<img class="Banner_Logo" style="padding:0;" src="Resources\img\infected_logo.png">';
 				echo '</a>';
 				echo '<span id="hamburger" style="float:right">';
-					echo '<i style="padding:7px 10px 7px 10px; color:white;" class="fa fa-bars fa-2x" aria-hidden="true" onclick="LinksOnMobile(\'nav_Links_Top\')"></i>';
+					echo '<i style="padding:7px 10px 7px 10px; color:white; cursor: pointer;" class="fa fa-bars fa-2x" aria-hidden="true" onclick="LinksOnMobile(\'nav_Links_Top\')"></i>';
 				echo '</span>';
 				echo '<br style="clear:both;" />';
 				echo '<center id="nav_Links_Top" class="nav_Links">';
@@ -89,10 +90,19 @@ class Site {
 				echo '</center>';
 				echo '<center style="padding-top:10px; padding-bottom:10px;">';
 					echo '<h3 class="Sponsor_h3">Samarbeidspartnere</h3>';
-					echo '<img class="sponsor_img" src="Resources\img\radar.png">';
-					echo '<img class="sponsor_img" src="Resources\img\bleiker.png">';
-					echo '<img class="sponsor_img" src="Resources\img\asker_kommune.png">';
-					//<img class="sponsor_img" src="Resources\img\meny.png">
+
+					$sponsorList = ['<a href="http://bleiker.vgs.no/" target="_blank"><img class="sponsor_img" src="Resources\img\bleiker.png" alt="Bleiker Vidregående Skole"></a>',
+													'<a href="http://askerkulturhus.no/huset/radar/" target="_blank"><img class="sponsor_img" src="Resources\img\radar.png" alt="Radar"></a>',
+													'<a href="http://asker.kommune.no/" target="_blank"><img class="sponsor_img" src="Resources\img\asker_kommune.png" alt="Asker Kommune"></a>'];
+
+					// Randomize the order of the list.
+					shuffle($sponsorList);
+
+					// Print every sponsor.
+					foreach ($sponsorList as $sponsor) {
+						echo $sponsor;
+					}
+
 				echo '</center>';
 				echo '<center style="padding-bottom:25px;">';
 					echo '<h3 style="color:white;">Infected Lan er også på</h3>';
