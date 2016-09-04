@@ -18,5 +18,5 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-header('Location: v7');
+header('Location: v8');
 ?>

@@ -42,7 +42,7 @@ class Site {
 				echo '<title>' . $this->getTitle() . '</title>';
 				echo '<meta name="description" content="' . Settings::description . '">';
 				echo '<meta name="keywords" content="' . Settings::keywords . '">';
-				echo '<meta name="author" content="halvors and petterroea">';
+				echo '<meta name="author" content="Brage, halvors and petterroea">';
 				echo '<meta charset="UTF-8">';
 				echo '<link rel="shortcut icon" href="images/favicon.ico">';
 				echo '<meta name="viewport" content="width=device-width, inition-scale=1.0">';
