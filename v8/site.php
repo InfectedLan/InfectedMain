@@ -69,38 +69,23 @@ class Site {
 				echo '</span>';
 				echo '<br style="clear:both;" />';
 				echo '<center id="nav_Links_Top" class="nav_Links">';
-					echo '<a class="Banner_Links" href="https://tickets.infected.no">';
-						echo '<p class="Banner_Links_P">Billetter</p>';
-					echo '</a>';
-					echo '<a class="Banner_Links" href="?pages=agenda">';
-						echo '<p class="Banner_Links_P">Agenda</p>';
-					echo '</a>';
-					echo '<a class="Banner_Links" href="?pages=competition">';
-						echo '<p class="Banner_Links_P">Konkurranser</p>';
-					echo '</a>';
-					echo '<a class="Banner_Links" href="?pages=onsite">';
-						echo '<p class="Banner_Links_P">Informasjon</p>';
-					echo '</a>';
-					echo '<a class="Banner_Links" href="https://crew.infected.no">';
-						echo '<p class="Banner_Links_P">Crew</p>';
-					echo '</a>';
+					echo '<a class="Banner_Links" href="//tickets.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Billetter</p></a>';
+					echo '<a class="Banner_Links" href="pages/agenda.html"><p class="Banner_Links_P">Agenda</p></a>';
+					echo '<a class="Banner_Links" href="pages/competition.html"><p class="Banner_Links_P">Konkurranser</p></a>';
+					echo '<a class="Banner_Links" href="pages/onsite.html"><p class="Banner_Links_P">Informasjon</p></a>';
+					echo '<a class="Banner_Links" href="//compo.' . Settings::domain . '/"><p class="Banner_Links_P">Compo</p></a>';
+					echo '<a class="Banner_Links" href="//crew.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Crew</p></a>';
 				echo '</center>';
 			echo '</nav>';
 
-			$pageName = isset($_GET['pages']) ? $_GET['pages'] : 'home';
-			$pageDir = 'pages';
-			$fileName = $pageDir . '/' . $pageName . '.' . 'php';
-			$pageList = glob($fileName);
-
-			if (in_array($fileName, $pageList)) {
-				include $fileName;
-			}
+			// View the page specified by "pageName" variable.
+			$this->viewPage($this->pageName);
 
 			echo '<footer>';
 				echo '<center style="padding-top: 25px;">';
-					echo '<a href="?pages=about"><p>Om</p></a>';
+					echo '<a href="pages/about.html"><p>Om</p></a>';
 					echo '<span style="border: white solid 1px;"></span>';
-					echo '<a href="?pages=contact"><p>Kontakt</p></a>';
+					echo '<a href="pages/contact.html"><p>Kontakt</p></a>';
 				echo '</center>';
 				echo '<center style="padding-top:10px; padding-bottom:10px;">';
 					echo '<h3 class="Sponsor_h3">Samarbeidspartnere</h3>';
@@ -276,7 +261,8 @@ class Site {
 
 	private function viewPage($pageName) {
 		// Fetch the page object from the database and display it.
-		$page = PageHandler::getPageByName($pageName);
+		//$page = PageHandler::getPageByName($pageName);
+		$page = null;
 
 		if ($page != null) {
 			// Format the page as HTML.

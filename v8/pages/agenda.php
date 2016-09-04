@@ -53,19 +53,24 @@ echo '<div id="General_information" class="Background2">';
           echo '</div>';
         }
 
-
         echo '<div class="agenda_container">';
         echo '<h2 style="margin:0; padding-top:10px; padding-bottom:10px;">' . DateUtils::getDayFromInt(date('w', $agenda->getStartTime())) . ' den ' . date('d', $agenda->getStartTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $agenda->getStartTime())) . '</h2>';
+
+        echo '<div class="agenda_container_row Background1 Foreground2">';
+          echo '<p class="agenda_container_row_text"><b>Når?</b></p>';
+          echo '<p class="agenda_container_row_text"><b>Hva?</b></p>';
+          echo '<p class="agenda_container_row_text"><b>Informasjon</b></p>';
+        echo '</div>';
       }
 
       if ($variable) {
-        echo '<div class="agenda_container_row Background1 Foreground2">';
+        echo '<div class="agenda_container_row Background2">';
           echo '<p class="agenda_container_row_text">' . date('H:i', $agenda->getStartTime()) . '</p>';
           echo '<p class="agenda_container_row_text">' . $agenda->getTitle() . '</p>';
           echo '<p class="agenda_container_row_text">' . $agenda->getDescription() . '</p>';
         echo '</div>';
       } else {
-        echo '<div class="agenda_container_row Background2">';
+        echo '<div class="agenda_container_row Background1 Foreground2">';
           echo '<p class="agenda_container_row_text">' . date('H:i', $agenda->getStartTime()) . '</p>';
           echo '<p class="agenda_container_row_text">' . $agenda->getTitle() . '</p>';
           echo '<p class="agenda_container_row_text">' . $agenda->getDescription() . '</p>';
