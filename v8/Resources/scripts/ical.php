@@ -17,11 +17,25 @@ if (!empty($agendaList))
   	$event = EventHandler::getCurrentEvent();
 
 
-      $ical = "BEGIN:VCALENDAR
-      VERSION:2.0
-      PRODID:-//infected/agendacal//NO
-      METHOD:PUBLISH\r\n";
+$ical = "BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//infected/agendacal//NO
+METHOD:PUBLISH\r\n";
 
+
+$ical = $ical . "BEGIN:VTIMEZONE
+TZID:W. Europe Standard Time
+BEGIN:STANDARD
+DTSTART:16011028T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010325T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+END:DAYLIGHT
+END:VTIMEZONE\r\n";
       foreach ($agendaList as $agenda)
       {
 
@@ -34,15 +48,21 @@ if (!empty($agendaList))
           $endTime = date('Hi', $agenda->getStartTime());
 
 
-            $ical = $ical . "BEGIN:VEVENT
-            UID:" . md5(uniqid(mt_rand(), true)). "infected.no
-            DTSTAMP:" . gmdate('Ymd').'T'. gmdate('His') . "Z
-            DTSTART:".$date."T".$startTime."00Z
-            DTEND:".$date."T".$endTime."00Z
-            SUMMARY:".$subject."
-            DESCRIPTION:".$desc."
-            SEQUENCE:0
-            END:VEVENT\r\n";
+$ical = $ical . "BEGIN:VEVENT
+UID:" . md5(uniqid(mt_rand(), true)). "infected.no
+DTSTAMP:" . gmdate('Ymd').'T'. gmdate('His') . "Z
+DTSTART;TZID=W. Europe Standard Time:".$date."T".$startTime."00
+DTEND;TZID=W. Europe Standard Time:".$date."T".$endTime."00
+SUMMARY:".$subject."
+DESCRIPTION:".$desc."
+LOCATION:Asker Kulturhus, Strøket 15a, Asker
+SEQUENCE:0
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT\r\n";
 
 
 

@@ -76,7 +76,36 @@ class Site {
 					echo '<a class="Banner_Links" href="pages/onsite.html"><p class="Banner_Links_P">Informasjon</p></a>';
 					echo '<a class="Banner_Links" href="//compo.' . Settings::domain . '/"><p class="Banner_Links_P">Compo</p></a>';
 					echo '<a class="Banner_Links" href="//crew.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Crew</p></a>';
+
+					/*echo '<center style="display:none; top:45px; position:absolute; border-top:white solid 1px;">';
+						echo '<a href="#">';
+							echo '<p>Mitt Crew</p>';
+						echo '</a>';
+						echo '<a href="#">';
+							echo '<p>Compo</p>';
+						echo '</a>';
+						echo '<a href="#">';
+							echo '<p>Logg ut</p>';
+						echo '</a>';
+					echo '</center>';*/
+
 				echo '</center>';
+				
+
+				/*<a  href="/" style=" right: 0px; padding: 0; height: 45px; min-width: 45px; width: auto; display: inline-block; position: absolute;">
+					<div style=" display: inline-flex; height: 45px;">
+  						<div style="display: inline-block;margin: auto 0;top: auto;bottom: auto;vertical-align: middle;">
+						  <p style=" margin: auto; text-align: right;">Fredrik Warbo</p>
+						  <p style=" margin: auto; font-weight: lighter; font-size: small; color: rgb(190,190,190);">Warbo Crew-et</p>
+						</div>
+						<img style="padding:0;height: 32px;width: 32px;border-radius: 50%;border: white solid 1px;margin: 5px;display: block;position: static;" src="images\userPlaceholder.png">
+					</div>
+				</a>*/
+
+				
+
+
+
 			echo '</nav>';
 
 			// View the page specified by "pageName" variable.
