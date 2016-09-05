@@ -23,7 +23,7 @@ PRODID:-//infected/agendacal//NO
 METHOD:PUBLISH\r\n";
 
 
-$ical = $ical . "BEGIN:VTIMEZONE
+/*$ical = $ical . "BEGIN:VTIMEZONE
 TZID:W. Europe Standard Time
 BEGIN:STANDARD
 DTSTART:16011028T030000
@@ -35,7 +35,7 @@ DTSTART:16010325T020000
 TZOFFSETFROM:+0100
 TZOFFSETTO:+0200
 END:DAYLIGHT
-END:VTIMEZONE\r\n";
+END:VTIMEZONE\r\n";*/
       foreach ($agendaList as $agenda)
       {
 
