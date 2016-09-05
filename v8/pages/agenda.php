@@ -54,7 +54,7 @@ echo '<div id="General_information" class="Background2">';
         }
 
         echo '<div class="agenda_container">';
-        echo '<h2 style="margin:0; padding-top:10px; padding-bottom:10px;">' . DateUtils::getDayFromInt(date('w', $agenda->getStartTime())) . ' den ' . date('d', $agenda->getStartTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $agenda->getStartTime())) . '</h2>';
+        echo '<h2 style="margin:0; padding-top:40px; padding-bottom:20px;">' . DateUtils::getDayFromInt(date('w', $agenda->getStartTime())) . ' den ' . date('d', $agenda->getStartTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $agenda->getStartTime())) . '</h2>';
 
         echo '<div class="agenda_container_row Background1 Foreground2">';
           echo '<p class="agenda_container_row_text"><b>Når?</b></p>';
@@ -86,7 +86,14 @@ echo '<div id="General_information" class="Background2">';
   		}
     }
 
+
+      echo '<a class="no_a Background1" style="margin:20px; margin-top:30px;" href="Resources/scripts/ical.php">';
+        echo '<p style="padding:10px;">Legg til i kalenderen</p>';
+      echo '</a>';
+
     echo '</center>';
+
+
   } else {
   	echo '<article class="contentBox">';
   		echo '<p>Agenda\'en for kommende arrangement har ikke blitt publisert enda!</p>';
