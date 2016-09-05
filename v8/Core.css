@@ -2,6 +2,9 @@ body {
      margin:0;
 }
 
+nav {
+    min-height:45px;
+}
 
 h1, h2, h3 {
     font-family: Arial, Helvetica, sans-serif;
@@ -180,6 +183,7 @@ footer {
         height:25px; 
         width: 81.297px; 
         padding:10px; 
+        position: absolute;
         /*background-color:#009900;*/
     }
      
@@ -274,10 +278,7 @@ footer {
 @media screen and (min-width: 660px)
 {
     
-    #hamburger {
-        display: none;
-        visibility: collapse;
-    }
+
 
     body {
         background-image:url(Resources/img/Back_660.jpg);
@@ -292,22 +293,9 @@ footer {
         display: inline-flex;
     }
 
-    .nav_Links {
-        width: inherit; 
-        display: block;
-        margin-left:-101.297px;
-        background-color: transparent;
-        margin-top: 0;
-        position: static;
-    }
 
-    .Banner_Links {
-        display: inline-block;
-    }
 
-    .Banner_Links_P {
-        line-height: 1.6em;
-    }
+
 
     .Banner_Info {
         display: block; 
@@ -354,6 +342,31 @@ footer {
         padding-right:50px;
     }
 
+}
+
+@media screen and (min-width: 730px)
+{
+        #hamburger {
+        display: none;
+        visibility: collapse;
+    }
+    
+        .nav_Links {
+        width: inherit; 
+        display: block;
+        /*margin-left:-101.297px;*/
+        background-color: transparent;
+        margin-top: 0;
+        position: static;
+    }
+    
+    .Banner_Links {
+        display: inline-block;
+    }
+
+    .Banner_Links_P {
+        line-height: 1.6em;
+    }
 }
 
 
@@ -438,7 +451,7 @@ footer {
 
     .nav_Links {
         width: inherit; 
-        margin-left:-101.297px;
+        /*margin-left:-101.297px;*/
     }
 
     .Banner_Logo {
