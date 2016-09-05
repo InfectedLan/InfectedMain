@@ -80,13 +80,13 @@ Vi forbeholder oss også retten til å vike fra å dømme etter reglene i veldig
                         
                 <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
                     <h2 style="color:white;">Spillene</h2>
-                    <div class="agenda_container_row Background1 Foreground2">
+                    <div class="agenda_container_row Background1 Foreground2" style="display: table-row;">
                             <p class="agenda_container_row_text">Counter-Strike: Global Offensive</p>
                             <p class="agenda_container_row_text">1. Plass 7500,-</p>
                             <p class="agenda_container_row_text">2. Plass 2500,-</p>
                             <p class="agenda_container_row_text">Max 16 lag</p>
                     </div>
-                    <div class="agenda_container_row Background1 Foreground2">
+                    <div class="agenda_container_row Background1 Foreground2" style="display: table-row;">
                             <p class="agenda_container_row_text">League of Legends</p>
                             <p class="agenda_container_row_text">1. Plass 7500,-</p>
                             <p class="agenda_container_row_text">2. Plass 2500,-</p>
