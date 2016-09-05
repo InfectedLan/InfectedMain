@@ -2,7 +2,7 @@
 /**
  * This file is part of InfectedMain.
  *
- * Copyright (C) 2015 Infected <http://infected.no/>.
+ * Copyright (C) 2013-2016 Infected <http://infected.no/>.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -21,6 +21,7 @@
 require_once 'utils/dateutils.php';
 require_once 'handlers/agendahandler.php';
 require_once 'handlers/eventhandler.php';
+require_once 'handlers/sectionpagehandler.php';
 
 echo '<center id="wrapper">';
   echo '<div id="Overview_Post" style="margin-bottom:150px;">';
@@ -30,13 +31,18 @@ echo '<center id="wrapper">';
   echo '</div>';
 echo '</center>';
 echo '<div id="General_information" class="Background2">';
-  echo '<center class="Banner_Post">';
-    echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
-      echo '<i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>';
-      echo '<h2 style="color:black;">Agendaen</h2>';
-      echo '<p style="text-align:center; color:black;">Her finner du agendaen for dette LAN-et</p>';
+
+  $sectionPage = SectionPageHandler::getSectionPageByName('agenda');
+
+  if ($sectionPage != null) {
+    echo '<center class="Banner_Post">';
+      echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
+        echo '<i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>';
+        echo '<h2 style="color:black;">' . $sectionPage->getTitle() . '</h2>';
+        echo '<p style="text-align:center; color:black;">' . $sectionPage->getContent() . '</p>';
+      echo '</center>';
     echo '</center>';
-  echo '</center>';
+  }
 
   $agendaList = AgendaHandler::getPublishedAgendas();
 
