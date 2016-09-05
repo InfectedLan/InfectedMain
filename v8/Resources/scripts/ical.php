@@ -76,7 +76,7 @@ END:VEVENT\r\n";
 
 
     header('Content-type: text/calendar; charset=utf-8');
-    header('Content-Disposition: inline; filename=calendar.ics');
+    header('Content-Disposition: inline; filename=Infected Event Calendar.ics');
     echo $ical;
     exit;
 
