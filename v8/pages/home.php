@@ -29,7 +29,7 @@
                         <i class="fa fa-shield fa-4x Foreground1" aria-hidden="true"></i>
                         <h3 style="color:black;">Regler og sikkerhet</h3>
                         <p style="text-align:center;">Rader er et <strong>rusfritt</strong> området, dette <strong style="color:red;">inkluderer snus og røyk</strong>. Det er ikke lov å røyke eller snuse under Infected</p>
-                        <a class="no_a Background1" href="?pages=security" style=" margin:20px;">
+                        <a class="no_a Background1" href="pages/security.html" style=" margin:20px;">
                             <p>Les mer</p>
                         </a>
                     </div>
@@ -39,7 +39,7 @@
                         <h3 style="color:black">Pakkeliste</h3>
                         <p style="text-align:center;">Vi i infected crewet har laget en hendig pakkliste over ting mang bør ha med på LAN</p>
                         <p style="text-align:center;">Klikk les mer for å se listen</p>
-                        <a class="no_a Background1" href="?pages=packing" style=" margin:20px;">
+                        <a class="no_a Background1" href="pages/packing.html" style=" margin:20px;">
                             <p>Les mer</p>
                         </a>
                     </div>
@@ -48,7 +48,7 @@
                         <i class="fa fa-child fa-4x Foreground1" aria-hidden="true"></i>
                         <h3 style="color:black">For foreldre og foresatte</h3>
                         <p style="text-align:center;">Nervøs for å sende barnet ditt på sitt første LAN? Nyskjerrig på hva et LAN er? Klikk les mer, for mer informasjon</p>
-                        <a class="no_a Background1" href="?pages=guardians" style=" margin:20px;">
+                        <a class="no_a Background1" href="pages/guardians.html" style=" margin:20px;">
                             <p>Les mer</p>
                         </a>
                     </div>
@@ -73,7 +73,7 @@
                     <i class="fa fa-trophy fa-4x Foreground1" aria-hidden="true"></i>
                     <h3>Konkurranser</h3>
                     <p style="text-align:center;">Under LAN-et vil det arrageres konkurranser, oversikten over spillene det er konkurranse i vil være tilgjengelig her</p>
-                    <a class="no_a Background1" href="?pages=competition" style=" margin:20px;">
+                    <a class="no_a Background1" href="pages/competition.html" style=" margin:20px;">
                         <p style="padding:10px;">Se konkurransene</p>
                     </a>
                 </div>
@@ -93,7 +93,7 @@
                     <i class="fa fa-calendar-o fa-4x Foreground1" aria-hidden="true"></i>
                     <h3>Agenda</h3>
                     <p style="text-align:center;">Agendaen vil vis hva som skjer på infected og når det vil skje. Dette inkluderer konkurranser og frister</p>
-                    <a class="no_a Background1" href="?pages=agenda" style=" margin:20px;">
+                    <a class="no_a Background1" href="pages/agenda.html" style=" margin:20px;">
                         <p style="padding:10px;">Se agendaen</p>
                     </a>
                 </div>

@@ -15,26 +15,26 @@
 
             <center style=" padding-top:50px; padding-bottom:50px; margin-left:10px; margin-right:10px;">
 
-                <div class="agenda_container_row" style="padding-bottom:25px;">
+                <div class="agenda_container_row" style="padding-bottom:25px; display: table-row;">
 
                     <i class="fa fa-check fa-5x Foreground1 information_content_icon" aria-hidden="true"></i>
                     <div class="information_content_textholder" style="padding-bottom:25px;">
-                      <ul>
-                        <li>Datamaskin med alt tilbehør.</li>
-                        <li>Nettverkskabel med en minumumslengde på fem meter.</li>
-                        <li>Strømpad, beregnet ett støpsel per person.</li>
-                        <li>Tannbørste og andre hygieneartikler.</li>
-                        <li>Penger.</li>
-                        <li>Vann eller brus.</li>
-                        <li>Eventuelle medisiner hvis man trenger det (Ta kontakt med crew hvis det er noe vi bør vite).</li>
-                        <li>Din billett.</li>
-                        <li>Sovepose.</li>
-                        <li>Legitimasjon.</li>
-                      </ul>
+                        
+                        <p>Datamaskin med alt tilbehør.</p>
+                        <p>Nettverkskabel med en minumumslengde på fem meter.</p>
+                        <p>Strømpad, beregnet ett støpsel per person.</p>
+                        <p>Tannbørste og andre hygieneartikler.</p>
+                        <p>Penger.</p>
+                        <p>Vann eller brus.</p>
+                        <p>Eventuelle medisiner hvis man trenger det (Ta kontakt med crew hvis det er noe vi bør vite).</p>
+                        <p>Din billett.</p>
+                        <p>Sovepose.</p>
+                        <p>Legitimasjon.</p>
+                      
                     </div>
                 </div>
 
-                <div class="agenda_container_row">
+                <div class="agenda_container_row" style="display: table-row;">
 
                     <i class="fa fa-times fa-5x Foreground1 information_content_icon" aria-hidden="true"></i>
                     <div class="information_content_textholder" style="padding-top:25px;">
