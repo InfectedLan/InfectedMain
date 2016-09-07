@@ -49,6 +49,10 @@ class Site {
 				echo '<link href="Core.css" rel="stylesheet" type="text/css">';
 				echo '<link href="Color.css" rel="stylesheet" type="text/css">';
 				echo '<link href="Resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">';
+				echo '<link rel="prerender" href="//tickets.' . Settings::domain . '/"/>';
+				echo '<link rel="next" href="//tickets.' . Settings::domain . '/"/>';
+				echo '<meta name="msapplication-TileColor" content="#00000000"/>';
+				echo '<meta name="msapplication-square150x150logo" content="images\square150x150.png"/>';
 				echo '<script src="Resources/scripts/hamburger.js" type="text/javascript" ></script>';
 				echo '<script>';
 					echo '(function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){';
@@ -63,7 +67,7 @@ class Site {
 			echo '<body>';
 			echo '<nav>';
 				echo '<a class="Banner_Logo" href="/">';
-					echo '<img class="Banner_Logo" style="padding:0;" src="Resources\img\infected_logo.png">';
+					echo '<img alt="Infected Logo" class="Banner_Logo" style="padding:0;" src="Resources\img\infected_logo.png">';
 				echo '</a>';
 				echo '<span id="hamburger" style="float:right">';
 					echo '<i style="padding:7px 10px 7px 10px; color:white; cursor: pointer;" class="fa fa-bars fa-2x" aria-hidden="true" onclick="LinksOnMobile(\'nav_Links_Top\')"></i>';
@@ -121,7 +125,7 @@ class Site {
 					echo '<h3 class="Sponsor_h3">Samarbeidspartnere</h3>';
 
 					$sponsorList = ['<a href="http://bleiker.vgs.no/" target="_blank"><img class="sponsor_img" src="Resources\img\bleiker.png" alt="Bleiker Vidregående Skole"></a>',
-													'<a href="http://askerkulturhus.no/huset/radar/" target="_blank"><img class="sponsor_img" src="Resources\img\radar.png" alt="Radar"></a>',
+													'<a href="http://askerkulturhus.no/huset/radar/" alt="Radar" target="_blank"><img class="sponsor_img" src="Resources\img\radar.png" alt="Radar"></a>',
 													'<a href="http://asker.kommune.no/" target="_blank"><img class="sponsor_img" src="Resources\img\asker_kommune.png" alt="Asker Kommune"></a>'];
 
 					// Randomize the order of the list.

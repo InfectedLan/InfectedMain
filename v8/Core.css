@@ -1,74 +1,18 @@
-body {
-     margin:0;
-}
-
-nav {
-    min-height:45px;
-}
-
-h1, h2, h3 {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-p {
-    margin:0;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-    a {
-        text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
-        padding:10px;
-        display: inline-block;
-    }
-
-footer {
-        
-        min-height:100px; 
-        /*padding-bottom:25px;*/
-    }
-
-
-    .information_content_container {
-        padding-top:50px;
-        padding-bottom: 50px;
-    }
-
-
+body { margin:0; }
+nav { min-height:45px; }
+h1, h2, h3 { font-family: Arial, Helvetica, sans-serif; }
+p { margin:0; text-align: left; font-family: Arial, Helvetica, sans-serif; }
+a { text-decoration: none; font-family: Arial, Helvetica, sans-serif; padding:10px; display: inline-block; }
+footer {  min-height:100px; }
+.information_content_container { padding-top:50px; padding-bottom: 50px; }
 
 @media screen and (min-width: 0px)
 {
+    #hamburger { display: block; visibility: visible; position: absolute; right: 0; }
     
-
-    #hamburger {
-        display: block;
-        visibility: visible;
-        position: absolute;
-        right: 0;
-    }
-    
-    body {
-        /*background-color:purple;*/
-        background-image:none;
-        background-repeat:no-repeat; 
-        background-size:100%; 
-        background-attachment: fixed; 
-    }
-
-    nav {
-        position:fixed; 
-        width:100%; 
-        
-        display: inline-flex;
-    }
-
-    .Banner_Logo {
-        height:25px; 
-        width: 81.297px; 
-        padding:10px; 
-        /*background-color:#009900;*/
-    }
+    body { background-image:none; background-repeat:no-repeat; background-size:100%; background-attachment: fixed; }
+    nav { position:fixed; width:100%; display: inline-flex; }
+    .Banner_Logo { height:25px; width: 81.297px; padding:10px; }
      
      .nav_Links {
         width: 100%; 
@@ -149,6 +93,22 @@ footer {
         padding: 0px;
         margin: 10px;
         word-wrap: break-word;
+    }
+
+    .information_content {
+        margin-top:25px; 
+        margin-bottom:25px; 
+    }
+
+    .bulletpoint_point {
+        display: table-cell!important; 
+        padding-right: 5px!important;
+        vertical-align: middle!important;
+    }
+
+    .bulletpoint_p {
+        display: table-cell!important; 
+        padding:5px;
     }
 
 

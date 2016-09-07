@@ -47,6 +47,11 @@ no_a:hover {
     background-color: transparent;
 }
 
+.bulletpoint_point {
+    color: purple;
+}
+
+
 @media screen and (min-width: 0px) {
     #nav_Links_Top {
         background-color:rgb(50,50,50); 

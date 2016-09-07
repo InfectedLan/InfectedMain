@@ -43,9 +43,18 @@
 
                     <div class="information_content_textholder">
                         <h3>Formål</h3>
-                        <p>Å skape et rusfritt tilbud til data og spill interessert ungdom i Asker og omegn.</p>
-                        <p>Å skape et arrangement hvor ungdom med like interesser kan møtes for spill, konkurranser, sosialisering og læring.</p>
-                        <p>Å være et non-profit arrangement basert på frivillig arbeid.</p>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Å skape et rusfritt tilbud til data og spill interessert ungdom i Asker og omegn.</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Å skape et arrangement hvor ungdom med like interesser kan møtes for spill, konkurranser, sosialisering og læring.</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Å være et non-profit arrangement basert på frivillig arbeid.</p>
+                        </div>
                     </div>
                 </div>           
 

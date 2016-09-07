@@ -20,16 +20,47 @@
                     <i class="fa fa-check fa-5x Foreground1 information_content_icon" aria-hidden="true"></i>
                     <div class="information_content_textholder" style="padding-bottom:25px;">
                         
-                        <p>Datamaskin med alt tilbehør.</p>
-                        <p>Nettverkskabel med en minumumslengde på fem meter.</p>
-                        <p>Strømpad, beregnet ett støpsel per person.</p>
-                        <p>Tannbørste og andre hygieneartikler.</p>
-                        <p>Penger.</p>
-                        <p>Vann eller brus.</p>
-                        <p>Eventuelle medisiner hvis man trenger det (Ta kontakt med crew hvis det er noe vi bør vite).</p>
-                        <p>Din billett.</p>
-                        <p>Sovepose.</p>
-                        <p>Legitimasjon.</p>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Datamaskin med alt tilbehør.</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Nettverkskabel med en minumumslengde på fem meter.</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Strømpad, beregnet ett støpsel per person.</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Tannbørste og andre hygieneartikler.</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Penger.</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Vann eller brus.</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Eventuelle medisiner hvis man trenger det (Ta kontakt med crew hvis det er noe vi bør vite).</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Din billett.</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Sovepose.</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Legitimasjon.</p>
+                        </div>
+
                       
                     </div>
                 </div>
@@ -38,9 +69,18 @@
 
                     <i class="fa fa-times fa-5x Foreground1 information_content_icon" aria-hidden="true"></i>
                     <div class="information_content_textholder" style="padding-top:25px;">
-                        <p>Alkohol og eller andre rusmidler.</p>
-                        <p>Høytalere.</p>
-                        <p>Kjøleskap og hvitevarer.</p>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Alkohol og eller andre rusmidler.</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Høytalere.</p>
+                        </div>
+                        <div style="text-align:left;">
+                            <i class="fa fa-caret-right bulletpoint_point" aria-hidden="true"></i>
+                            <p class="bulletpoint_p">Kjøleskap og hvitevarer.</p>
+                        </div>
                     </div>
                 </div>
 

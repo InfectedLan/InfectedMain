@@ -94,7 +94,7 @@ echo '<div id="General_information" class="Background2">';
 
 
       echo '<a class="no_a Background1" style="margin:20px; margin-top:30px;" href="Resources/scripts/ical.php">';
-        echo '<p style="padding:10px;">Legg til i kalenderen</p>';
+        echo '<p style="padding:10px; text-align: center;">Legg til i kalenderen</p>';
       echo '</a>';
 
     echo '</center>';
