@@ -65,94 +65,65 @@ class Site {
 				echo '</script>';
 			echo '</head>';
 			echo '<body>';
-			echo '<nav>';
-				echo '<a class="Banner_Logo" href="/">';
-					echo '<img alt="Infected Logo" class="Banner_Logo" style="padding:0;" src="Resources\img\infected_logo.png">';
-				echo '</a>';
-				echo '<span id="hamburger" style="float:right">';
-					echo '<i style="padding:7px 10px 7px 10px; color:white; cursor: pointer;" class="fa fa-bars fa-2x" aria-hidden="true" onclick="LinksOnMobile(\'nav_Links_Top\')"></i>';
-				echo '</span>';
-				echo '<br style="clear:both;" />';
-				echo '<center id="nav_Links_Top" class="nav_Links">';
-					echo '<a class="Banner_Links" href="//tickets.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Billetter</p></a>';
-					echo '<a class="Banner_Links" href="pages/agenda.html"><p class="Banner_Links_P">Agenda</p></a>';
-					echo '<a class="Banner_Links" href="pages/competition.html"><p class="Banner_Links_P">Konkurranser</p></a>';
-					echo '<a class="Banner_Links" href="pages/onsite.html"><p class="Banner_Links_P">Informasjon</p></a>';
-					echo '<a class="Banner_Links" href="//compo.' . Settings::domain . '/"><p class="Banner_Links_P">Compo</p></a>';
-					echo '<a class="Banner_Links" href="//crew.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Crew</p></a>';
-
-					/*echo '<center style="display:none; top:45px; position:absolute; border-top:white solid 1px;">';
-						echo '<a href="#">';
-							echo '<p>Mitt Crew</p>';
-						echo '</a>';
-						echo '<a href="#">';
-							echo '<p>Compo</p>';
-						echo '</a>';
-						echo '<a href="#">';
-							echo '<p>Logg ut</p>';
-						echo '</a>';
-					echo '</center>';*/
-
-				echo '</center>';
-				
-
-				/*<a  href="/" style=" right: 0px; padding: 0; height: 45px; min-width: 45px; width: auto; display: inline-block; position: absolute;">
-					<div style=" display: inline-flex; height: 45px;">
-  						<div style="display: inline-block;margin: auto 0;top: auto;bottom: auto;vertical-align: middle;">
-						  <p style=" margin: auto; text-align: right;">Fredrik Warbo</p>
-						  <p style=" margin: auto; font-weight: lighter; font-size: small; color: rgb(190,190,190);">Warbo Crew-et</p>
-						</div>
-						<img style="padding:0;height: 32px;width: 32px;border-radius: 50%;border: white solid 1px;margin: 5px;display: block;position: static;" src="images\userPlaceholder.png">
-					</div>
-				</a>*/
-
-				
-
-
-
-			echo '</nav>';
-
-			// View the page specified by "pageName" variable.
-			$this->viewPage($this->pageName);
-
-			echo '<footer>';
-				echo '<center style="padding-top: 25px;">';
-					echo '<a href="pages/about.html"><p>Om</p></a>';
-					echo '<span style="border: white solid 1px;"></span>';
-					echo '<a href="pages/contact.html"><p>Kontakt</p></a>';
-				echo '</center>';
-				echo '<center style="padding-top:10px; padding-bottom:10px;">';
-					echo '<h3 class="Sponsor_h3">Samarbeidspartnere</h3>';
-
-					$sponsorList = ['<a href="http://bleiker.vgs.no/" target="_blank"><img class="sponsor_img" src="Resources\img\bleiker.png" alt="Bleiker Vidregående Skole"></a>',
-													'<a href="http://askerkulturhus.no/huset/radar/" alt="Radar" target="_blank"><img class="sponsor_img" src="Resources\img\radar.png" alt="Radar"></a>',
-													'<a href="http://asker.kommune.no/" target="_blank"><img class="sponsor_img" src="Resources\img\asker_kommune.png" alt="Asker Kommune"></a>'];
-
-					// Randomize the order of the list.
-					shuffle($sponsorList);
-
-					// Print every sponsor.
-					foreach ($sponsorList as $sponsor) {
-						echo $sponsor;
-					}
-
-				echo '</center>';
-				echo '<center style="padding-bottom:25px;">';
-					echo '<h3 style="color:white;">Infected Lan er også på</h3>';
-					echo '<a href="https://www.facebook.com/infectedlan/?fref=ts" style="border:#3b5998 solid 1px; height: 1em; width:1em; background-color:#3b5998; border-radius:50%; margin:0 2.5px;">';
-						echo '<i class="fa fa-facebook fa-1x" aria-hidden="true"></i>';
+				echo '<nav>';
+					echo '<a class="Banner_Logo" href="/">';
+						echo '<img alt="Infected Logo" class="Banner_Logo" style="padding:0;" src="Resources\img\infected_logo.png">';
 					echo '</a>';
-					echo '<a href="https://twitter.com/infected_lan" style="border:#1da1f2 solid 1px; height: 1em; width:1em; background-color:#1da1f2; border-radius:50%; margin:0 2.5px;">';
-						echo '<i class="fa fa-twitter fa-1x" aria-hidden="true"></i>';
-					echo '</a>';
-				echo '</center>';
-				echo '<center style="padding-bottom:10px; padding-top:10px; background-color:rgb(10,10,10);">';
-					echo '<p style="color:white; text-align:center;">Kopirett &copy; 2016 exeron, halvors og petterroea</p>';
-				echo '</center>';
-			echo '</footer>';
-		echo '</body>';
-	echo '</html>';
-}
+					echo '<span id="hamburger" style="float:right">';
+						echo '<i style="padding:7px 10px 7px 10px; color:white; cursor: pointer;" class="fa fa-bars fa-2x" aria-hidden="true" onclick="LinksOnMobile(\'nav_Links_Top\')"></i>';
+					echo '</span>';
+					echo '<br style="clear:both;" />';
+					echo '<center id="nav_Links_Top" class="nav_Links">';
+						echo '<a class="Banner_Links" href="//tickets.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Billetter</p></a>';
+						echo '<a class="Banner_Links" href="pages/agenda.html"><p class="Banner_Links_P">Agenda</p></a>';
+						echo '<a class="Banner_Links" href="pages/competition.html"><p class="Banner_Links_P">Konkurranser</p></a>';
+						echo '<a class="Banner_Links" href="pages/onsite.html"><p class="Banner_Links_P">Informasjon</p></a>';
+						echo '<a class="Banner_Links" href="//compo.' . Settings::domain . '/"><p class="Banner_Links_P">Compo</p></a>';
+						echo '<a class="Banner_Links" href="//crew.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Crew</p></a>';
+					echo '</center>';
+				echo '</nav>';
+
+				// View the page specified by "pageName" variable.
+				$this->viewPage($this->pageName);
+
+				echo '<footer>';
+					echo '<center style="padding-top: 25px;">';
+						echo '<a href="pages/about.html"><p>Om</p></a>';
+						echo '<span style="border: white solid 1px;"></span>';
+						echo '<a href="pages/contact.html"><p>Kontakt</p></a>';
+					echo '</center>';
+					echo '<center style="padding-top:10px; padding-bottom:10px;">';
+						echo '<h3 class="Sponsor_h3">Samarbeidspartnere</h3>';
+
+						$sponsorList = ['<a href="http://bleiker.vgs.no/" target="_blank"><img class="sponsor_img" src="Resources\img\bleiker.png" alt="Bleiker Vidregående Skole"></a>',
+														'<a href="http://askerkulturhus.no/huset/radar/" alt="Radar" target="_blank"><img class="sponsor_img" src="Resources\img\radar.png" alt="Radar"></a>',
+														'<a href="http://asker.kommune.no/" target="_blank"><img class="sponsor_img" src="Resources\img\asker_kommune.png" alt="Asker Kommune"></a>'];
+
+						// Randomize the order of the list.
+						shuffle($sponsorList);
+
+						// Print every sponsor.
+						foreach ($sponsorList as $sponsor) {
+							echo $sponsor;
+						}
+
+					echo '</center>';
+					echo '<center style="padding-bottom:25px;">';
+						echo '<h3 style="color:white;">Infected Lan er også på</h3>';
+						echo '<a href="https://www.facebook.com/infectedlan/?fref=ts" style="border:#3b5998 solid 1px; height: 1em; width:1em; background-color:#3b5998; border-radius:50%; margin:0 2.5px;">';
+							echo '<i class="fa fa-facebook fa-1x" aria-hidden="true"></i>';
+						echo '</a>';
+						echo '<a href="https://twitter.com/infected_lan" style="border:#1da1f2 solid 1px; height: 1em; width:1em; background-color:#1da1f2; border-radius:50%; margin:0 2.5px;">';
+							echo '<i class="fa fa-twitter fa-1x" aria-hidden="true"></i>';
+						echo '</a>';
+					echo '</center>';
+					echo '<center style="padding-bottom:10px; padding-top:10px; background-color:rgb(10,10,10);">';
+						echo '<p style="color:white; text-align:center;">Kopirett &copy; 2016 exeron, halvors og petterroea</p>';
+					echo '</center>';
+				echo '</footer>';
+			echo '</body>';
+		echo '</html>';
+	}
 
 	// Picks randomly a background from the background directory.
 	private function getBackground() {

@@ -1,52 +1,35 @@
-<center id="wrapper">
-  <div id="Overview_Post">
-    <img class="Infected_logo" alt="Infected Logo" src="Resources\img\infected_logo.png" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px;" />
-    <h1 style="color:white;">Delta på ett av Akershus største LAN party</h1>
-    <h3 style="color:white;">Vi ønsker alle som er interresert, velkommen!</h3>
-
-
-
-<?php 
-$event = EventHandler::getCurrentEvent();
-if ($event->isBookingTime()) 
-{
-  if (!empty($event->getAvailableTickets())) {
-    ?>
-      <a class="no_a Background1" href="https://tickets.infected.no" style="margin:20px;">
-        <p style="padding:10px; text-align: center;">Bestill billett</p>
-      </a>
-    <?php
-  } 
-  else 
-  {
-    ?>
-    <center style=" padding: 10px;">
-      <div style="display: inline-block;">
-        <p style="color:white;background-color: #990000; padding: 20px;margin-bottom: 10px;text-align: center; cursor: default;">Arrangemanget er utsolgt</p>
-        <p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er utsolgt</p>
-      </div>
-    </center>
-    <?php
-	}
-}
-else 
-{
-?>
-
-<center style=" padding: 10px;">
-      <div style="display: inline-block;">
-        <p style="color:white;background-color: #696969; padding: 20px;margin-bottom: 10px;text-align: center; cursor: default;">Billetter er ikke tilgjengelig</p>
-        <p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er ikke tilgjengelig enda</p>
-      </div>
-    </center>
-    
 <?php
-}
-?>
+echo '<center id="wrapper">';
+  echo '<div id="Overview_Post">';
+    echo '<img class="Infected_logo" alt="Infected Logo" src="Resources\img\infected_logo.png" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px;">';
+    echo '<h1 style="color:white;">Delta på ett av Akershus største LAN party</h1>';
+    echo '<h3 style="color:white;">Vi ønsker alle som er interresert, velkommen!</h3>';
 
-  </div>
+    $event = EventHandler::getCurrentEvent();
 
-  <?php
+    if ($event->isBookingTime()) {
+      if (!empty($event->getAvailableTickets())) {
+        echo '<a class="no_a Background1" href="https://tickets.infected.no" style="margin:20px;">';
+          echo '<p style="padding:10px; text-align: center;">Bestill billett</p>';
+        echo '</a>';
+      } else {
+        echo '<center style=" padding: 10px;">';
+          echo '<div style="display: inline-block;">';
+            echo '<p style="color:white;background-color: #990000; padding: 20px;margin-bottom: 10px;text-align: center; cursor: default;">Arrangemanget er utsolgt</p>';
+            echo '<p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er utsolgt</p>';
+          echo '</div>';
+        echo '</center>';
+      }
+    } else {
+      echo '<center style=" padding: 10px;">';
+        echo '<div style="display: inline-block;">';
+          echo '<p style="color:white;background-color: #696969; padding: 20px;margin-bottom: 10px;text-align: center; cursor: default;">Billetter er ikke tilgjengelig</p>';
+          echo '<p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er ikke tilgjengelig enda</p>';
+        echo '</div>';
+      echo '</center>';
+    }
+
+  echo '</div>';
   echo '<center class="Banner_Post Background1">';
     echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
       echo '<h2 style="color:white;">Når er neste arrangement?</h2>';
