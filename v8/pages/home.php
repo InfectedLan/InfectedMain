@@ -29,7 +29,7 @@ echo '<center id="wrapper">';
   echo '</div>';
   echo '<center class="Banner_Post Background1">';
     echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
-      echo '<h2 style="color:white;">Når er neste arrangement?</h2>';
+      echo '<h2 style="color: white;">Når er arrangementet?</h2>';
 
       $event = EventHandler::getCurrentEvent();
       $ticketText = $event->getTicketCount() > 1 ? 'billetter' : 'billett';
