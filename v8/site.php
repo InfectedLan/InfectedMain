@@ -78,7 +78,7 @@ class Site {
 						echo '<a class="Banner_Links" href="pages/agenda.html"><p class="Banner_Links_P">Agenda</p></a>';
 						echo '<a class="Banner_Links" href="pages/competition.html"><p class="Banner_Links_P">Konkurranser</p></a>';
 						echo '<a class="Banner_Links" href="pages/onsite.html"><p class="Banner_Links_P">Informasjon</p></a>';
-						echo '<a class="Banner_Links" href="//compo.' . Settings::domain . '/"><p class="Banner_Links_P">Compo</p></a>';
+						echo '<a class="Banner_Links" href="//compo.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Compo</p></a>';
 						echo '<a class="Banner_Links" href="//crew.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Crew</p></a>';
 					echo '</center>';
 				echo '</nav>';
@@ -109,11 +109,11 @@ class Site {
 
 					echo '</center>';
 					echo '<center style="padding-bottom:25px;">';
-						echo '<h3 style="color:white;">Infected Lan er også på</h3>';
-						echo '<a href="https://www.facebook.com/infectedlan/?fref=ts" style="border:#3b5998 solid 1px; height: 1em; width:1em; background-color:#3b5998; border-radius:50%; margin:0 2.5px;">';
+						echo '<h3 style="color:white;">' . Settings::name . ' er også på</h3>';
+						echo '<a href="https://www.facebook.com/infectedlan/?fref=ts" style="border: #3b5998 solid 1px; height: 1em; width: 1em; background-color: #3b5998; border-radius: 50%; margin: 0 5px;">';
 							echo '<i class="fa fa-facebook fa-1x" aria-hidden="true"></i>';
 						echo '</a>';
-						echo '<a href="https://twitter.com/infected_lan" style="border:#1da1f2 solid 1px; height: 1em; width:1em; background-color:#1da1f2; border-radius:50%; margin:0 2.5px;">';
+						echo '<a href="https://twitter.com/infected_lan" style="border: #1da1f2 solid 1px; height: 1em; width:1em; background-color: #1da1f2; border-radius:50%; margin:0 5px;">';
 							echo '<i class="fa fa-twitter fa-1x" aria-hidden="true"></i>';
 						echo '</a>';
 					echo '</center>';
@@ -169,21 +169,21 @@ class Site {
 			if (in_array($fileName, glob($directory . '*.php'))) {
 				include $fileName;
 			} else {
-				echo '<div style="display: table; position: absolute; height:100%; width:100%;">';
-        	echo '<center style="display: table-cell; vertical-align: middle;" >';
-          	echo '<center class="Background1">';
-            	echo '<center style="margin: 0 auto; width: 60%; display: inline-block; padding-top: 25px; padding-bottom: 25px;">';
-              	echo '<i class="fa fa-exclamation-triangle fa-5x Foreground2" aria-hidden="true"></i>';
-                echo '<h1 style="color:white; text-align:center; font-family: Arial, Helvetica, sans-serif;">404</h1>';
-                echo '<h3 style="text-align:center; font-family: Arial, Helvetica, sans-serif;" class="Foreground2">Kunne ikke finne siden du lette etter!</h3>';
-                echo '<p style="text-align:center; font-family: Arial, Helvetica, sans-serif; color:White;">Vennligst gå tilbake til hovedsiden og forsøk på nytt.</p>';
-                echo '<a href="/" style="margin:20px; padding-left:20px; padding-right:20px; display:inline-block; text-decoration:none; background-color:rgb(25,25,25);">';
-                	echo '<p style="font-family: Arial, Helvetica, sans-serif;">Gå hjem</p>';
-                echo '</a>';
-              echo '</center>';
-            echo '</center>';
-          echo '</center>';
-        echo '</div>';
+        echo '<div style="background-color:White; display:table; position:absolute; height:100%; width:100%;">';
+          echo '<center style="display:table-cell; vertical-align:middle;">';
+            echo '<center class="Background1">';
+              echo '<center  style="margin:0 auto; width:60%; display:inline-block; padding-top:25px; padding-bottom:25px;">';
+	              echo '<i class="fa fa-exclamation-triangle fa-5x Foreground2" aria-hidden="true"></i>';
+	              echo '<h1 style="color:white; text-align:center; font-family: Arial, Helvetica, sans-serif;">404</h1>';
+	              echo '<h3 style="text-align:center; font-family: Arial, Helvetica, sans-serif;" class="Foreground2">Kunne ikke finne siden du lette etter!</h3>';
+	              echo '<p style="text-align:center; font-family: Arial, Helvetica, sans-serif; color:White;">Vennligst gå tilbake til hovedsiden og forsøk på nytt.</p>';
+	              echo '<a  href="/" style="margin:20px; padding-left:20px; padding-right:20px; display:inline-block; text-decoration:none; background-color:rgb(25,25,25);">';
+	                echo '<p style="font-family: Arial, Helvetica, sans-serif;">Gå hjem</p>';
+	              echo '</a>';
+	            echo '</center>';
+	          echo '</center>';
+	        echo '</center>';
+	      echo '</div>';
 			}
 		}
 	}

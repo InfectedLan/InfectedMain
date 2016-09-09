@@ -1,23 +1,4 @@
 <?php
-/**
- * This file is part of InfectedMain.
- *
- * Copyright (C) 2013-2016 Infected <http://infected.no/>.
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 3.0 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 echo '<center class="wrapper">';
   echo '<div id="Overview_Post">';
     echo '<img class="Infected_logo" alt="Infected Logo" src="Resources\img\infected_logo.png" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px;">';
@@ -48,23 +29,26 @@ echo '<center class="wrapper">';
   echo '</div>';
   echo '<center class="Banner_Post Background1">';
     echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
-      echo '<h2 style="color: white;">Arrangementet</h2>';
+      echo '<h2 style="color: white;">Kommende LAN</h2>';
 
       $event = EventHandler::getCurrentEvent();
       $ticketText = $event->getTicketCount() > 1 ? 'billett' : 'billetter';
 
       echo '<p style=" text-align: center; color: white; margin: 5px 0;">';
-        echo 'Holdes fra ' . DateUtils::getDayFromInt(date('w', $event->getStartTime())) . ' ' . date('d', $event->getStartTime()) . '. ' . (date('m', $event->getStartTime()) != date('m', $event->getEndTime()) ? DateUtils::getMonthFromInt(date('m', $event->getStartTime())) : null) . ' til ' . DateUtils::getDayFromInt(date('w', $event->getEndTime())) . ' ' . date('d', $event->getEndTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getEndTime())) . '.';
+        echo 'Førstkommende arrangement er den ' . date('d', $event->getStartTime()) . '. ' . (date('m', $event->getStartTime()) != date('m', $event->getEndTime()) ? DateUtils::getMonthFromInt(date('m', $event->getStartTime())) : null);
       echo '</p>';
-      echo '<p class="Foreground2" style="text-align:center; margin: 5px 0;">Arrangementet vil foregå i ' . $event->getLocation()->getTitle() . ', dørene åpner kl. ' . date('H:i', $event->getStartTime()) . '.</p>';
-      echo '<p style="text-align: center; color: white; margin: 5px 0;">';
-        echo 'Pris per billett er <strong>' . $event->getTicketType()->getPrice() . ',-</strong> (Inkluderer medlemskap i Radar).' . '<br>';
+      echo '<p class="Foreground2" style="text-align:center; margin: 5px 0;">Arrangementet vil foregå i ' . $event->getLocation()->getTitle() . '</p>';
+      echo '<p style=" text-align: center; color: white; margin: 5px 0;">';
+        echo 'Dørene åpner kl. ' . date('H:i', $event->getStartTime());
+      echo '</>';
+      echo '<p style=" text-align: center; color: white; margin: 5px 0;">';
+        echo 'Pris per billett er <strong>' . $event->getTicketType()->getPrice() . ',-</strong> (Inkluderer medlemskap i Radar)' . '<br>';
       echo '</p>';
-      echo '<p style="text-align: center; color: white;">';
+      echo '<p style=" text-align: center; color: white;">';
 
         if ($event->isBookingTime()) {
           if (!empty($event->getAvailableTickets())) {
-            echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen.';
+            echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen';
           } else {
             echo 'Det er ingen billetter igjen';
           }
@@ -168,14 +152,14 @@ echo '<center class="wrapper">';
           }
           echo '</p>';
         ?>
-
+        
       </div>
       <a class="no_a Background1" href="https://tickets.infected.no" style=" margin:20px;">
         <p style="padding:10px;">Bestill billett</p>
       </a>
       <?php
           /*echo '<p style="display: table; text-align:center;">';
-
+          
           echo '</p>';*/
       ?>
     </div>
