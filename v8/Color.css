@@ -15,7 +15,8 @@ footer {
 }
 
 .Foreground1 {
-    color:#009900;
+    /*color:#009900;*/
+    color: #008d99
 }
 
 .Foreground2 {
@@ -23,7 +24,8 @@ footer {
 }
 
 .Background1 {
-    background-color:#009900;
+    /*background-color:#009900;*/
+    background-color: #008d99;
 }
 
 .Background2 {
