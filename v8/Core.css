@@ -128,7 +128,7 @@ footer {  min-height:100px; }
     
     body {
         /*background-color:purple;*/
-        background-image:url(Resources/img/Back_660.jpg);
+        /*background-image:url(Resources/img/Back_660.jpg);*/
         background-repeat:no-repeat; 
         background-size:100%; 
         background-attachment: fixed; 
@@ -242,7 +242,7 @@ footer {  min-height:100px; }
 
 
     body {
-        background-image:url(Resources/img/Back_660.jpg);
+        /*background-image:url(Resources/img/Back_660.jpg);*/
         background-repeat:no-repeat; 
         background-size:100%; 
         background-attachment: fixed; 
@@ -335,7 +335,7 @@ footer {  min-height:100px; }
 {
     
     body {
-        background-image:url(Resources/img/Back_660.jpg); 
+        /*background-image:url(Resources/img/Back_660.jpg);*/ 
         background-repeat:no-repeat; 
         background-size:100%; 
         background-attachment: fixed; 
@@ -393,7 +393,7 @@ footer {  min-height:100px; }
 
     body {
         margin:0;
-        background-image:url(Resources/img/Back.jpg); 
+        /*background-image:url(Resources/img/Back.jpg);*/ 
         background-repeat:no-repeat; 
         background-size:100%; 
         background-attachment: fixed; 

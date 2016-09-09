@@ -54,13 +54,20 @@ class Site {
 				echo '<link href="Color.css" rel="stylesheet" type="text/css">';
 				echo '<link href="Resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">';
 				echo '<style>';
+					echo '@media screen and (min-width: 919px) {';
+						echo 'body {';
+						echo 'background: #000000 url(\'' . $this->getBackground() . '\');';
+					echo '}}';
+
+
+					echo '@media screen and (min-width: 1068px) {';
 					echo 'body {';
 						echo 'background: #000000 url(\'' . $this->getBackground() . '\');';
-						echo 'background-repeat: no-repeat;';
+						/*echo 'background-repeat: no-repeat;';
 						echo 'background-attachment: fixed;';
 						echo 'background-size: 100% auto;';
-						echo 'background-position: center;';
-					echo '}';
+						echo 'background-position: center;';*/
+					echo '}}';
 				echo '</style>';
 				echo '<script src="Resources/scripts/hamburger.js" type="text/javascript" ></script>';
 				echo '<script>';
