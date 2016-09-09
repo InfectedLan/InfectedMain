@@ -110,10 +110,10 @@ class Site {
 					echo '</center>';
 					echo '<center style="padding-bottom:25px;">';
 						echo '<h3 style="color:white;">Infected Lan er også på</h3>';
-						echo '<a href="https://www.facebook.com/infectedlan/?fref=ts" style="border:#3b5998 solid 1px; height: 1em; width:1em; background-color:#3b5998; border-radius:50%; margin:0 2.5px;">';
+						echo '<a href="https://www.facebook.com/infectedlan/?fref=ts" style="border:#3b5998 solid 1px; height: 1em; width:1em; background-color:#3b5998; border-radius:50%; margin:0 5px;">';
 							echo '<i class="fa fa-facebook fa-1x" aria-hidden="true"></i>';
 						echo '</a>';
-						echo '<a href="https://twitter.com/infected_lan" style="border:#1da1f2 solid 1px; height: 1em; width:1em; background-color:#1da1f2; border-radius:50%; margin:0 2.5px;">';
+						echo '<a href="https://twitter.com/infected_lan" style="border:#1da1f2 solid 1px; height: 1em; width:1em; background-color:#1da1f2; border-radius:50%; margin:0 5px;">';
 							echo '<i class="fa fa-twitter fa-1x" aria-hidden="true"></i>';
 						echo '</a>';
 					echo '</center>';
@@ -169,7 +169,8 @@ class Site {
 			if (in_array($fileName, glob($directory . '*.php'))) {
 				include $fileName;
 			} else {
-				echo '<div style="display: table; position: absolute; height:100%; width:100%;">';
+				
+				/*echo '<div style="display: table; position: absolute; height:100%; width:100%;">';
         	echo '<center style="display: table-cell; vertical-align: middle;" >';
           	echo '<center class="Background1">';
             	echo '<center style="margin: 0 auto; width: 60%; display: inline-block; padding-top: 25px; padding-bottom: 25px;">';
@@ -183,7 +184,31 @@ class Site {
               echo '</center>';
             echo '</center>';
           echo '</center>';
-        echo '</div>';
+        echo '</div>';*/
+
+?>
+
+            <div style="background-color:White; display:table; position:absolute; height:100%; width:100%;">
+                <center style="display:table-cell; vertical-align:middle;" >
+                            
+                    <center class="Background1">
+                        <center  style="margin:0 auto; width:60%; display:inline-block; padding-top:25px; padding-bottom:25px;">
+                        <i class="fa fa-exclamation-triangle fa-5x Foreground2" aria-hidden="true"></i>
+                        <h1 style="color:white; text-align:center; font-family: Arial, Helvetica, sans-serif;">404</h1>
+                        <h3 style="text-align:center; font-family: Arial, Helvetica, sans-serif;" class="Foreground2">Kunne ikke finne siden du lette etter!</h3>
+                        <p style="text-align:center; font-family: Arial, Helvetica, sans-serif; color:White;">Vennligst gå tilbake til hovedsiden og forsøk på nytt.</p>
+                        <a  href="/" style="margin:20px; padding-left:20px; padding-right:20px; display:inline-block; text-decoration:none; background-color:rgb(25,25,25);">
+                            <p style="font-family: Arial, Helvetica, sans-serif;">Gå hjem</p>
+                        </a>
+                    </center>
+                    </center>
+
+                </center>
+            </div>
+		<?php
+
+
+
 			}
 		}
 	}
