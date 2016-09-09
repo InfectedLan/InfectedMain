@@ -159,9 +159,7 @@ class Site {
 
 		if ($page != null) {
 			// Format the page as HTML.
-			echo '<div class="contentTitleBox">';
-				echo '<h1>' . $page->getTitle() . '</h1>';
-			echo '</div>';
+			echo '<h1>' . $page->getTitle() . '</h1>';
 			echo $page->getContent();
 		} else {
 			$directory = 'pages/';
@@ -171,10 +169,21 @@ class Site {
 			if (in_array($fileName, glob($directory . '*.php'))) {
 				include $fileName;
 			} else {
-				echo '<article>';
-					echo '<h1>Siden ble ikke funnet!</h1>';
-					echo 'Siden du ser etter finnes ikke.';
-				echo '</article>';
+				echo '<div style="display: table; position: absolute; height:100%; width:100%;">';
+        	echo '<center style="display: table-cell; vertical-align: middle;" >';
+          	echo '<center class="Background1">';
+            	echo '<center style="margin: 0 auto; width: 60%; display: inline-block; padding-top: 25px; padding-bottom: 25px;">';
+              	echo '<i class="fa fa-exclamation-triangle fa-5x Foreground2" aria-hidden="true"></i>';
+                echo '<h1 style="color:white; text-align:center; font-family: Arial, Helvetica, sans-serif;">404</h1>';
+                echo '<h3 style="text-align:center; font-family: Arial, Helvetica, sans-serif;" class="Foreground2">Kunne ikke finne siden du lette etter!</h3>';
+                echo '<p style="text-align:center; font-family: Arial, Helvetica, sans-serif; color:White;">Vennligst gå tilbake til hovedsiden og forsøk på nytt.</p>';
+                echo '<a href="/" style="margin:20px; padding-left:20px; padding-right:20px; display:inline-block; text-decoration:none; background-color:rgb(25,25,25);">';
+                	echo '<p style="font-family: Arial, Helvetica, sans-serif;">Gå hjem</p>';
+                echo '</a>';
+              echo '</center>';
+            echo '</center>';
+          echo '</center>';
+        echo '</div>';
 			}
 		}
 	}
