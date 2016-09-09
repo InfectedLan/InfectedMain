@@ -7,28 +7,25 @@ echo '<center id="wrapper">';
 
     $event = EventHandler::getCurrentEvent();
 
-    if ($event->isBookingTime()) {
-      if (!empty($event->getAvailableTickets())) {
-        echo '<a class="no_a Background1" href="https://tickets.infected.no" style="margin:20px;">';
-          echo '<p style="padding:10px; text-align: center;">Bestill billett</p>';
-        echo '</a>';
-      } else {
-        echo '<center style=" padding: 10px;">';
-          echo '<div style="display: inline-block;">';
+    echo '<center style="padding: 10px;">';
+      echo '<div style="display: inline-block;">';
+
+        if ($event->isBookingTime()) {
+          if (!empty($event->getAvailableTickets())) {
+            echo '<a class="no_a Background1" href="https://tickets.infected.no" style="margin:20px;">';
+              echo '<p style="padding:10px; text-align: center;">Bestill billett</p>';
+            echo '</a>';
+          } else {
             echo '<p style="color:white;background-color: #990000; padding: 20px;margin-bottom: 10px;text-align: center; cursor: default;">Arrangemanget er utsolgt</p>';
             echo '<p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er utsolgt</p>';
-          echo '</div>';
-        echo '</center>';
-      }
-    } else {
-      echo '<center style=" padding: 10px;">';
-        echo '<div style="display: inline-block;">';
+          }
+        } else {
           echo '<p style="color:white;background-color: #696969; padding: 20px;margin-bottom: 10px;text-align: center; cursor: default;">Billetter er ikke tilgjengelig</p>';
           echo '<p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er ikke tilgjengelig enda</p>';
-        echo '</div>';
-      echo '</center>';
-    }
+        }
 
+      echo '</div>';
+    echo '</center>';
   echo '</div>';
   echo '<center class="Banner_Post Background1">';
     echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
