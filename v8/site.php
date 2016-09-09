@@ -26,10 +26,16 @@ require_once 'utils/dateutils.php';
 
 class Site {
 	// Variable definitions.
+	private $backgroundDirectory;
+	private $backgroundSuffix;
+	private $backgroundIndex;
 	private $pageName;
 
 	public function __construct() {
 		// Set the variables.
+		$this->backgroundDirectory = 'images/backgrounds/';
+		$this->backgroundSuffix = 'jpg';
+		$this->backgroundIndex = rand(0, count(glob($this->backgroundDirectory . '*.' . $this->backgroundSuffix)) - 1);
 		$this->pageName = isset($_GET['page']) ? $_GET['page'] : 'home';
 	}
 
@@ -54,20 +60,16 @@ class Site {
 				echo '<link href="Color.css" rel="stylesheet" type="text/css">';
 				echo '<link href="Resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">';
 				echo '<style>';
-					echo '@media screen and (min-width: 919px) {';
+					echo '@media screen and (min-width: 0px) {';
 						echo 'body {';
-						echo 'background: #000000 url(\'' . $this->getBackground() . '\');';
-					echo '}}';
-
-
+							echo 'background-image: url(\'' . $this->getBackground(true) . '\');';
+						echo '}';
+					echo '}';
 					echo '@media screen and (min-width: 1068px) {';
-					echo 'body {';
-						echo 'background: #000000 url(\'' . $this->getBackground() . '\');';
-						/*echo 'background-repeat: no-repeat;';
-						echo 'background-attachment: fixed;';
-						echo 'background-size: 100% auto;';
-						echo 'background-position: center;';*/
-					echo '}}';
+						echo 'body {';
+							echo 'background-image: url(\'' . $this->getBackground(false) . '\');';
+						echo '}';
+					echo '}';
 				echo '</style>';
 				echo '<script src="Resources/scripts/hamburger.js" type="text/javascript" ></script>';
 				echo '<script>';
@@ -125,7 +127,7 @@ class Site {
 
 					echo '</center>';
 					echo '<center style="padding-bottom:25px;">';
-						echo '<h3 style="color:white;">' . Settings::name . ' er også på</h3>';
+						echo '<h3 style="color:white;">Følg ' . Settings::name . ' på</h3>';
 						echo '<a href="https://www.facebook.com/infectedlan/?fref=ts" style="border: #3b5998 solid 1px; height: 1em; width: 1em; background-color: #3b5998; border-radius: 50%; margin: 0 5px;">';
 							echo '<i class="fa fa-facebook fa-1x" aria-hidden="true"></i>';
 						echo '</a>';
@@ -142,12 +144,11 @@ class Site {
 	}
 
 	// Picks randomly a background from the background directory.
-	private function getBackground() {
-		$directory = 'images/backgrounds/';
-		$suffix = 'jpg';
-		$list = glob($directory . '*.' . $suffix);
+	private function getBackground($responsive) {
+		$directory = $this->backgroundDirectory . ($responsive ? 'responsive/' : null);
+		$list = glob($directory . '*.' . $this->backgroundSuffix);
 
-		return $list[rand(0, count($list) - 1)];
+		return $list[$this->backgroundIndex];
 	}
 
 	// Generates title based on current page / article.
