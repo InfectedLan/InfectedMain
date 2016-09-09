@@ -1,4 +1,23 @@
 <?php
+/**
+ * This file is part of InfectedMain.
+ *
+ * Copyright (C) 2013-2016 Infected <http://infected.no/>.
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3.0 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 echo '<center class="wrapper">';
   echo '<div id="Overview_Post">';
     echo '<img class="Infected_logo" alt="Infected Logo" src="Resources\img\infected_logo.png" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px;">';
@@ -35,9 +54,7 @@ echo '<center class="wrapper">';
       $ticketText = $event->getTicketCount() > 1 ? 'billetter' : 'billett';
 
       echo '<p style="max-width: 80%; text-align: center; color: white;">';
-        echo 'Neste arrangement vil er den ' . date('d', $event->getStartTime()) . '. ' . (date('m', $event->getStartTime()) != date('m', $event->getEndTime()) ? DateUtils::getMonthFromInt(date('m', $event->getStartTime())) : null) . ' til ' . date('d', $event->getEndTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getEndTime())) . ' i ' . $event->getLocation()->getTitle();
-      echo '</p>';
-      echo '<p style="max-width: 80%; text-align: center; color: white;">';
+        echo 'Arrangementet holdes fra ' . date('d', $event->getStartTime()) . '. ' . (date('m', $event->getStartTime()) != date('m', $event->getEndTime()) ? DateUtils::getMonthFromInt(date('m', $event->getStartTime())) : null) . ' til ' . date('d', $event->getEndTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getEndTime())) . ' og arrangeres i ' . $event->getLocation()->getTitle();
         echo 'Dørene åpner kl. ' . date('H:i', $event->getStartTime());
       echo '</>';
       echo '<p style="max-width: 80%; text-align: center; color: white;">';
