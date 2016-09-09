@@ -21,7 +21,7 @@
 echo '<center class="wrapper">';
   echo '<div id="Overview_Post">';
     echo '<img class="Infected_logo" alt="Infected Logo" src="Resources\img\infected_logo.png" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px;">';
-    echo '<h1 style="color:white;">Delta på ett av Akershus største LAN party</h1>';
+    echo '<h1 style="color:white;">Delta på ett av Akershus største LAN-party</h1>';
     echo '<h3 style="color:white;">Vi ønsker alle som er interresert, velkommen!</h3>';
 
     $event = EventHandler::getCurrentEvent();
@@ -34,6 +34,22 @@ echo '<center class="wrapper">';
             echo '<a class="no_a Background1" href="https://tickets.infected.no" style="margin:20px;">';
               echo '<p style="padding:10px; text-align: center;">Bestill billett</p>';
             echo '</a>';
+
+            echo '<div>';
+
+
+              echo '<p style="text-align:center; font-size:32px; display:inline-block; vertical-align: super" class="Foreground2">';
+                echo $event->getAvailableTickets();
+              echo '</p>';
+
+              echo '<p style="text-align:center; font-size:64px; display:inline-block; vertical-align: sub; margin-left:10px; margin-right:10px;" class="Foreground2">/</p>';
+
+              echo '<p style="text-align:center; font-size:32px; display:inline-block; vertical-align: super" class="Foreground2">';
+                echo $event->getParticipants();
+              echo '</p>';
+
+            echo '</div>';
+
           } else {
             echo '<p style="color:white;background-color: #990000; padding: 20px;margin-bottom: 10px;text-align: center; cursor: default;">Arrangemanget er utsolgt</p>';
             echo '<p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er utsolgt</p>';
