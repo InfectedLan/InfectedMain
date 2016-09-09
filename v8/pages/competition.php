@@ -23,8 +23,25 @@
   <div id="Overview_Post" style="margin-bottom:150px;">
       <i id="main_emblem" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-gamepad Foreground2" aria-hidden="true"></i>
       <h1 style="color:white;">Konkurranser</h1>
-      <h3 style="color:white;">Reglene, og spillene vises under</h3>
+      <h3 style="color:white;">Reglene og spillene vises under</h3>
   </div>
+</center>
+<center class="Banner_Post Background1">
+  <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
+    <h2 style="color:white;">Spillene</h2>
+    <div class="agenda_container_row Background1 Foreground2" style="display: table-row;">
+      <p class="agenda_container_row_text">Counter-Strike: Global Offensive</p>
+      <p class="agenda_container_row_text">1. Plass 7500,-</p>
+      <p class="agenda_container_row_text">2. Plass 2500,-</p>
+      <p class="agenda_container_row_text">Max 16 lag</p>
+    </div>
+    <div class="agenda_container_row Background1 Foreground2" style="display: table-row;">
+      <p class="agenda_container_row_text">League of Legends</p>
+      <p class="agenda_container_row_text">1. Plass 7500,-</p>
+      <p class="agenda_container_row_text">2. Plass 2500,-</p>
+      <p class="agenda_container_row_text">Max 16 lag</p>
+    </div>
+  </center>
 </center>
 <div id="gen_information" class="Background2">
   <center class="Banner_Post">
@@ -77,20 +94,3 @@
     </div>
   </div>
 </div>
-<center class="Banner_Post Background1">
-  <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
-    <h2 style="color:white;">Spillene</h2>
-    <div class="agenda_container_row Background1 Foreground2" style="display: table-row;">
-      <p class="agenda_container_row_text">Counter-Strike: Global Offensive</p>
-      <p class="agenda_container_row_text">1. Plass 7500,-</p>
-      <p class="agenda_container_row_text">2. Plass 2500,-</p>
-      <p class="agenda_container_row_text">Max 16 lag</p>
-    </div>
-    <div class="agenda_container_row Background1 Foreground2" style="display: table-row;">
-      <p class="agenda_container_row_text">League of Legends</p>
-      <p class="agenda_container_row_text">1. Plass 7500,-</p>
-      <p class="agenda_container_row_text">2. Plass 2500,-</p>
-      <p class="agenda_container_row_text">Max 16 lag</p>
-    </div>
-  </center>
-</center>
