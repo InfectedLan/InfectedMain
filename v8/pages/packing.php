@@ -1,4 +1,4 @@
-<center id="wrapper">
+<center class="wrapper">
   <div id="Overview_Post" style="margin-bottom:150px;">
     <i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-suitcase Foreground2" aria-hidden="true"></i>
     <h1 style="color:white;">På Infected</h1>

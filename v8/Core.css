@@ -1,5 +1,5 @@
 body { margin:0; }
-nav { min-height:45px; }
+nav { min-height:45px; height: 45px; }
 h1, h2, h3 { font-family: Arial, Helvetica, sans-serif; }
 p { margin:0; text-align: left; font-family: Arial, Helvetica, sans-serif; }
 a { text-decoration: none; font-family: Arial, Helvetica, sans-serif; padding:10px; display: inline-block; }
@@ -35,7 +35,7 @@ footer {  min-height:100px; }
         width: 80%;
     }
 
-    #wrapper {
+    .wrapper {
         padding-top: 100px;
         margin:0 auto;
     }
@@ -60,6 +60,11 @@ footer {  min-height:100px; }
         width: auto;  
         margin: auto 10px;
         padding-bottom:50px;
+    }
+    .Banner_Info_Desc {
+        max-height: 56px!important;
+        min-height: 56px!important;
+        height: 56px!important;
     }
 
     .Sponsor_h3 {
@@ -169,7 +174,7 @@ footer {  min-height:100px; }
         width: auto;
     }
 
-    #wrapper {
+    .wrapper {
         padding-top: 100px;
         margin:0 auto;
     }
@@ -190,7 +195,7 @@ footer {  min-height:100px; }
     }
 
     .Banner_Info {
-        display: inline-block; 
+        display: block; 
         width: 300px;  
         margin: auto 10px;
         padding-bottom:50px;
@@ -424,7 +429,7 @@ footer {  min-height:100px; }
 
 
 
-    #wrapper {
+    .wrapper {
         padding-top: 160px;
         margin:0 auto;
     }

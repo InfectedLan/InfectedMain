@@ -23,7 +23,7 @@ require_once 'handlers/agendahandler.php';
 require_once 'handlers/eventhandler.php';
 require_once 'handlers/sectionpagehandler.php';
 
-echo '<center id="wrapper">';
+echo '<center class="wrapper">';
   echo '<div id="Overview_Post" style="margin-bottom:150px;">';
     echo '<i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-calendar-o Foreground2" aria-hidden="true"></i>';
     echo '<h1 style="color:white;">Agenda</h1>';

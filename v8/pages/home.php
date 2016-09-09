@@ -1,8 +1,9 @@
-<center id="wrapper">
+<center class="wrapper">
   <div id="Overview_Post">
     <img class="Infected_logo" alt="Infected Logo" src="Resources\img\infected_logo.png" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px;" />
     <h1 style="color:white;">Delta på ett av Akershus største LAN party</h1>
     <h3 style="color:white;">Vi ønsker alle som er interresert, velkommen!</h3>
+    <p style="color:white; text-align:center;">Alle som ønsker å delta må ha billett</p>
 
 
 
@@ -22,8 +23,8 @@ if ($event->isBookingTime())
     ?>
     <center style=" padding: 10px;">
       <div style="display: inline-block;">
-        <p style="color:white;background-color: #990000; padding: 20px;margin-bottom: 10px;text-align: center; cursor: default;">Arrangemanget er utsolgt</p>
-        <p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er utsolgt</p>
+        <p style="color:white;background-color: #990000; padding: 20px;margin-bottom: 10px;text-align: center; cursor: default;">Arrangementet er utsolgt</p>
+        <p style="color:white;padding-top: 5px;text-align: center;">Det er dessverre ikke billetter igjenn til LAN-et</p>
       </div>
     </center>
     <?php
@@ -36,7 +37,7 @@ else
 <center style=" padding: 10px;">
       <div style="display: inline-block;">
         <p style="color:white;background-color: #696969; padding: 20px;margin-bottom: 10px;text-align: center; cursor: default;">Billetter er ikke tilgjengelig</p>
-        <p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er ikke tilgjengelig enda</p>
+        <p style="color:white;padding-top: 5px;text-align: center;">Billettene til det kommende LAN-et er ikke tilgjengelig enda</p>
       </div>
     </center>
     
@@ -99,7 +100,9 @@ else
       <div class="Banner_Info">
         <i class="fa fa-shield fa-4x Foreground1" aria-hidden="true"></i>
         <h3 style="color:black;">Regler og sikkerhet</h3>
-        <p style="text-align:center;">Rader er et <strong>rusfritt</strong> området, dette <strong style="color:red;">inkluderer snus og røyk</strong>. Det er ikke lov å røyke eller snuse under Infected</p>
+        <div class="Banner_Info_Desc">
+          <p style="text-align:center;">Rader er et <strong>rusfritt</strong> området, dette <strong style="color:red;">inkluderer snus og røyk</strong>. Det er ikke lov å røyke eller snuse under Infected</p>
+        </div>
         <a class="no_a Background1" href="pages/security.html" style=" margin:20px;">
           <p>Les mer</p>
         </a>
@@ -107,8 +110,10 @@ else
       <div class="Banner_Info" >
         <i class="fa fa-suitcase fa-4x Foreground1" aria-hidden="true"></i>
         <h3 style="color:black">Pakkeliste</h3>
-        <p style="text-align:center;">Vi i infected crewet har laget en hendig pakkliste over ting mang bør ha med på LAN</p>
-        <p style="text-align:center;">Klikk les mer for å se listen</p>
+        <div class="Banner_Info_Desc">
+          <p style="text-align:center;">Vi i infected crewet har laget en hendig pakkliste over ting mang bør ha med på LAN</p>
+          <p style="text-align:center;">Klikk les mer for å se listen</p>
+        </div>
         <a class="no_a Background1" href="pages/packing.html" style=" margin:20px;">
           <p>Les mer</p>
         </a>
@@ -116,7 +121,9 @@ else
       <div class="Banner_Info">
         <i class="fa fa-child fa-4x Foreground1" aria-hidden="true"></i>
         <h3 style="color:black">For foreldre og foresatte</h3>
-        <p style="text-align:center;">Nervøs for å sende barnet ditt på sitt første LAN? Nyskjerrig på hva et LAN er? Klikk les mer, for mer informasjon</p>
+        <div class="Banner_Info_Desc">
+          <p style="text-align:center;">Nervøs for å sende barnet ditt på sitt første LAN? Nyskjerrig på hva et LAN er? Klikk les mer, for mer informasjon</p>
+        </div>
         <a class="no_a Background1" href="pages/guardians.html" style=" margin:20px;">
           <p>Les mer</p>
         </a>
@@ -133,7 +140,9 @@ else
     <div class="Banner_Info">
       <i class="fa fa-trophy fa-4x Foreground1" aria-hidden="true"></i>
       <h3>Konkurranser</h3>
-      <p style="text-align:center;">Under LAN-et vil det arrageres konkurranser, oversikten over spillene det er konkurranse i vil være tilgjengelig her</p>
+      <div class="Banner_Info_Desc">
+        <p style="text-align:center;">Under LAN-et vil det arrageres konkurranser, oversikten over spillene det er konkurranse i vil være tilgjengelig her</p>
+      </div>
       <a class="no_a Background1" href="pages/competition.html" style=" margin:20px;">
         <p style="padding:10px;">Se konkurransene</p>
       </a>
@@ -141,9 +150,11 @@ else
     <div class="Banner_Info" >
       <i class="fa fa-ticket fa-4x Foreground1" aria-hidden="true"></i>
       <h3>Billetter</h3>
-      <p style="text-align:center;">Billetter til infected kan bestilles på vår ticket side</p>
-      <p style="text-align:center;">Prisen per billett er på: <strong>350,-</strong></p>
-      <p style="text-align:center;">Det er <strong>150</strong> av <strong>400</strong></p>
+      <div class="Banner_Info_Desc">
+        <p style="text-align:center;">Billetter til infected kan bestilles på vår ticket side</p>
+        <p style="text-align:center;">Prisen per billett er på: <strong>350,-</strong></p>
+        <p style="text-align:center;">Det er <strong>150</strong> av <strong>400</strong></p>
+      </div>
       <a class="no_a Background1" href="https://tickets.infected.no" style=" margin:20px;">
         <p style="padding:10px;">Bestill billett</p>
       </a>
@@ -151,7 +162,9 @@ else
     <div class="Banner_Info">
       <i class="fa fa-calendar-o fa-4x Foreground1" aria-hidden="true"></i>
       <h3>Agenda</h3>
-      <p style="text-align:center;">Agendaen vil vis hva som skjer på infected og når det vil skje. Dette inkluderer konkurranser og frister</p>
+      <div class="Banner_Info_Desc">
+        <p style="text-align:center;">Agendaen vil vis hva som skjer på infected og når det vil skje. Dette inkluderer konkurranser og frister</p>
+      </div>
       <a class="no_a Background1" href="pages/agenda.html" style=" margin:20px;">
         <p style="padding:10px;">Se agendaen</p>
       </a>
