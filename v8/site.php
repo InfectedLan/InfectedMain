@@ -87,8 +87,8 @@ class Site {
 					echo '<a class="Banner_Logo" href="/">';
 						echo '<img alt="Infected Logo" class="Banner_Logo" style="padding:0;" src="Resources\img\infected_logo.png">';
 					echo '</a>';
-					echo '<span id="hamburger" style="float:right">';
-						echo '<i style="padding:7px 10px 7px 10px; color:white; cursor: pointer;" class="fa fa-bars fa-2x" aria-hidden="true" onclick="LinksOnMobile(\'nav_Links_Top\')"></i>';
+					echo '<span id="hamburger" style="float: right; padding: 0; height:45px; width:45px;">';
+						echo '<i style="padding:8.5px 10px 8.5px 10px; color:white; cursor: pointer; font-size:1.8em;" class="fa fa-bars " aria-hidden="true" onclick="LinksOnMobile(\'nav_Links_Top\')"></i>';
 					echo '</span>';
 					echo '<br style="clear:both;" />';
 					echo '<center id="nav_Links_Top" class="nav_Links">';

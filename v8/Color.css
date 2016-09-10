@@ -41,6 +41,16 @@ a {
     color: white;
 }
 
+#hamburger {
+    /*background-color: transparent;*/
+}
+
+
+#hamburger:hover {
+    background-color: #3e9ee7!important;
+}
+
+
 a:hover {
     background-color:rgb(25,25,25);
 }
