@@ -80,7 +80,7 @@ echo '<center class="wrapper">';
 
         if ($event->isBookingTime()) {
           if (!empty($event->getAvailableTickets())) {
-            echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen.';
+            //echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen.';
           } else {
             echo 'Det er ingen billetter igjen';
           }
@@ -160,6 +160,16 @@ echo '<center class="wrapper">';
       </a>
     </div>
     <div class="Banner_Info">
+      <i class="fa fa-users fa-4x Foreground1" aria-hidden="true"></i>
+      <h3>Infected Crew</h3>
+      <div class="Banner_Info_Desc">
+        <p style="text-align:center;">Infected er en non-profit organisasjon, det er 100% bygd opp av fri vilje. Hvis du ønsker å hjelpe til kan du sjekke ut crewene</p>
+      </div>
+      <a class="no_a Background1" href="pages/competition.html" style=" margin:20px;">
+        <p style="padding:10px;">Se Informasjon</p>
+      </a>
+    </div>
+    <div class="Banner_Info">
       <i class="fa fa-calendar-o fa-4x Foreground1" aria-hidden="true"></i>
       <h3>Agenda</h3>
       <div class="Banner_Info_Desc">
@@ -169,5 +179,6 @@ echo '<center class="wrapper">';
         <p style="padding:10px;">Se agendaen</p>
       </a>
     </div>
+    
   </center>
 </center>

@@ -32,16 +32,22 @@ footer {  min-height:100px; }
     }
 
     .Infected_logo {
+        padding-top: 100px!important;
         width: 80%;
+    }
+    
+    .TopSymbol {
+        padding-top: 100px!important;
     }
 
     .wrapper {
-        padding-top: 100px;
+        /*padding-top: 100px;*/
         margin:0 auto;
     }
 
     #Overview_Post {
-        margin-bottom:450px; 
+        /*margin-bottom:450px; */
+        height: 100vh;
         margin-left: 20px; 
         margin-right:20px;
     }
@@ -168,15 +174,20 @@ footer {  min-height:100px; }
     .Infected_logo {
         height: 60px;
         width: auto;
+        padding-top: 100px!important;
+    }
+
+    .TopSymbol {
+        padding-top: 100px!important;
     }
 
     .wrapper {
-        padding-top: 100px;
+        /*padding-top: 100px;*/
         margin:0 auto;
     }
 
     #Overview_Post {
-        margin-bottom:100px; 
+        /*margin-bottom:100px;*/ 
         margin-left: 20px; 
         margin-right:20px;
     }
@@ -433,16 +444,21 @@ footer {  min-height:100px; }
 
 
     .wrapper {
-        padding-top: 160px;
+        /*padding-top: 160px;*/
         margin:0 auto;
     }
 
+        .TopSymbol {
+        padding-top: 160px!important;
+    }
+
     .Infected_logo {
+        padding-top: 160px!important;
         height: auto;
     }
 
     #Overview_Post {
-        margin-bottom:450px; 
+        /*margin-bottom:450px; */
         margin-left: 20px; 
         margin-right:20px;
     }

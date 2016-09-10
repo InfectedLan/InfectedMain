@@ -20,8 +20,8 @@
 ?>
 
 <center class="wrapper">
-  <div id="Overview_Post" style="margin-bottom:150px;">
-    <i id="main_emblem" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-shield Foreground2" aria-hidden="true"></i>
+  <div id="Overview_Post">
+    <i id="main_emblem" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-shield Foreground2 TopSymbol" aria-hidden="true"></i>
     <h1 style="color:white;">Sikkerhet og regler</h1>
     <h3 style="color:white;">Infected skal være et sikkert og hyggelig LAN!</h3>
   </div>
