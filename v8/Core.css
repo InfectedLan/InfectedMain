@@ -32,7 +32,7 @@ footer {  min-height:100px; }
     }
 
     .Infected_logo {
-        padding-top: 100px!important;
+        padding-top: 75px!important;
         width: 80%;
     }
     
@@ -47,7 +47,7 @@ footer {  min-height:100px; }
 
     #Overview_Post {
         /*margin-bottom:450px; */
-        height: 100vh;
+        min-height: 100vh;
         margin-left: 20px; 
         margin-right:20px;
     }
@@ -174,11 +174,11 @@ footer {  min-height:100px; }
     .Infected_logo {
         height: 60px;
         width: auto;
-        padding-top: 100px!important;
+        padding-top: 75px!important;
     }
 
     .TopSymbol {
-        padding-top: 100px!important;
+        padding-top: 75px!important;
     }
 
     .wrapper {
