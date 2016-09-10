@@ -18,7 +18,6 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-require_once 'handlers/compohandler.php';
 require_once 'handlers/grouphandler.php';
 
 echo '<center class="wrapper">';
@@ -28,7 +27,6 @@ echo '<center class="wrapper">';
     echo '<h3 style="color:white;">Her vil du se hvilke crew som finnes, og informasjon om dem</h3>';
   echo '</div>';
 echo '</center>';
-
 
 echo '<div id="gen_information" class="Background2">';
   echo '<center class="Banner_Post">';
@@ -41,26 +39,19 @@ echo '<div id="gen_information" class="Background2">';
     echo '</center>';
   echo '</center>';
   echo '<div class="information_content_container">';
-  
-  
 
   $groupList = GroupHandler::getGroups();
 
-  if (!empty($groupList)) 
-  {
-    foreach ($groupList as $group) 
-    {
-
+  if (!empty($groupList)) {
+    foreach ($groupList as $group) {
       echo '<div class="information_content">';
         echo '<div class="information_content_textholder">';
-          echo '<h3>'. $group->getTitle() .'</h3>';
-          echo '<p>'. $group->getDescription() .'</p>';
+          echo '<h3>' . $group->getTitle() . '</h3>';
+          echo '<p>' . $group->getDescription() . '</p>';
         echo '</div>';
       echo '</div>';
-
     }
-  } else 
-  {
+  } else {
     echo '<div class="information_content">';
         echo '<div class="information_content_textholder">';
           echo '<h3>Crewene ble ikke funnet</h3>';
@@ -71,14 +62,4 @@ echo '<div id="gen_information" class="Background2">';
 
   echo '</div>';
 echo '</div>';
-
-
-
-
-
-
-
-
-
 ?>
-
