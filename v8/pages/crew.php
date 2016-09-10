@@ -54,8 +54,8 @@ echo '<div id="gen_information" class="Background2">';
   } else {
     echo '<div class="information_content">';
         echo '<div class="information_content_textholder">';
-          echo '<h3>Crewene ble ikke funnet</h3>';
-          echo '<p>Det var ikke mulig å finne crewene... Vennligst prøv igjen senere</p>';
+          echo '<h3>Ingen crew ble funnet</h3>';
+          echo '<p>Vennligst prøv igjen senere</p>';
         echo '</div>';
       echo '</div>';
   }
