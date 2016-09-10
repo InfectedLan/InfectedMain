@@ -165,7 +165,7 @@ echo '<center class="wrapper">';
       <div class="Banner_Info_Desc">
         <p style="text-align:center;">Infected er en non-profit organisasjon, det er 100% bygd opp av fri vilje. Hvis du ønsker å hjelpe til kan du sjekke ut crewene</p>
       </div>
-      <a class="no_a Background1" href="pages/competition.html" style=" margin:20px;">
+      <a class="no_a Background1" href="pages/crew.html" style=" margin:20px;">
         <p style="padding:10px;">Se Informasjon</p>
       </a>
     </div>
