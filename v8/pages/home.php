@@ -159,42 +159,6 @@ echo '<center class="wrapper">';
         <p style="padding:10px;">Se konkurransene</p>
       </a>
     </div>
-    <div class="Banner_Info" >
-      <i class="fa fa-ticket fa-4x Foreground1" aria-hidden="true"></i>
-      <h3>Billetter</h3>
-      <div class="Banner_Info_Desc">
-        <p style="text-align:center;">Billetter til infected kan bestilles på vår ticket side</p>
-        <p style="text-align:center;">Prisen per billett er på: <strong><?php echo $event->getTicketType()->getPrice(); ?>,-</strong></p>
-        <?php
-          echo '<p style="text-align:center;">';
-          if ($event->isBookingTime()) {
-            if (!empty($event->getAvailableTickets())) {
-              echo 'Det er <strong>' . $event->getAvailableTickets() . '</strong> av <strong>' . $event->getParticipants() . '</strong> ' . $ticketText . ' igjen';
-            } else {
-              echo 'Det er ingen billetter igjen';
-            }
-          } else {
-            $currentDate = date('Y-m-d');
-            $tomorrowDate = date('Y-m-d', strtotime('+1 day', strtotime($currentDate)));
-            $bookingDate = date('Y-m-d', $event->getBookingTime());
-            $bookingDateFormattedText = date('d', $event->getBookingTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getBookingTime()));
-            $ticketSaleStartDate = $currentDate == $bookingDate ? 'i dag' : ($tomorrowDate == $bookingDate ? 'i morgen' : $bookingDateFormattedText);
-
-            echo 'Billettsalget starter ' . $ticketSaleStartDate . ' kl. '  . date('H:i', $event->getBookingTime());
-          }
-          echo '</p>';
-        ?>
-
-      </div>
-      <a class="no_a Background1" href="https://tickets.infected.no" style=" margin:20px;">
-        <p style="padding:10px;">Bestill billett</p>
-      </a>
-      <?php
-          /*echo '<p style="display: table; text-align:center;">';
-
-          echo '</p>';*/
-      ?>
-    </div>
     <div class="Banner_Info">
       <i class="fa fa-calendar-o fa-4x Foreground1" aria-hidden="true"></i>
       <h3>Agenda</h3>
