@@ -20,9 +20,15 @@
 
 require_once 'handlers/compohandler.php';
 
+if (isset($_GET['id']) &&
+	is_numeric($_GET['id'])) {
+	$compo = CompoHandler::getCompo($_GET['id']);
+
+$page = PageHandler::getPageByName($compo->getName());
+
 echo '<center class="wrapper">';
   echo '<div id="Overview_Post">';
-    echo '<i id="main_emblem" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-gamepad Foreground2 TopSymbol" aria-hidden="true"></i>';
+    echo '<img class="Infected_logo" alt="Game Logo" src="Resources\img\infected_logo.png" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px;">';
     echo '<h1 style="color:white;">Konkurranser</h1>';
     echo '<h3 style="color:white;">Reglene og spillene vises under</h3>';
   echo '</div>';
@@ -130,7 +136,7 @@ echo '<center style=" padding-top:50px; padding-bottom:50px; min-height:100px;">
         echo '<div class="Banner_Info_Desc">';
           echo '<p style="text-align:center;" class="Foreground2">Ved å følge lenken under vil det vises hvordan spillet '. $compo->getTitle() .' skal settes opp.</p>';
         echo '</div>';
-        echo '<a class="no_a Background2" href="pages/game/id/'. $compo->getId() .'.html" style=" margin:20px;">';
+        echo '<a class="no_a Background2" href="pages/competition/id/'. $compo->getId() .'.html" style=" margin:20px;">';
           echo '<p class="Foreground1">Se informasjonen</p>';
         echo '</a>';
       echo '</div>';

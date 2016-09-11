@@ -35,7 +35,12 @@ footer {  min-height:100px; }
         padding-top: 75px!important;
         width: 80%;
     }
+
+    .GameLogo {
+        max-width: 128px;
+    }
     
+
     .TopSymbol {
         padding-top: 100px!important;
     }
