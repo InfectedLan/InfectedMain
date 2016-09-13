@@ -33,7 +33,7 @@ $compoList = CompoHandler::getCompos();
 if (!empty($compoList)) {
   echo '<center class="Banner_Post Background1">';
     echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
-      echo '<h2 style="color:white;">Spillene</h2>';
+      echo '<h2 style="color:white;">Premier</h2>';
 
 			foreach ($compoList as $compo) {
         echo '<div class="agenda_container_row Background1 Foreground2" style="display: table-row;">';
