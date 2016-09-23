@@ -339,6 +339,7 @@ footer {  min-height:100px; }
     
     .Banner_Links {
         display: inline-block;
+        max-height: 25px;
     }
 
     .Banner_Links_P {

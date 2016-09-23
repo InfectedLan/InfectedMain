@@ -19,6 +19,7 @@
  */
 
 require_once 'handlers/compohandler.php';
+require_once 'handlers/pagehandler.php';
 
 if (isset($_GET['id']) &&
 	is_numeric($_GET['id'])) {
@@ -26,11 +27,16 @@ if (isset($_GET['id']) &&
 
 $page = PageHandler::getPageByName($compo->getName());
 
+
+
+  }
+
 echo '<center class="wrapper">';
   echo '<div id="Overview_Post">';
     echo '<img class="Infected_logo" alt="Game Logo" src="Resources\img\infected_logo.png" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px;">';
     echo '<h1 style="color:white;">Konkurranser</h1>';
     echo '<h3 style="color:white;">Reglene og spillene vises under</h3>';
+    echo '<p style="color:White;">'. $compo->getName() . '</p>';
   echo '</div>';
 echo '</center>';
 
