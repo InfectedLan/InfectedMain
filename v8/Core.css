@@ -1,3 +1,4 @@
+* {font-family: Arial, Helvetica, sans-serif;}
 body { margin:0; }
 nav { min-height:45px; height: 45px; }
 h1, h2, h3 { font-family: Arial, Helvetica, sans-serif; }
@@ -6,13 +7,51 @@ a { text-decoration: none; font-family: Arial, Helvetica, sans-serif; padding:10
 footer {  min-height:100px; }
 .information_content_container { padding-top:50px; padding-bottom: 50px; }
 
+/*Log In Button*/
+
+#toggle {
+  position:absolute;
+  appearance:none;
+  cursor:pointer;
+  right:-100%;
+  top:-100%;
+}
+
+
+#toggle + label {
+    cursor:pointer;
+    /*background: #26ae90;*/
+    color: #FFF;
+    -webkit-font-smoothing: antialiased;
+    transition:all 500ms ease;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/*Rest of Class*/
+
+.navRight {
+height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
+}
+
+.navSignIn 
+{
+    display: inline-flex!important; max-height:45px; cursor:pointer; right:45px;
+}
+
+
 @media screen and (min-width: 0px)
 {
-    #hamburger { display: block; visibility: visible; position: absolute; right: 0; }
+    #hamburger { display: block; visibility: visible; }
     
     body { background-image:none; background-repeat:no-repeat; background-size:100%; background-attachment: fixed; }
     nav { position:fixed; width:100%; display: inline-flex; }
-    .Banner_Logo { height:25px; width: 81.297px; padding:10px; }
+    .Banner_Logo { height:25px; width: 81.297px; padding:10px; z-index: 100; }
      
      .nav_Links {
         width: 100%; 
@@ -21,6 +60,7 @@ footer {  min-height:100px; }
         left:0;
         right: 0;
         position: absolute;
+        z-index: 99;
     }
 
     .Banner_Links {
@@ -124,17 +164,73 @@ footer {  min-height:100px; }
     }
 
 
+
+
+/*Logg in style*/
+
+    .loginForm {
+        background:#181818!important;
+        color:#FFF;
+        position: absolute;
+        /*top: -253px;*/
+        width: 100%;
+        top:45px;
+        right: 0px;
+        height: 0px;
+        transition: height 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+        overflow: hidden;
+    
+    }
+
+
+    #toggle:checked ~ .loginForm {
+    /* top: 45px!important;*/
+        height: 225px;
+    }
+
+
+    .signInForm {
+        color:white; 
+
+    }
+
+    .singInInputContainer {
+        margin:10px; 
+
+    }
+
+    .signInInputHeader {
+        padding-bottom:10px; color:rgb(190,190,190); font-size:12px;
+    }
+
+    .signInInput {
+        padding-top:5px; 
+        padding-bottom:5px; 
+        border-width: 0px 0px 1px; 
+
+        font-size:18px; 
+    }    
+
+    .signInButton {
+        margin:10px; 
+
+        padding-top:10px; 
+        padding-bottom:10px; 
+        font-size:18px; 
+    }
+
+
+
 }
 
 @media screen and (min-width: 320px)
 {
     
 
+
     #hamburger {
         display: block;
         visibility: visible;
-        position: absolute;
-        right: 0;
     }
     
     body {
@@ -249,7 +345,90 @@ footer {  min-height:100px; }
     }
 
 
+    /*Logg in style*/
+
+    .loginForm {
+        background:#181818!important;
+        color:#FFF;
+        position: absolute;
+        /*top: -253px;*/
+        width: 100%;
+        top:45px;
+        right: 0px;
+        height: 0px;
+        transition: height 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+        overflow: hidden;
+    
+    }
+
+
+    #toggle:checked ~ .loginForm {
+    /* top: 45px!important;*/
+        height: 225px;
+    }
+
+
+    .signInForm {
+        color:white; 
+
+    }
+
+    .signInInputHeader {
+        padding-bottom:10px; color:rgb(190,190,190); font-size:12px; width: 80%;
+    }
+
+
+    .signInInput {
+        padding-top:5px; 
+        padding-bottom:5px; 
+        border-width: 0px 0px 1px; 
+        width: 80%;
+        font-size:18px; 
+    }    
+
+    .signInButton {
+        
+        width: 80%;
+        padding-top:10px; 
+        padding-bottom:10px; 
+        font-size:18px; 
+    }
+
+
 }
+
+
+@media screen and (min-width: 450px)
+{
+/*Logg in */
+    .signInForm {
+        color:white; 
+        width:400px;
+    }
+
+    .singInInputContainer {
+        padding:10px; 
+        width:300px;
+        margin: auto;
+    }
+
+    .signInInputHeader {
+        width: auto;
+    }
+
+    .signInInput {
+        padding-top:5px; 
+        padding-bottom:5px; 
+        border-width: 0px 0px 1px; 
+        width:300px; 
+        font-size:18px; 
+    }    
+
+    .signInButton {
+        margin:10px; width:300px; padding:10px;  font-size:18px; 
+    }
+}
+
 
 
 @media screen and (min-width: 660px)
@@ -327,6 +506,12 @@ footer {  min-height:100px; }
         display: none;
         visibility: collapse;
     }
+
+
+
+    .navSignIn {
+        right:0px;;
+    }
     
         .nav_Links {
         width: inherit; 
@@ -344,6 +529,50 @@ footer {  min-height:100px; }
 
     .Banner_Links_P {
         line-height: 1.6em;
+    }
+
+    /*Logg inn animation*/
+    .loginForm {
+        background:#181818!important;
+        color:#FFF;
+        position: absolute;
+        /*top: -253px;*/
+        width: auto;
+        top:45px;
+        right: 0px;
+        height: 0px;
+        transition: height 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+        overflow: hidden;
+    
+    }
+
+
+
+    #toggle:checked ~ .loginForm {
+    /* top: 45px!important;*/
+        height: 225px;
+    }
+
+
+    /*Logg in */
+    .signInForm {
+        color:white; width:400px;
+    }
+
+    .singInInputContainer {
+        padding:10px; width:300px;
+    }
+
+    .signInInput {
+        padding-top:5px; 
+        padding-bottom:5px; 
+        border-width: 0px 0px 1px; 
+        width:300px; 
+        font-size:18px; 
+    }    
+
+    .signInButton {
+        margin:10px; width:300px; padding:10px;  font-size:18px; 
     }
 }
 
@@ -509,3 +738,19 @@ footer {  min-height:100px; }
 
 }
     
+
+
+
+
+
+
+/*CSS TEST*/
+
+
+
+
+#toggle:checked + label {
+  /*background:#dd6149;*/
+}
+
+

@@ -33,9 +33,9 @@ class Site {
 
 	public function __construct() {
 		// Set the variables.
-		$this->backgroundDirectory = 'images/backgrounds/';
+		/*$this->backgroundDirectory = 'images/backgrounds/';
 		$this->backgroundSuffix = 'jpg';
-		$this->backgroundIndex = rand(0, count(glob($this->backgroundDirectory . '*.' . $this->backgroundSuffix)) - 1);
+		$this->backgroundIndex = rand(0, count(glob($this->backgroundDirectory . '*.' . $this->backgroundSuffix)) - 1);*/
 		$this->pageName = isset($_GET['page']) ? $_GET['page'] : 'home';
 	}
 
@@ -57,9 +57,9 @@ class Site {
 				echo '<link rel="prerender" href="//tickets.' . Settings::domain . '/">';
 				echo '<link rel="next" href="//tickets.' . Settings::domain . '/">';
 				echo '<link href="Core.css" rel="stylesheet" type="text/css">';
-				echo '<link href="Color.css" rel="stylesheet" type="text/css">';
+				echo '<link href="Theme.css" rel="stylesheet" type="text/css">';
 				echo '<link href="Resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">';
-				echo '<style>';
+				/*echo '<style>';
 					echo '@media screen and (min-width: 0px) {';
 						echo 'body {';
 							echo 'background-image: url(\'' . $this->getBackground(true) . '\');';
@@ -70,7 +70,7 @@ class Site {
 							echo 'background-image: url(\'' . $this->getBackground(false) . '\');';
 						echo '}';
 					echo '}';
-				echo '</style>';
+				echo '</style>';*/
 				echo '<script src="Resources/scripts/hamburger.js" type="text/javascript" ></script>';
 				echo '<script>';
 					echo '(function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){';
@@ -87,9 +87,38 @@ class Site {
 					echo '<a class="Banner_Logo" href="/">';
 						echo '<img alt="Infected Logo" class="Banner_Logo" style="padding:0;" src="Resources\img\infected_logo.png">';
 					echo '</a>';
-					echo '<span id="hamburger" style="float: right; padding: 0; height:45px; width:45px;">';
+
+					echo '<input type="checkbox" name="toggle" id="toggle" />';
+					echo '<label style="line-height:1.6em; padding: 10px; display:block; max-height:25px; user-select: none; " class="Foreground2 navRight navSignIn" for="toggle">Logg inn</label>';
+
+					echo '<span id="hamburger" class="navRight" style="padding: 0; height:45px; width:45px;">';
 						echo '<i style="padding:8.5px 10px 8.5px 10px; color:white; cursor: pointer; font-size:1.8em;" class="fa fa-bars " aria-hidden="true" onclick="LinksOnMobile(\'nav_Links_Top\')"></i>';
 					echo '</span>';
+
+
+
+
+
+
+					
+					echo '<div class="loginForm" style=" z-index: 1;">';
+								echo '<center>';
+									echo '<form class="signInForm">';
+										echo '<div class="singInInputContainer">';
+											echo '<p class="signInInputHeader">Brukernavn</p>';
+											echo '<input name="username" type="text" placeholder="Brukernavn" class="signInInput" />';
+										echo '</div>';
+										echo '<div class="singInInputContainer">';
+											echo '<p class="signInInputHeader">Passord</p>';
+											echo '<input name="password" type="password" class="signInInput" />';
+										echo '</div>';
+										echo '<button class="signInButton">Logg inn</button>';
+									echo '</form>';
+									echo '</center>';
+							echo '</div>';
+
+
+
 					echo '<br style="clear:both;" />';
 					echo '<center id="nav_Links_Top" class="nav_Links">';
 						echo '<a class="Banner_Links" href="//tickets.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Billetter</p></a>';
@@ -134,6 +163,9 @@ class Site {
 						echo '<a href="https://twitter.com/infected_lan" style="border: #1da1f2 solid 1px; height: 1em; width:1em; background-color: #1da1f2; border-radius:50%; margin:0 5px;">';
 							echo '<i class="fa fa-twitter fa-1x" aria-hidden="true"></i>';
 						echo '</a>';
+					echo '</center>';
+					echo '<center style="padding-bottom:10px; padding-top:10px;" class="Background1">';
+						echo '<p style="color:white; text-align:center;">Denne nettsiden bruker cookies, ved videre bruk av siden aksepterer du at vi samler inn informasjon</p>';
 					echo '</center>';
 					echo '<center style="padding-bottom:10px; padding-top:10px; background-color:rgb(10,10,10);">';
 						echo '<p style="color:white; text-align:center;">Kopirett &copy; 2016 exeron, halvors og petterroea</p>';

@@ -1,0 +1,148 @@
+body {
+    background-color:black;
+}
+
+nav {
+    background-color:rgb(50,50,50); 
+}
+
+footer {
+    background-color:rgb(25,25,25); 
+}
+
+.Base {
+    
+}
+
+.Foreground1 {
+    color:#009900;
+    /*color: #3e9ee7*/
+}
+
+.Foreground2 {
+    color:white;
+}
+
+.Background1 {
+    background-color:#009900;
+    /*background-color: #3e9ee7;*/
+}
+
+.Background2 {
+    background-color: white;
+}
+
+.Border1 {
+    /*border-color: #3e9ee7;*/
+    border-color:#009900;
+}
+
+
+a {
+    color: white;
+}
+
+#hamburger {
+    /*background-color: transparent;*/
+}
+
+
+#hamburger:hover {
+    /*background-color: #3e9ee7!important;*/
+    background-color:#009900!important;
+}
+
+
+a:hover {
+    background-color:rgb(25,25,25);
+}
+
+no_a:hover {
+    background-color: transparent;
+}
+
+.bulletpoint_point {
+    color: #009900;
+}
+
+@media screen and (min-width: 320px) 
+{
+    body 
+    {
+        background-image:url(Resources/img/Back_660.jpg);
+    }
+}
+
+@media screen and (min-width: 660px) 
+{
+        body 
+    {
+        background-image:url(Resources/img/Back_660.jpg);
+    }
+}
+
+@media screen and (min-width: 1390px) 
+{
+    body 
+    {
+        background-image:url(Resources/img/Back.jpg);
+    }
+}
+
+
+
+@media screen and (min-width: 0px) {
+    #nav_Links_Top {
+        background-color:rgb(50,50,50); 
+    }
+}
+@media screen and (min-width: 730px)
+{
+    #nav_Links_Top {
+        /*background-color:transparent; */
+    }
+}
+
+
+
+.Sponsor_h3 {
+    color:white; 
+    border-bottom-color: white;
+}
+
+.signInInput {
+    border-style: none none solid; 
+    border-color: white; 
+    background-color: transparent; 
+    color:white;
+}    
+
+.signInButton {
+    border:white 1px solid; color:white; background-color:transparent; color:white;
+}
+
+.navSignIn {
+    background-color: transparent;
+}
+
+.navSignIn:hover {
+    background-color: rgb(25,25,25);
+}
+
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}
+
