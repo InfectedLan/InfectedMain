@@ -89,7 +89,30 @@ class Site {
 					echo '</a>';
 
 					echo '<input type="checkbox" name="toggle" id="toggle" />';
-					echo '<label style="line-height:1.6em; padding: 10px; display:block; max-height:25px; user-select: none; " class="Foreground2 navRight navSignIn" for="toggle">Logg inn</label>';
+					echo '<label style="line-height:1.6em; display:block; user-select: none; " class="Foreground2 navRight navSignIn" for="toggle">';
+
+					if (isset($_GET['state'])) 
+					{
+						if ($_GET['state'] == "true") 
+						{
+						echo '<div style="display: inline-flex; max-height:45px;">';
+						echo '<span style="margin: auto 10px; text-align: right !important; line-height:normal!important;"><p style="text-align:right;">Snake</p><p style="text-align:right;">Security</p></span><img style="border-radius: 50%; width: 45px; height: 45px;" src="http://www.technobuffalo.com/wp-content/uploads/2015/08/MGS-Characters-Big-Boss.jpg">';
+						echo '</div>';
+						}
+
+
+
+					}
+						else {
+							echo '<p style="line-height: 1.6em; max-height: 25px; padding: 10px;">Logg inn</p>';
+						}
+
+
+					
+					echo '</label>';
+
+
+
 
 					echo '<span id="hamburger" class="navRight" style="padding: 0; height:45px; width:45px;">';
 						echo '<i style="padding:8.5px 10px 8.5px 10px; color:white; cursor: pointer; font-size:1.8em;" class="fa fa-bars " aria-hidden="true" onclick="LinksOnMobile(\'nav_Links_Top\')"></i>';
@@ -103,7 +126,7 @@ class Site {
 					
 					echo '<div class="loginForm" style=" z-index: 1;">';
 								echo '<center>';
-									echo '<form class="signInForm">';
+									echo '<form class="signInForm" action="?state=true">';
 										echo '<div class="singInInputContainer">';
 											echo '<p class="signInInputHeader">Brukernavn</p>';
 											echo '<input name="username" type="text" placeholder="Brukernavn" class="signInInput" />';
