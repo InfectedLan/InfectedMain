@@ -165,10 +165,10 @@ class Site {
 						echo '</a>';
 					echo '</center>';
 					echo '<center style="padding-bottom:10px; padding-top:10px;" class="Background1">';
-						echo '<p style="color:white; text-align:center;">Denne nettsiden bruker cookies, ved videre bruk av siden aksepterer du at vi samler inn informasjon</p>';
+						echo '<p style="color:white; text-align:center; padding-left:10px; padding-right:10px;">Denne nettsiden bruker cookies, ved videre bruk av siden aksepterer du at vi samler inn informasjon</p>';
 					echo '</center>';
 					echo '<center style="padding-bottom:10px; padding-top:10px; background-color:rgb(10,10,10);">';
-						echo '<p style="color:white; text-align:center;">Kopirett &copy; 2016 exeron, halvors og petterroea</p>';
+						echo '<p style="color:white; text-align:center;">Kopirett &copy; 2016 Brage, Halvor, Liam</p>';
 					echo '</center>';
 				echo '</footer>';
 			echo '</body>';
