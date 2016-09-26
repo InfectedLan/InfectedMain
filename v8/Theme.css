@@ -15,7 +15,7 @@ footer {
 }
 
 .Foreground1 {
-    color:#009900;
+    color:#21a80f;
     /*color: #3e9ee7*/
 }
 
@@ -23,8 +23,12 @@ footer {
     color:white;
 }
 
+.Foreground3 {
+    color:black;
+}
+
 .Background1 {
-    background-color:#009900;
+    background-color:#21a80f;
     /*background-color: #3e9ee7;*/
 }
 
@@ -34,7 +38,7 @@ footer {
 
 .Border1 {
     /*border-color: #3e9ee7;*/
-    border-color:#009900;
+    border-color:#21a80f;
 }
 
 
@@ -49,7 +53,7 @@ a {
 
 #hamburger:hover {
     /*background-color: #3e9ee7!important;*/
-    background-color:#009900!important;
+    background-color:#21a80f!important;
 }
 
 
@@ -62,7 +66,7 @@ no_a:hover {
 }
 
 .bulletpoint_point {
-    color: #009900;
+    color: #21a80f;
 }
 
 @media screen and (min-width: 320px) 
