@@ -89,14 +89,14 @@ class Site {
 					echo '</a>';
 
 					echo '<input type="checkbox" name="toggle" id="toggle" />';
-					echo '<label style="line-height:1.6em; display:block; user-select: none; " class="Foreground2 navRight navSignIn" for="toggle">';
+					echo '<label style="line-height:1.6em; display:block; user-select: none; height:45px;" class="Foreground2 navRight navSignIn" for="toggle">';
 
 					if (isset($_GET['state'])) 
 					{
 						if ($_GET['state'] == "true") 
 						{
 						echo '<div style="display: inline-flex; max-height:45px;">';
-						echo '<span style="margin: auto 10px; text-align: right !important; line-height:normal!important;"><p style="text-align:right;">Snake</p><p style="text-align:right;">Security</p></span><img style="border-radius: 50%; width: 45px; height: 45px;" src="http://www.technobuffalo.com/wp-content/uploads/2015/08/MGS-Characters-Big-Boss.jpg">';
+						echo '<span style="margin: auto 10px; text-align: right !important; line-height:normal!important;"><p style="text-align:right;">Snake</p><p style="text-align: right; color: rgb(190, 190, 190); font-size: 14px;">Security</p></span><img style="border-radius: 50%; width: 40px; height: 40px; margin:2.5px;" src="http://www.technobuffalo.com/wp-content/uploads/2015/08/MGS-Characters-Big-Boss.jpg">';
 						echo '</div>';
 						}
 
@@ -104,7 +104,7 @@ class Site {
 
 					}
 						else {
-							echo '<p style="line-height: 1.6em; max-height: 25px; padding: 10px;">Logg inn</p>';
+							echo '<p style="line-height: 1.6em; max-height: 25px; height:25px; padding: 10px;">Logg inn</p>';
 						}
 
 
@@ -129,7 +129,7 @@ class Site {
 									echo '<form class="signInForm" action="?state=true">';
 										echo '<div class="singInInputContainer">';
 											echo '<p class="signInInputHeader">Brukernavn</p>';
-											echo '<input name="username" type="text" placeholder="Brukernavn" class="signInInput" />';
+											echo '<input name="identifier" type="text" placeholder="Brukernavn" class="signInInput" />';
 										echo '</div>';
 										echo '<div class="singInInputContainer">';
 											echo '<p class="signInInputHeader">Passord</p>';
