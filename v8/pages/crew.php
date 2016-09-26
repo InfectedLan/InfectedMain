@@ -20,15 +20,15 @@
 
 require_once 'handlers/grouphandler.php';
 
-echo '<center class="wrapper">';
+/*echo '<center class="wrapper">';
   echo '<div id="Overview_Post">';
     echo '<i id="main_emblem" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-users Foreground2 TopSymbol" aria-hidden="true"></i>';
     echo '<h1 style="color:white;">Bidra</h1>';
     echo '<h3 style="color:white;">Her vil du se hvilke crew som finnes, og informasjon om dem</h3>';
   echo '</div>';
-echo '</center>';
+echo '</center>';*/
 
-echo '<div id="gen_information" class="Background2">';
+echo '<div style="padding-top:45px;" id="gen_information" class="Background2">';
   echo '<center class="Banner_Post">';
     echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
       echo '<i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>';

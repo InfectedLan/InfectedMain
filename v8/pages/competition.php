@@ -20,39 +20,16 @@
 
 require_once 'handlers/compohandler.php';
 
-echo '<center class="wrapper">';
+/*echo '<center class="wrapper">';
   echo '<div id="Overview_Post">';
     echo '<i id="main_emblem" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-gamepad Foreground2 TopSymbol" aria-hidden="true"></i>';
     echo '<h1 style="color:white;">Konkurranser</h1>';
     echo '<h3 style="color:white;">Reglene og spillene vises under</h3>';
   echo '</div>';
-echo '</center>';
+echo '</center>';*/
 
-$compoList = CompoHandler::getCompos();
 
-if (!empty($compoList)) {
-  echo '<center class="Banner_Post Background1">';
-    echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
-      echo '<h2 style="color:white;">Premier</h2>';
-
-			foreach ($compoList as $compo) {
-        echo '<div class="agenda_container_row Background1 Foreground2" style="display: table-row;">';
-          echo '<p class="agenda_container_row_text">' . $compo->getTitle() . '</p>';
-          echo '<p class="agenda_container_row_text">' . $compo->getDescription() . '</p>';
-
-          /*
-          echo '<p class="agenda_container_row_text">1. Plass 7500,-</p>';
-          echo '<p class="agenda_container_row_text">2. Plass 2500,-</p>';
-          echo '<p class="agenda_container_row_text">Max 16 lag</p>';
-          */
-        echo '</div>';
-			}
-
-    echo '</center>';
-  echo '</center>';
-}
-
-echo '<div id="gen_information" class="Background2">';
+echo '<div style="padding-top:45px;" id="gen_information" class="Background2">';
   echo '<center class="Banner_Post">';
     echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
       echo '<i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>';
@@ -110,7 +87,34 @@ $compoList = CompoHandler::getCompos();
 if (!empty($compoList)) {
   echo '<center class="Banner_Post Background1">';
     echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
-      echo '<h2 style="color:white;">Spillene</h2>';
+      echo '<h2 class="Foreground2">Premier</h2>';
+
+			foreach ($compoList as $compo) {
+        echo '<div class="agenda_container_row Background1 Foreground2" style="display: table-row;">';
+          echo '<p class="agenda_container_row_text">' . $compo->getTitle() . '</p>';
+          echo '<p class="agenda_container_row_text">' . $compo->getDescription() . '</p>';
+
+          /*
+          echo '<p class="agenda_container_row_text">1. Plass 7500,-</p>';
+          echo '<p class="agenda_container_row_text">2. Plass 2500,-</p>';
+          echo '<p class="agenda_container_row_text">Max 16 lag</p>';
+          */
+        echo '</div>';
+			}
+
+    echo '</center>';
+  echo '</center>';
+}
+
+
+
+
+$compoList = CompoHandler::getCompos();
+
+if (!empty($compoList)) {
+  echo '<center class="Banner_Post Background2">';
+    echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
+      echo '<h2 class="Foreground3">Spillene</h2>';
 
 echo '<center style=" padding-top:50px; padding-bottom:50px; min-height:100px;">';
 
@@ -128,10 +132,10 @@ echo '<center style=" padding-top:50px; padding-bottom:50px; min-height:100px;">
         echo '<img style="padding-bottom:20px;" class="GameLogo" src="'.$gameIcon.'"  />';
         /*echo '<h3 class="Foreground2">'. $compo->getTitle() .'</h3>';*/
         echo '<div class="Banner_Info_Desc">';
-          echo '<p style="text-align:center;" class="Foreground2">Ved å følge lenken under vil det vises hvordan spillet '. $compo->getTitle() .' skal settes opp.</p>';
+          echo '<p style="text-align:center;" class="Foreground3">Ved å følge lenken under vil det vises hvordan spillet '. $compo->getTitle() .' skal settes opp.</p>';
         echo '</div>';
-        echo '<a class="no_a Background2" href="pages/game/id/'. $compo->getId() .'.html" style=" margin:20px;">';
-          echo '<p class="Foreground1">Se informasjonen</p>';
+        echo '<a class="no_a Background1" href="pages/game/id/'. $compo->getId() .'.html" style=" margin:20px;">';
+          echo '<p class="Foreground2">Se informasjonen</p>';
         echo '</a>';
       echo '</div>';
 

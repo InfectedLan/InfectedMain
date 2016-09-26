@@ -19,20 +19,15 @@
  */
 ?>
 
-<center class="wrapper">
+<!--<center class="wrapper">
   <div id="Overview_Post">
     <i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-child Foreground2 TopSymbol" aria-hidden="true"></i>
     <h1 style="color:white;">Foreldre og foresatte</h1>
     <h3 style="color:white;">Er barnet ditt under 14 år, må du ha med en fullmakt.</h3>
   </div>
-</center>
-<center class="Banner_Post Background1">
-  <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
-      <h2 style="color:white;">Hvordan foregår det?</h2>
-      <p class="Banner_Post_P" style="text-align:center; color:White;">Arrangementet varer over tre dager – normalt fra fredag kveld til søndag morgen, første helgen i høstferien og vinterferien. Infected er for ungdom – og utføres av ungdom. Det vil si at det er primært ungdommen selv som står for arrangementet, med planlegging, gjennomføring og opprydding. På denne måten blir arrangementet en arena der unge mennesker kan bygge opp relasjoner og drive positivt arbeid.</p>
-  </center>
-</center>
-<div id="guardi_information" class="Background2">
+</center>-->
+
+<div style="padding-top:45px;"  id="guardi_information" class="Background2">
   <center class="Banner_Post">
     <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
       <i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>
@@ -47,6 +42,12 @@
     </center>
   </center>
 </div>
+<center class="Banner_Post Background1">
+  <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
+      <h2 style="color:white;">Hvordan foregår det?</h2>
+      <p class="Banner_Post_P" style="text-align:center; color:White;">Arrangementet varer over tre dager – normalt fra fredag kveld til søndag morgen, første helgen i høstferien og vinterferien. Infected er for ungdom – og utføres av ungdom. Det vil si at det er primært ungdommen selv som står for arrangementet, med planlegging, gjennomføring og opprydding. På denne måten blir arrangementet en arena der unge mennesker kan bygge opp relasjoner og drive positivt arbeid.</p>
+  </center>
+</center>
 <div id="guardi_information" class="Background2">
   <div style=" padding-top:25px; padding-bottom:50px;">
     <div class="information_content">

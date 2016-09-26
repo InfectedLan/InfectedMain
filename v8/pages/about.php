@@ -17,16 +17,30 @@
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
-?>
 
-<center class="wrapper">
+
+/*<!--<center class="wrapper">
   <div id="Overview_Post">
       <i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-circle-o-notch Foreground2 TopSymbol" aria-hidden="true"></i>
       <h1 style="color:white;">Om Infected</h1>
       <h3 style="color:white;">Infected er et LAN-party</h3>
   </div>
-</center>
-<div style=" padding-top:50px; padding-bottom:50px;" class="Background2">
+</center>-->*/
+echo '<div class="Background2" style="padding-top:45px;">';
+  echo '<center class="Banner_Post">';
+    echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
+      echo '<i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>';
+      echo '<h2 style="color:black;">Generell informasjon</h2>';
+      echo '<p style="text-align:center; color:black;">Det er viktig at spillerne er klare over reglene</p>';
+      echo '<p style="text-align:center; color:black;">Vennligst <strong>les reglene</strong>, og gjør deg kjent med dem</p>';
+    echo '</center>';
+  echo '</center>';
+
+  ?>
+
+
+
+<div style=" padding-top:50px; padding-bottom:50px;">
   <div class="information_content">
     <div class="information_content_textholder">
       <h3>Hva er et LAN Party?</h3>
@@ -65,4 +79,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
