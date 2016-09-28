@@ -32,7 +32,7 @@ echo '<center class="wrapper">';
         if ($event->isBookingTime()) {
           if (!empty($event->getAvailableTickets())) {
             echo '<a class="no_a Background1" href="https://tickets.infected.no" style="margin:20px;">';
-              echo '<p style="padding:10px; text-align: center;">Bestill billett</p>';
+              echo '<p style="padding:5px; text-align: center;">Bestill billett</p>';
             echo '</a>';
 
             echo '<div>';
@@ -51,11 +51,11 @@ echo '<center class="wrapper">';
             echo '</div>';
 
           } else {
-            echo '<p style="color:white;background-color: #990000; padding: 20px;margin-bottom: 10px;text-align: center; cursor: default;">Arrangemanget er utsolgt</p>';
+            echo '<p style="color:white;background-color: #990000; padding: 10px;margin-bottom: 10px;text-align: center; cursor: default;">Arrangemanget er utsolgt</p>';
             echo '<p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er utsolgt</p>';
           }
         } else {
-          echo '<p style="color:white;background-color: #696969; padding: 20px;margin-bottom: 10px;text-align: center; cursor: default;">Billetter er ikke tilgjengelig</p>';
+          echo '<p style="color:white;background-color: #696969; padding: 10px;margin-bottom: 10px;text-align: center; cursor: default;">Billetter er ikke tilgjengelig</p>';
           echo '<p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er ikke tilgjengelig enda</p>';
         }
 
