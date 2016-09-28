@@ -88,7 +88,7 @@ class Site {
 						echo '<img alt="Infected Logo" class="Banner_Logo" style="padding:0;" src="Resources\img\infected_logo.png">';
 					echo '</a>';
 
-					echo '<input type="checkbox" name="toggle" id="toggle" />';
+					echo '<input type="checkbox" name="toggle" class="toggle" id="toggle" />';
 					echo '<label style="line-height:1.6em; display:block; user-select: none; height:45px;" class="Foreground2 navRight navSignIn" for="toggle">';
 
 					if (isset($_GET['state'])) 
@@ -113,11 +113,13 @@ class Site {
 
 
 
+					echo '<input type="checkbox" name="navtoggle" class="toggle" id="navtoggle" />';
+					echo '<label style=" user-select: none; height:45px;" class="Foreground2 navRight navhamburger" for="navtoggle">';
 
-					echo '<span id="hamburger" class="navRight" style="padding: 0; height:45px; width:45px;">';
-						echo '<i style="padding:8.5px 10px 8.5px 10px; color:white; cursor: pointer; font-size:1.8em;" class="fa fa-bars " aria-hidden="true" onclick="LinksOnMobile(\'nav_Links_Top\')"></i>';
-					echo '</span>';
-
+					//echo '<span id="hamburger" class="navRight" style="padding: 0; height:45px; width:45px;">';
+						echo '<i style="padding:8.5px 10px 8.5px 10px; color:white; cursor: pointer; font-size:1.8em;" class="fa fa-bars " aria-hidden="true"></i>';
+					//echo '</span>';
+					echo '</label>';
 
 
 
