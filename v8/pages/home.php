@@ -62,42 +62,6 @@ echo '<center class="wrapper">';
       echo '</div>';
     echo '</center>';
   echo '</div>';
-  echo '<center class="Banner_Post Background1">';
-    echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
-      echo '<h2 style="color: white;">Arrangementet</h2>';
-
-      $event = EventHandler::getCurrentEvent();
-      $ticketText = $event->getTicketCount() > 1 ? 'billett' : 'billetter';
-
-      echo '<p style=" text-align: center; color: white; margin: 5px 0;">';
-        echo 'Holdes fra ' . DateUtils::getDayFromInt(date('w', $event->getStartTime())) . ' ' . date('d', $event->getStartTime()) . '. ' . (date('m', $event->getStartTime()) != date('m', $event->getEndTime()) ? DateUtils::getMonthFromInt(date('m', $event->getStartTime())) : null) . ' til ' . DateUtils::getDayFromInt(date('w', $event->getEndTime())) . ' ' . date('d', $event->getEndTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getEndTime())) . '.';
-      echo '</p>';
-      echo '<p class="Foreground2" style="text-align:center; margin: 5px 0;">Arrangementet vil foregå i ' . $event->getLocation()->getTitle() . ', dørene åpner kl. ' . date('H:i', $event->getStartTime()) . '.</p>';
-      echo '<p style="text-align: center; color: white; margin: 5px 0;">';
-        echo 'Pris per billett er <strong>' . $event->getTicketType()->getPrice() . ',-</strong> (Inkluderer medlemskap i Radar).' . '<br>';
-      echo '</p>';
-      echo '<p style="text-align: center; color: white;">';
-
-        if ($event->isBookingTime()) {
-          if (!empty($event->getAvailableTickets())) {
-            //echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen.';
-          } else {
-            echo 'Det er ingen billetter igjen';
-          }
-        } else {
-          $currentDate = date('Y-m-d');
-          $tomorrowDate = date('Y-m-d', strtotime('+1 day', strtotime($currentDate)));
-          $bookingDate = date('Y-m-d', $event->getBookingTime());
-          $bookingDateFormattedText = date('d', $event->getBookingTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getBookingTime()));
-          $ticketSaleStartDate = $currentDate == $bookingDate ? 'i dag' : ($tomorrowDate == $bookingDate ? 'i morgen' : $bookingDateFormattedText);
-
-          echo 'Billettsalget starter ' . $ticketSaleStartDate . ' kl. '  . date('H:i', $event->getBookingTime());
-        }
-
-      echo '</p>';
-
-    echo '</center>';
-  echo '</center>';
   ?>
   <div id="General_information" class="Background2">
     <center class="Banner_Post">
@@ -142,12 +106,50 @@ echo '<center class="wrapper">';
       </div>
     </center>
   </div>
-  <center class="Banner_Post Background1">
-    <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
-      <h2 style="color:white;">Gjennomføring</h2>
-      <p class="Banner_Post_P" style="text-align:center; color:White;">Arrangementet gjennomføres første helg av høstferien og vinterferien. Dørene åpner 18:00, men det lønner seg å komme i god tid før dette om du ønsker å komme raskt i gang. Det tar tid å komme inn, og du må beregne litt ventetid.</p>
-    </center>
-  </center>
+<?php
+
+  echo '<center class="Banner_Post Background1">';
+    echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
+      echo '<h2 style="color: white;">Arrangementet</h2>';
+
+      $event = EventHandler::getCurrentEvent();
+      $ticketText = $event->getTicketCount() > 1 ? 'billett' : 'billetter';
+
+      echo '<p style=" text-align: center; color: white; margin: 5px 0;">';
+        echo 'Holdes fra ' . DateUtils::getDayFromInt(date('w', $event->getStartTime())) . ' ' . date('d', $event->getStartTime()) . '. ' . (date('m', $event->getStartTime()) != date('m', $event->getEndTime()) ? DateUtils::getMonthFromInt(date('m', $event->getStartTime())) : null) . ' til ' . DateUtils::getDayFromInt(date('w', $event->getEndTime())) . ' ' . date('d', $event->getEndTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getEndTime())) . '.';
+      echo '</p>';
+      echo '<p class="Foreground2" style="text-align:center; margin: 5px 0;">Arrangementet vil foregå i ' . $event->getLocation()->getTitle() . ', dørene åpner kl. ' . date('H:i', $event->getStartTime()) . '.</p>';
+      echo '<p style="text-align: center; color: white; margin: 5px 0;">';
+        echo 'Pris per billett er <strong>' . $event->getTicketType()->getPrice() . ',-</strong> (Inkluderer medlemskap i Radar).' . '<br>';
+      echo '</p>';
+      echo '<p style="text-align: center; color: white;">';
+
+        if ($event->isBookingTime()) {
+          if (!empty($event->getAvailableTickets())) {
+            //echo 'Det er <b>' . $event->getAvailableTickets() . '</b> av <b>' . $event->getParticipants() . '</b> ' . $ticketText . ' igjen.';
+          } else {
+            echo 'Det er ingen billetter igjen';
+          }
+        } else {
+          $currentDate = date('Y-m-d');
+          $tomorrowDate = date('Y-m-d', strtotime('+1 day', strtotime($currentDate)));
+          $bookingDate = date('Y-m-d', $event->getBookingTime());
+          $bookingDateFormattedText = date('d', $event->getBookingTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getBookingTime()));
+          $ticketSaleStartDate = $currentDate == $bookingDate ? 'i dag' : ($tomorrowDate == $bookingDate ? 'i morgen' : $bookingDateFormattedText);
+
+          echo 'Billettsalget starter ' . $ticketSaleStartDate . ' kl. '  . date('H:i', $event->getBookingTime());
+        }
+
+      echo '</p>';
+      echo '<p style="text-align:center; color:white;">På grunn av antallet deltakere, må det <strong>beregnes litt ventetid</strong> ved insjekking.</p>';
+
+    echo '</center>';
+  echo '</center>';
+
+
+
+?>
+
   <center class="Background2" style="padding-top:50px; padding-bottom:50px; min-height:100px;">
     <div class="Banner_Info">
       <i class="fa fa-trophy fa-4x Foreground1" aria-hidden="true"></i>
