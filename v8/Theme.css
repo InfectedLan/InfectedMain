@@ -50,6 +50,10 @@ a {
     /*background-color: transparent;*/
 }
 
+#navtoggle:checked + label {
+    background-color:#21a80f!important;
+}
+
 
 #hamburger:hover {
     /*background-color: #3e9ee7!important;*/
