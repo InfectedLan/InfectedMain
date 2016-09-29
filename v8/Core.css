@@ -9,6 +9,10 @@ footer {  min-height:100px; }
 
 /*Log In Button*/
 
+.preventOverlay {
+    z-index:100; position:relative;
+}
+
 .toggle {
   position:absolute;
   appearance:none;

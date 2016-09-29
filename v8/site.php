@@ -59,6 +59,8 @@ class Site {
 				echo '<link href="Core.css" rel="stylesheet" type="text/css">';
 				echo '<link href="Theme.css" rel="stylesheet" type="text/css">';
 				echo '<link href="Resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">';
+				echo '<script type="text/javascript" src="../../api/scripts/jquery-1.11.3.min.js"></script>';
+				echo '<script type="text/javascript" src="Resources/scripts/eHide.js" ></script>';
 				/*echo '<style>';
 					echo '@media screen and (min-width: 0px) {';
 						echo 'body {';
@@ -71,7 +73,7 @@ class Site {
 						echo '}';
 					echo '}';
 				echo '</style>';*/
-				echo '<script src="Resources/scripts/hamburger.js" type="text/javascript" ></script>';
+				//echo '<script src="Resources/scripts/hamburger.js" type="text/javascript" ></script>';
 				echo '<script>';
 					echo '(function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){';
 					echo '(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),';
@@ -158,7 +160,7 @@ class Site {
 				// View the page specified by "pageName" variable.
 				$this->viewPage($this->pageName);
 
-				echo '<footer>';
+				echo '<footer class="preventOverlay">';
 					echo '<center style="padding-top: 25px;">';
 						echo '<a href="pages/about.html"><p>Om</p></a>';
 						echo '<span style="border: white solid 1px;"></span>';

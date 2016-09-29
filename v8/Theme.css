@@ -69,6 +69,17 @@ no_a:hover {
     background-color: transparent;
 }
 
+clear_a {
+    padding:0;
+    margin:0;
+    background-color: transparent;
+}
+
+clear_a:hover {
+    background-color: transparent!important;
+}
+
+
 .bulletpoint_point {
     color: #21a80f;
 }

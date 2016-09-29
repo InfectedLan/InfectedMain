@@ -22,6 +22,11 @@ echo '<center class="wrapper">';
   echo '<div id="Overview_Post">';
     echo '<img class="Infected_logo" alt="Infected Logo" src="Resources\img\infected_logo.png" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px;">';
     echo '<h1 style="color:white;">Delta på ett av Akershus største LAN-party</h1>';
+$event = EventHandler::getCurrentEvent();
+
+      echo '<h2 style=" text-align: center; color:white;">';
+        echo DateUtils::getDayFromInt(date('w', $event->getStartTime())) . ' ' . date('d', $event->getStartTime()) . '. ' . (date('m', $event->getStartTime()) != date('m', $event->getEndTime()) ? DateUtils::getMonthFromInt(date('m', $event->getStartTime())) : null) . ' til ' . DateUtils::getDayFromInt(date('w', $event->getEndTime())) . ' ' . date('d', $event->getEndTime()) . '. ' . DateUtils::getMonthFromInt(date('m', $event->getEndTime())) . '.';
+      echo '</h2>';
     echo '<h3 style="color:white;">Vi ønsker alle som er interresert, velkommen!</h3>';
 
     $event = EventHandler::getCurrentEvent();
@@ -32,7 +37,7 @@ echo '<center class="wrapper">';
         if ($event->isBookingTime()) {
           if (!empty($event->getAvailableTickets())) {
             echo '<a class="no_a Background1" href="https://tickets.infected.no" style="margin:20px;">';
-              echo '<p style="padding:5px; text-align: center;">Bestill billett</p>';
+              echo '<p style="padding:5px 2px; text-align: center;">Bestill billett</p>';
             echo '</a>';
 
             echo '<div>';
@@ -61,9 +66,13 @@ echo '<center class="wrapper">';
 
       echo '</div>';
     echo '</center>';
+       
   echo '</div>';
+  echo '<a id="topdownarrow" class="clear_a" href="#General_information" style="position: fixed;left: 0;right: 0;bottom: 10px;z-index: 1;">';
+ echo '<i  class="fa fa-angle-down fa-5x Foreground1" aria-hidden="true" style="position: relative;margin-top: auto;margin-bottom: 0;color: white;"></i>';
+ echo '</a>';
   ?>
-  <div id="General_information" class="Background2">
+  <div id="General_information" class="Background2 preventOverlay">
     <center class="Banner_Post">
       <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
         <i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>
@@ -108,7 +117,7 @@ echo '<center class="wrapper">';
   </div>
 <?php
 
-  echo '<center class="Banner_Post Background1">';
+  echo '<center style="z-index:100; position:relative;" class="Banner_Post Background1">';
     echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
       echo '<h2 style="color: white;">Arrangementet</h2>';
 
@@ -150,7 +159,7 @@ echo '<center class="wrapper">';
 
 ?>
 
-  <center class="Background2" style="padding-top:50px; padding-bottom:50px; min-height:100px;">
+  <center class="Background2 preventOverlay" style="padding-top:50px; padding-bottom:50px; min-height:100px;">
     <div class="Banner_Info">
       <i class="fa fa-trophy fa-4x Foreground1" aria-hidden="true"></i>
       <h3>Konkurranser</h3>
