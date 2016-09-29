@@ -58,6 +58,7 @@ class Site {
 				echo '<link rel="next" href="//tickets.' . Settings::domain . '/">';
 				echo '<link href="Core.css" rel="stylesheet" type="text/css">';
 				echo '<link href="Theme.css" rel="stylesheet" type="text/css">';
+				echo '<link href="FontSize.css" rel="stylesheet" type="text/css">';
 				echo '<link href="Resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">';
 				echo '<script type="text/javascript" src="../../api/scripts/jquery-1.11.3.min.js"></script>';
 				echo '<script type="text/javascript" src="Resources/scripts/eHide.js" ></script>';
@@ -85,7 +86,7 @@ class Site {
 				echo '</script>';
 			echo '</head>';
 			echo '<body>';
-				echo '<nav>';
+				echo '<nav style="z-index:999;">';
 					echo '<a class="Banner_Logo" href="/">';
 						echo '<img alt="Infected Logo" class="Banner_Logo" style="padding:0;" src="Resources\img\infected_logo.png">';
 					echo '</a>';

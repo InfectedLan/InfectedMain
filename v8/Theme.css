@@ -69,13 +69,11 @@ no_a:hover {
     background-color: transparent;
 }
 
-clear_a {
-    padding:0;
-    margin:0;
+.clear_a {
     background-color: transparent;
 }
 
-clear_a:hover {
+.clear_a:hover {
     background-color: transparent!important;
 }
 

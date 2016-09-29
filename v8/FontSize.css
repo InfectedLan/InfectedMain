@@ -1,0 +1,34 @@
+@media screen and (min-width: 0px)
+{
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+       font-size: 1.2em; 
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 320px)
+{
+
+}
+
+@media screen and (min-width: 450px)
+{
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+       font-size: 1.5em; 
+    }
+
+    h3 {
+        font-size: 1.17em;
+    }
+}

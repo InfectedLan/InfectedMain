@@ -49,6 +49,21 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
 }
 
 
+@media screen and (min-height: 0px) {
+    #arrowContainer {
+        display: none!important;
+    }
+}
+
+@media screen and (min-height: 610px) {
+    #arrowContainer {
+        display: block!important;
+    }
+}
+
+
+
+
 @media screen and (min-width: 0px)
 {
     .navhamburger { display: block; visibility: visible; }
@@ -79,6 +94,10 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
         }
 
 
+
+    .ticketButton_a {
+        margin:0;
+    }
 
 
     .Banner_Links {
@@ -469,6 +488,10 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
 
     .signInButton {
         margin:10px; width:300px; padding:10px;  font-size:18px; 
+    }
+
+        .ticketButton_a {
+        margin:20px;
     }
 }
 

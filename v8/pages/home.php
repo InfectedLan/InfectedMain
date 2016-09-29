@@ -36,7 +36,7 @@ $event = EventHandler::getCurrentEvent();
 
         if ($event->isBookingTime()) {
           if (!empty($event->getAvailableTickets())) {
-            echo '<a class="no_a Background1" href="https://tickets.infected.no" style="margin:20px;">';
+            echo '<a class="no_a Background1 ticketButton_a" href="https://tickets.infected.no>';
               echo '<p style="padding:5px 2px; text-align: center;">Bestill billett</p>';
             echo '</a>';
 
@@ -68,13 +68,15 @@ $event = EventHandler::getCurrentEvent();
     echo '</center>';
        
   echo '</div>';
+  echo '<span id="arrowContainer">';
   echo '<a id="topdownarrow" class="clear_a" href="#General_information" style="position: fixed;left: 0;right: 0;bottom: 10px;z-index: 1;">';
- echo '<i  class="fa fa-angle-down fa-5x Foreground1" aria-hidden="true" style="position: relative;margin-top: auto;margin-bottom: 0;color: white;"></i>';
+ echo '<i class="fa fa-angle-down fa-5x Foreground1" aria-hidden="true" style="position: relative; margin-top: auto;margin-bottom: 0;color: white;"></i>';
  echo '</a>';
+ echo '</span>';
   ?>
   <div id="General_information" class="Background2 preventOverlay">
     <center class="Banner_Post">
-      <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
+      <center style="margin:0 auto; display:inline-block; padding-top:45px; padding-bottom:25px;">
         <i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>
         <h2 style="color:black;">Informasjon</h2>
         <p style="text-align:center; color:black;">Vi har noen regler og forslag.</p>
