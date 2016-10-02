@@ -20,6 +20,7 @@
 
 echo '<center class="wrapper">';
   echo '<div id="Overview_Post">';
+  echo '<div class="Center_Vertical_Post">';
     echo '<img class="Infected_logo" alt="Infected Logo" src="Resources\img\infected_logo.png" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px;">';
     echo '<h1 style="color:white;">Delta på ett av Akershus største LAN-party</h1>';
 $event = EventHandler::getCurrentEvent();
@@ -64,6 +65,7 @@ $event = EventHandler::getCurrentEvent();
           echo '<p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er ikke tilgjengelig enda</p>';
         }
 
+      echo '</div>';
       echo '</div>';
     echo '</center>';
        

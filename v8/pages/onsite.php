@@ -19,13 +19,13 @@
  */
 ?>
 
-<!--<center class="wrapper">
+<center class="wrapper">
   <div id="Overview_Post">
     <i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-map-marker Foreground2 TopSymbol" aria-hidden="true"></i>
     <h1 style="color:white;">På Infected</h1>
     <h3 style="color:white;">Informasjon for deltakere, før og under arrangemanget</h3>
   </div>
-</center>-->
+</center>
 <div style="padding-top:45px;" id="onsite_information" class="Background2">
   <center class="Banner_Post">
     <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
@@ -57,13 +57,6 @@
         <p>Dette er begrenset for å hindre at infected eller crewet skal stå annsvarlig for eventuelle feil eller skader som kan forekomme</p>
         <p>Tech support / datahjelp vil ikke kunne hjelpe med rekvisita som saks og gaffateip, kontakt info for slike henvendelser.</p>
         <p>Hvis du forsøker, vil du bare bli henvist videre...</p>
-      </div>
-    </div>
-    <div class="information_content">
-      <i class="fa fa-life-ring fa-5x Foreground1 information_content_icon" aria-hidden="true"></i>
-      <div class="information_content_textholder">
-        <p>Det er også en info desk tilgjengelig under arrangemanget</p>
-        <p>Her vil du kunne få ting som saks, gaffateip, og annet rekvisita</p>
       </div>
     </div>
   </div>

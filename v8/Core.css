@@ -130,9 +130,15 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
     #Overview_Post {
         /*margin-bottom:450px; */
         /*min-height: 100vh;*/
+        display: table;
         min-height: calc(100vh - 95px);
         margin-left: 20px; 
         margin-right:20px;
+    }
+
+    .Center_Vertical_Post {
+        display: table-cell;
+        vertical-align: middle;
     }
 
     .Banner_Post {
@@ -467,6 +473,7 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
     #Overview_Post {
         /*margin-bottom:450px; */
         /*min-height: 100vh;*/
+        
         min-height: calc(100vh - 100px);
         margin-left: 20px; 
         margin-right:20px;
@@ -512,6 +519,8 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
     
 
 
+
+
     body {
         /*background-image:url(Resources/img/Back_660.jpg);*/
         background-repeat:no-repeat; 
@@ -528,12 +537,15 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
     #Overview_Post {
         /*margin-bottom:450px; */
         /*min-height: 100vh;*/
+        display: block;
         min-height: calc(100vh - 115px);
         margin-left: 20px; 
         margin-right:20px;
     }
 
-
+    .Center_Vertical_Post {
+        display: block;
+    }
 
 
     .Banner_Info {
