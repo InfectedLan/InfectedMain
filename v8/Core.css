@@ -1,5 +1,5 @@
 * {font-family: Arial, Helvetica, sans-serif;}
-body { margin:0; }
+body { margin:0; min-height: 100vh; }
 nav { min-height:45px; height: 45px; }
 h1, h2, h3 { font-family: Arial, Helvetica, sans-serif; }
 p { margin:0; text-align: left; font-family: Arial, Helvetica, sans-serif; }
@@ -7,6 +7,10 @@ a { text-decoration: none; font-family: Arial, Helvetica, sans-serif; padding:10
 footer {  min-height:100px; }
 .information_content_container { padding-top:50px; padding-bottom: 50px; }
 
+.subPageHeader {
+    padding-bottom:75px!important; 
+    min-height:auto!important;
+}
 /*Log In Button*/
 
 .preventOverlay {

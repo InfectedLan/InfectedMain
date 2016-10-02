@@ -19,13 +19,13 @@
  */
 ?>
 
-<!--<center class="wrapper">
-  <div id="Overview_Post">
+<center class="wrapper">
+  <div id="Overview_Post" class="subPageHeader">
     <i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-child Foreground2 TopSymbol" aria-hidden="true"></i>
     <h1 style="color:white;">Foreldre og foresatte</h1>
     <h3 style="color:white;">Er barnet ditt under 14 år, må du ha med en fullmakt.</h3>
   </div>
-</center>-->
+</center>
 
 <div style="padding-top:45px;"  id="guardi_information" class="Background2">
   <center class="Banner_Post">
@@ -49,7 +49,7 @@
   </center>
 </center>
 <div id="guardi_information" class="Background2">
-  <div style=" padding-top:25px; padding-bottom:50px;">
+  <div class="information_content_container">
     <div class="information_content">
       <i class="fa fa-building-o Foreground1 information_content_icon" aria-hidden="true"></i>
       <div class="information_content_textholder">

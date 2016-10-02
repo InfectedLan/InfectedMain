@@ -19,13 +19,13 @@
  */
 ?>
 
-<!--<center class="wrapper">
-  <div id="Overview_Post">
+<center class="wrapper">
+  <div id="Overview_Post" class="subPageHeader">
     <i id="main_emblem" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-shield Foreground2 TopSymbol" aria-hidden="true"></i>
     <h1 style="color:white;">Sikkerhet og regler</h1>
     <h3 style="color:white;">Infected skal være et sikkert og hyggelig LAN!</h3>
   </div>
-</center>-->
+</center>
 
 <div style="padding-top:45px;" id="Sec_information" class="Background2">
   <center class="Banner_Post">

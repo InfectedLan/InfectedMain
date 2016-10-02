@@ -20,13 +20,13 @@
 
 require_once 'handlers/compohandler.php';
 
-/*echo '<center class="wrapper">';
-  echo '<div id="Overview_Post">';
+echo '<center class="wrapper">';
+  echo '<div id="Overview_Post" class="subPageHeader">';
     echo '<i id="main_emblem" style=" padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-gamepad Foreground2 TopSymbol" aria-hidden="true"></i>';
     echo '<h1 style="color:white;">Konkurranser</h1>';
     echo '<h3 style="color:white;">Reglene og spillene vises under</h3>';
   echo '</div>';
-echo '</center>';*/
+echo '</center>';
 
 
 echo '<div style="padding-top:45px;" id="gen_information" class="Background2">';
