@@ -70,14 +70,14 @@ $event = EventHandler::getCurrentEvent();
   echo '</div>';
   echo '<span id="arrowContainer">';
   echo '<a id="topdownarrow" class="clear_a" href="#General_information" style="position: fixed;left: 0;right: 0;bottom: 10px;z-index: 1;">';
- echo '<i class="fa fa-angle-down fa-5x Foreground1" aria-hidden="true" style="position: relative; margin-top: auto;margin-bottom: 0;color: white;"></i>';
+ echo '<i class="fa fa-angle-down Foreground1 font-icon" aria-hidden="true" style="position: relative; margin-top: auto;margin-bottom: 0;color: white;"></i>';
  echo '</a>';
  echo '</span>';
   ?>
   <div id="General_information" class="Background2 preventOverlay">
     <center class="Banner_Post">
-      <center style="margin:0 auto; display:inline-block; padding-top:45px; padding-bottom:25px;">
-        <i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>
+      <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
+        <i class="fa fa-info-circle Foreground1 font-icon" aria-hidden="true"></i>
         <h2 style="color:black;">Informasjon</h2>
         <p style="text-align:center; color:black;">Vi har noen regler og forslag.</p>
         <p style="text-align:center; color:black;">Det er viktig at du er klar over reglene til arrangemanget</p>
@@ -85,7 +85,7 @@ $event = EventHandler::getCurrentEvent();
     </center>
     <center style=" padding-top:50px; padding-bottom:50px; min-height:100px;">
       <div class="Banner_Info">
-        <i class="fa fa-shield fa-4x Foreground1" aria-hidden="true"></i>
+        <i class="fa fa-shield Foreground1 font-icon" aria-hidden="true"></i>
         <h3 style="color:black;">Regler og sikkerhet</h3>
         <div class="Banner_Info_Desc">
           <p style="text-align:center;">Rader er et <strong>rusfritt</strong> området, dette <strong style="color:red;">inkluderer snus og røyk</strong>. Det er ikke lov å røyke eller snuse under Infected</p>
@@ -95,7 +95,7 @@ $event = EventHandler::getCurrentEvent();
         </a>
       </div>
       <div class="Banner_Info" >
-        <i class="fa fa-suitcase fa-4x Foreground1" aria-hidden="true"></i>
+        <i class="fa fa-suitcase Foreground1 font-icon" aria-hidden="true"></i>
         <h3 style="color:black">Pakkeliste</h3>
         <div class="Banner_Info_Desc">
           <p style="text-align:center;">Vi i infected crewet har laget en hendig pakkliste over ting mang bør ha med på LAN</p>
@@ -106,7 +106,7 @@ $event = EventHandler::getCurrentEvent();
         </a>
       </div>
       <div class="Banner_Info">
-        <i class="fa fa-child fa-4x Foreground1" aria-hidden="true"></i>
+        <i class="fa fa-child Foreground1 font-icon" aria-hidden="true"></i>
         <h3 style="color:black">For foreldre og foresatte</h3>
         <div class="Banner_Info_Desc">
           <p style="text-align:center;">Nervøs for å sende barnet ditt på sitt første LAN? Nyskjerrig på hva et LAN er? Klikk les mer, for mer informasjon</p>
@@ -163,7 +163,7 @@ $event = EventHandler::getCurrentEvent();
 
   <center class="Background2 preventOverlay" style="padding-top:50px; padding-bottom:50px; min-height:100px;">
     <div class="Banner_Info">
-      <i class="fa fa-trophy fa-4x Foreground1" aria-hidden="true"></i>
+      <i class="fa fa-trophy Foreground1 font-icon" aria-hidden="true"></i>
       <h3>Konkurranser</h3>
       <div class="Banner_Info_Desc">
         <p style="text-align:center;">Under LAN-et vil det arrageres konkurranser, oversikten over spillene det er konkurranse i vil være tilgjengelig her</p>
@@ -173,7 +173,7 @@ $event = EventHandler::getCurrentEvent();
       </a>
     </div>
     <div class="Banner_Info">
-      <i class="fa fa-users fa-4x Foreground1" aria-hidden="true"></i>
+      <i class="fa fa-users Foreground1 font-icon" aria-hidden="true"></i>
       <h3>Infected Crew</h3>
       <div class="Banner_Info_Desc">
         <p style="text-align:center;">Infected er en non-profit organisasjon, det er 100% bygd opp av fri vilje. Hvis du ønsker å hjelpe til kan du sjekke ut crewene</p>
@@ -183,7 +183,7 @@ $event = EventHandler::getCurrentEvent();
       </a>
     </div>
     <div class="Banner_Info">
-      <i class="fa fa-calendar-o fa-4x Foreground1" aria-hidden="true"></i>
+      <i class="fa fa-calendar-o Foreground1 font-icon" aria-hidden="true"></i>
       <h3>Agenda</h3>
       <div class="Banner_Info_Desc">
         <p style="text-align:center;">Agendaen vil vis hva som skjer på infected og når det vil skje. Dette inkluderer konkurranser og frister</p>

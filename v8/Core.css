@@ -129,7 +129,8 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
 
     #Overview_Post {
         /*margin-bottom:450px; */
-        min-height: 100vh;
+        /*min-height: 100vh;*/
+        min-height: calc(100vh - 95px);
         margin-left: 20px; 
         margin-right:20px;
     }
@@ -462,6 +463,15 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
 
 @media screen and (min-width: 450px)
 {
+
+    #Overview_Post {
+        /*margin-bottom:450px; */
+        /*min-height: 100vh;*/
+        min-height: calc(100vh - 100px);
+        margin-left: 20px; 
+        margin-right:20px;
+    }
+
 /*Logg in */
     .signInForm {
         color:white; 
@@ -515,6 +525,13 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
         display: inline-flex;
     }
 
+    #Overview_Post {
+        /*margin-bottom:450px; */
+        /*min-height: 100vh;*/
+        min-height: calc(100vh - 115px);
+        margin-left: 20px; 
+        margin-right:20px;
+    }
 
 
 
@@ -529,8 +546,8 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
     .information_content_container {
         padding-top:50px;
         padding-bottom: 50px;
-        margin-left:100px;
-        margin-right: 100px;
+        padding-left:100px;
+        padding-right: 100px;
     }
 
     .information_content {
@@ -654,6 +671,13 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
         background-attachment: fixed; 
 
     }
+
+    #Overview_Post {
+        /*margin-bottom:450px; */
+        min-height: calc(100vh - 125px);
+        margin-left: 20px; 
+        margin-right:20px;
+    }
     
     .Banner_Post_P {
         max-width:60%;
@@ -662,8 +686,8 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
     .information_content_container {
         padding-top:50px;
         padding-bottom: 50px;
-        margin-left:200px;
-        margin-right: 200px;
+        padding-left:200px;
+        padding-right: 200px;
     }
 
     .information_content {
@@ -685,6 +709,7 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
 
 @media screen and (min-width: 1068px)
 {
+
     .Banner_Info {
         display: inline-block; 
         width: 250px;  
@@ -759,11 +784,6 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
         height: auto;
     }
 
-    #Overview_Post {
-        /*margin-bottom:450px; */
-        margin-left: 20px; 
-        margin-right:20px;
-    }
 
     .Banner_Post {
         width:100%; 

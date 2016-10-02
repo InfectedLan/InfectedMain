@@ -33,7 +33,7 @@
       <h2 style="color:black;">Hva er tilgjengelig</h2>
     </center>
   </center>
-  <div style=" padding-top:50px; padding-bottom:50px;">
+  <div class="information_content_container">
     <div class="information_content">
       <i class="fa fa-cutlery fa-5x Foreground1 information_content_icon" aria-hidden="true"></i>
       <div class="information_content_textholder">
@@ -75,7 +75,7 @@
     <p style="text-align:center; color:White;">Her er en oversikt over hva som er på plassen.</p>
   </center>
 </center>
-<div class="Background1" style="padding-top:50px; padding-bottom:50px;">
+<div class="Background1 information_content_container">
   <div class="information_content">
     <i class="fa fa-street-view fa-5x Foreground2 information_content_icon" aria-hidden="true"></i>
     <div class="information_content_textholder">
