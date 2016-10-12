@@ -150,11 +150,12 @@ class Site {
 					echo '<br style="clear:both;" />';
 					echo '<center id="nav_Links_Top" class="nav_Links">';
 						echo '<a class="Banner_Links" href="//tickets.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Billetter</p></a>';
+						echo '<a class="Banner_Links" href="pages/onsite.html"><p class="Banner_Links_P">Informasjon</p></a>';
 						echo '<a class="Banner_Links" href="pages/agenda.html"><p class="Banner_Links_P">Agenda</p></a>';
 						echo '<a class="Banner_Links" href="pages/competition.html"><p class="Banner_Links_P">Konkurranser</p></a>';
-						echo '<a class="Banner_Links" href="pages/onsite.html"><p class="Banner_Links_P">Informasjon</p></a>';
 						echo '<a class="Banner_Links" href="//compo.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Compo</p></a>';
 						echo '<a class="Banner_Links" href="//crew.' . Settings::domain . '/" target="_blank"><p class="Banner_Links_P">Crew</p></a>';
+						echo '<a class="Banner_Links" href="pages/contact.html"><p class="Banner_Links_P">Kontakt</p></a>';
 					echo '</center>';
 				echo '</nav>';
 

@@ -171,7 +171,7 @@ $event = EventHandler::getCurrentEvent();
         <p style="text-align:center;">Under LAN-et vil det arrageres konkurranser, oversikten over spillene det er konkurranse i vil være tilgjengelig her</p>
       </div>
       <a class="no_a Background1" href="pages/competition.html" style=" margin:20px;">
-        <p style="padding:10px;">Se konkurransene</p>
+        <p>Se konkurransene</p>
       </a>
     </div>
     <div class="Banner_Info">
@@ -181,7 +181,7 @@ $event = EventHandler::getCurrentEvent();
         <p style="text-align:center;">Infected er en non-profit organisasjon, det er 100% bygd opp av fri vilje. Hvis du ønsker å hjelpe til kan du sjekke ut crewene</p>
       </div>
       <a class="no_a Background1" href="pages/crew.html" style=" margin:20px;">
-        <p style="padding:10px;">Se Informasjon</p>
+        <p>Se Informasjon</p>
       </a>
     </div>
     <div class="Banner_Info">
@@ -191,7 +191,7 @@ $event = EventHandler::getCurrentEvent();
         <p style="text-align:center;">Agendaen vil vis hva som skjer på infected og når det vil skje. Dette inkluderer konkurranser og frister</p>
       </div>
       <a class="no_a Background1" href="pages/agenda.html" style=" margin:20px;">
-        <p style="padding:10px;">Se agendaen</p>
+        <p>Se agendaen</p>
       </a>
     </div>
     

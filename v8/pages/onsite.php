@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="information_content">
-      <i class="fa fa-bed fa-5x Foreground1 information_content_icon" aria-hidden="true"></i>
+      <i class="fa fa-bed Foreground1 information_content_icon too-large" style="font-size:4.9em" aria-hidden="true"></i>
       <div class="information_content_textholder">
         <p>Under arrangemanget vil noen deltakere bli trøtte, og det vil bli ønske om å sove.</p>
         <p>Infected har lagt til rette en sovesal, der deltakerene kan sove.</p>
