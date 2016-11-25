@@ -157,7 +157,7 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
     .Banner_Info {
         display: block; 
         width: auto;  
-        margin: auto 10px;
+        margin: auto 0px;
         padding-bottom:50px;
     }
 
@@ -378,7 +378,7 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
     .Banner_Info {
         display: block; 
         width: 300px;  
-        margin: auto 10px;
+        margin: auto 0px;
         padding-bottom:50px;
     }
 
