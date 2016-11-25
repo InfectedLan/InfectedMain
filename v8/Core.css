@@ -542,6 +542,13 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
         display: inline-flex;
     }
 
+
+    .Infected_logo {
+        height: 72px;
+        width: auto;
+        padding-top: 120px!important;
+    }
+
     #Overview_Post {
         /*margin-bottom:450px; */
         /*min-height: 100vh;*/
@@ -696,6 +703,12 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
 
     }
 
+    .Infected_logo {
+        height: 72px;
+        width: auto;
+        padding-top: 125px!important;
+    }
+
     #Overview_Post {
         /*margin-bottom:450px; */
         min-height: calc(100vh - 125px);
@@ -745,6 +758,11 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
         max-height: 90px!important;
         min-height: 90px!important;
         height: 90px!important;
+    }
+
+        .Infected_logo {
+        padding-top: 120px!important;
+        height: auto;
     }
 
 }
