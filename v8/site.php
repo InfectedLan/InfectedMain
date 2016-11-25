@@ -186,10 +186,10 @@ class Site {
 					echo '</center>';
 					echo '<center style="padding-bottom:25px;">';
 						echo '<h3 style="color:white;">Følg ' . Settings::name . ' på</h3>';
-						echo '<a href="https://www.facebook.com/infectedlan/?fref=ts" style="border: #3b5998 solid 1px; height: 1em; width: 1em; background-color: #3b5998; border-radius: 50%; margin: 0 5px;">';
+						echo '<a href="https://www.facebook.com/infectedlan/?fref=ts" target="_blank" style="border: #3b5998 solid 1px; height: 1em; width: 1em; background-color: #3b5998; border-radius: 50%; margin: 0 5px;">';
 							echo '<i class="fa fa-facebook fa-1x" aria-hidden="true"></i>';
 						echo '</a>';
-						echo '<a href="https://twitter.com/infected_lan" style="border: #1da1f2 solid 1px; height: 1em; width:1em; background-color: #1da1f2; border-radius:50%; margin:0 5px;">';
+						echo '<a href="https://twitter.com/infected_lan" target="_blank" style="border: #1da1f2 solid 1px; height: 1em; width:1em; background-color: #1da1f2; border-radius:50%; margin:0 5px;">';
 							echo '<i class="fa fa-twitter fa-1x" aria-hidden="true"></i>';
 						echo '</a>';
 					echo '</center>';

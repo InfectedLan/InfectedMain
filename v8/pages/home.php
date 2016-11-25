@@ -62,7 +62,7 @@ $event = EventHandler::getCurrentEvent();
           }
         } else {
           echo '<p style="color:white;background-color: #696969; padding: 10px;margin-bottom: 10px;text-align: center; cursor: default;">Billetter er ikke tilgjengelig</p>';
-          echo '<p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et er ikke tilgjengelig enda</p>';
+          echo '<p style="color:white;padding-top: 5px;text-align: center;">Billettene til LAN-et blir gjort tilgjeneglie en måned før arrangementet</p>';
         }
 
       echo '</div>';
