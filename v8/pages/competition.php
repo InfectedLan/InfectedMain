@@ -126,6 +126,8 @@ echo '<center style=" padding-top:50px; padding-bottom:50px; min-height:100px;">
         $gameIcon = $gameIcon . "csgo.png";
       } else if ($compo->getTitle() == "League of Legends") {
         $gameIcon = $gameIcon . "lol.png";
+      } else if ($compo->getTitle() == "Overwatch") {
+        $gameIcon = $gameIcon . "overwatch.png";
       }
 
       echo '<div class="Banner_Info">';

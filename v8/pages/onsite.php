@@ -91,7 +91,6 @@
       <p style="color:white;">Infected står for internettet på arrangemanget</p>
       <p style="color:white;">Det settes opp switcher på bordene, der kan du sette inn din egen kabel</p>
       <p style="color:white;">Det er <strong>ikke tillat å koble ut andre enn dine egne kabler</strong></p>
-      <p style="color:white;">Hvis kabelen som kalles "uplink" blir koblet ut vil nettet på hele raden forsvinne!</p>
     </div>
   </div>
 </div>
