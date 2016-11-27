@@ -48,6 +48,9 @@ else if ($compo->getTitle() == "League of Legends")
 {
   $gameIcon = $gameIcon . "lol.png";
 }
+else if ($compo->getTitle() == "Overwatch") {
+        $gameIcon = $gameIcon . "overwatch.png";
+}
 
 
 

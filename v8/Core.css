@@ -134,7 +134,7 @@ height: 45px; right: 0px; position: absolute; display:inline-flex; z-index: 100;
     #Overview_Post {
         /*margin-bottom:450px; */
         /*min-height: 100vh;*/
-        display: table;
+        /*display: table;*/
         min-height: calc(100vh - 95px);
         margin-left: 20px; 
         margin-right:20px;
