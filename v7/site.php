@@ -176,7 +176,7 @@ class Site {
 							echo '<div class="infoTextContact">';
 								echo '<p><b>Noe du lurer på?</b><br>';
 								echo 'E-post: kontakt@infected.no<br>';
-								echo 'Telefon: 99 76 77 45<br>';
+								echo 'Telefon: 48 05 96 67<br>';
 								echo 'Addresse: Strøket 15a, Asker</p>';
 							echo '</div>';
 						echo '</div>';
