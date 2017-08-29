@@ -129,8 +129,7 @@ class Site {
 						$sponsorList = ['<li><a href="http://bleiker.vgs.no/" target="_blank"><img src="images/sponsors/bleiker.png" alt="Bleiker VGS" style="width: 80%;"></a></li>',
 											 			'<li><a href="http://askerkulturhus.no/huset/radar/" target="_blank"><img src="images/sponsors/radar.png" alt="Radar Cafe" style="width: 80%;"></a></li>',
 											 			'<li><a href="http://asker.kommune.no/" target="_blank"><img src="images/sponsors/asker_kommune.png" alt="Asker Kommune" style="width: 80%;"></a></li>',
-														'<li><a href="http://meny.no/" target="_blank"><img src="images/sponsors/meny.svg" alt="Meny" style="width: 80%;"></a></li>',
-														'<li><a href="http://ungdomsakademiet.no/" target="_blank"><img src="images/sponsors/ungdomsakademiet.png" alt="Ungdomsakademiet" style="width: 80%;"></a></li>'];
+														'<li><a href="http://meny.no/" target="_blank"><img src="images/sponsors/meny.svg" alt="Meny" style="width: 80%;"></a></li>'];
 
 						// Randomize the order of the list.
 						shuffle($sponsorList);
@@ -177,7 +176,7 @@ class Site {
 							echo '<div class="infoTextContact">';
 								echo '<p><b>Noe du lurer på?</b><br>';
 								echo 'E-post: kontakt@infected.no<br>';
-								echo 'Telefon: 48 05 96 67<br>';
+								echo 'Telefon: 45 44 65 51<br>';
 								echo 'Addresse: Strøket 15a, Asker</p>';
 							echo '</div>';
 						echo '</div>';
