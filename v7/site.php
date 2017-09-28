@@ -175,8 +175,8 @@ class Site {
 							echo '</div>';
 							echo '<div class="infoTextContact">';
 								echo '<p><b>Noe du lurer på?</b><br>';
-								echo 'E-post: kontakt@infected.no<br>';
-								echo 'Telefon: 45 44 65 51<br>';
+								echo 'E-post: erling@nortiktak.no<br>';
+								echo 'Telefon: 95 01 83 05<br>';
 								echo 'Addresse: Strøket 15a, Asker</p>';
 							echo '</div>';
 						echo '</div>';
