@@ -37,7 +37,7 @@
       <p style="text-align:center; color:black; margin-top:10px; margin-bottom:10px;">Skjemaet for fullmakt finner du her!</p>
       <a class="Background1" href="#" style="margin:20px;">
           <i style="color:white; padding-left:30px; padding-right:30px;" class="fa fa-download fa-2x" aria-hidden="true"></i>
-          <p style="text-align:center; color:white;">Last ned</p>
+          <a href="Resources/files/foreldreskjema.doc" style="text-align:center; color:white;">Last ned</a>
       </a>
     </center>
   </center>
