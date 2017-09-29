@@ -20,20 +20,20 @@
 ?>
 
 <center class="wrapper">
-  <div id="Overview_Post" style="margin-bottom:150px;">
-    <i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-map-marker Foreground2" aria-hidden="true"></i>
+  <div id="Overview_Post" class="subPageHeader">
+    <i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-map-marker Foreground2 TopSymbol" aria-hidden="true"></i>
     <h1 style="color:white;">På Infected</h1>
     <h3 style="color:white;">Informasjon for deltakere, før og under arrangemanget</h3>
   </div>
 </center>
-<div id="onsite_information" class="Background2">
+<div style="padding-top:45px;" id="onsite_information" class="Background2">
   <center class="Banner_Post">
     <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
       <i class="fa fa-question-circle-o fa-5x Foreground1" aria-hidden="true"></i>
       <h2 style="color:black;">Hva er tilgjengelig</h2>
     </center>
   </center>
-  <div style=" padding-top:50px; padding-bottom:50px;">
+  <div class="information_content_container">
     <div class="information_content">
       <i class="fa fa-cutlery fa-5x Foreground1 information_content_icon" aria-hidden="true"></i>
       <div class="information_content_textholder">
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="information_content">
-      <i class="fa fa-bed fa-5x Foreground1 information_content_icon" aria-hidden="true"></i>
+      <i class="fa fa-bed Foreground1 information_content_icon too-large" style="font-size:4.9em" aria-hidden="true"></i>
       <div class="information_content_textholder">
         <p>Under arrangemanget vil noen deltakere bli trøtte, og det vil bli ønske om å sove.</p>
         <p>Infected har lagt til rette en sovesal, der deltakerene kan sove.</p>
@@ -59,23 +59,17 @@
         <p>Hvis du forsøker, vil du bare bli henvist videre...</p>
       </div>
     </div>
-    <div class="information_content">
-      <i class="fa fa-life-ring fa-5x Foreground1 information_content_icon" aria-hidden="true"></i>
-      <div class="information_content_textholder">
-        <p>Det er også en info desk tilgjengelig under arrangemanget</p>
-        <p>Her vil du kunne få ting som saks, gaffateip, og annet rekvisita</p>
-      </div>
-    </div>
   </div>
 </div>
-<center class="Banner_Post Background1">
+<div class="Background1">
+<center class="Banner_Post">
   <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
     <i class="fa fa-info-circle fa-5x Foreground2" aria-hidden="true"></i>
     <h2 style="color:white;">Informasjon om plassen</h2>
     <p style="text-align:center; color:White;">Her er en oversikt over hva som er på plassen.</p>
   </center>
 </center>
-<div class="Background1" style="padding-top:50px; padding-bottom:50px;">
+<div class="information_content_container">
   <div class="information_content">
     <i class="fa fa-street-view fa-5x Foreground2 information_content_icon" aria-hidden="true"></i>
     <div class="information_content_textholder">
@@ -100,4 +94,5 @@
       <p style="color:white;">Hvis kabelen som kalles "uplink" blir koblet ut vil nettet på hele raden forsvinne!</p>
     </div>
   </div>
+</div>
 </div>

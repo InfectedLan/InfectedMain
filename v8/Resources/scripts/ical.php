@@ -44,6 +44,7 @@ END:VTIMEZONE\r\n";*/
 
           $subject = $agenda->getTitle();
           $desc = $agenda->getDescription();
+          $desc = trim($desc);
 
           $endTime = date('Hi', $agenda->getStartTime());
 

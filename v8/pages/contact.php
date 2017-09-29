@@ -21,13 +21,13 @@
 require_once 'handlers/sectionpagehandler.php';
 
 echo '<center class="wrapper">';
-  echo '<div id="Overview_Post" style="margin-bottom:150px;">';
-    echo '<i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-question Foreground2" aria-hidden="true"></i>';
+  echo '<div id="Overview_Post" class="subPageHeader">';
+    echo '<i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-question Foreground2 TopSymbol" aria-hidden="true"></i>';
     echo '<h1 style="color:white;">Noe du lurer på?</h1>';
     echo '<h3 style="color:white;">Ta gjerne kontakt med oss!</h3>';
   echo '</div>';
 echo '</center>';
-echo '<div id="onsite_information" class="Background2">';
+echo '<div style="padding-top:45px;" id="onsite_information" class="Background2">';
 
   $sectionPage = SectionPageHandler::getSectionPageByName('how-to-contact');
 
@@ -40,13 +40,13 @@ echo '<div id="onsite_information" class="Background2">';
       echo '<i class="fa fa-phone fa-4x Foreground1" aria-hidden="true"></i>';
       echo '<h3>Telefon</h3>';
       echo '<p style="text-align:center;">Du kan gjerne kontakte oss på telefon.</p>';
-      echo '<p class="Background1 Foreground2" style="margin:20px; padding:10px; text-align: center;">99 76 77 45</p>';
+      echo '<a class="Background1 Foreground2" style="margin:20px; padding:10px; text-align: center; display:block;" href="tel:99767745">99 76 77 45</a>';
     echo '</div>';
     echo '<div class="Banner_Info">';
       echo '<i class="fa fa-envelope-o fa-4x Foreground1" aria-hidden="true"></i>';
       echo '<h3>E-post</h3>';
       echo '<p style="text-align:center;">Du kan komme i kontakt med oss på e-post</p>';
-      echo '<p class="Background1 Foreground2" style="margin:20px; padding:10px; text-align: center;">kontakt@infected.no</p>';
+      echo '<a class="Background1 Foreground2" style="margin:20px; padding:10px; text-align: center; display:block;" href="mailto:kontakt@infected.no?subject=Spørsmål anng. Infected LAN">kontakt@infected.no</a>';
     echo '</div>';
   echo '</center>';
 echo '</div>';

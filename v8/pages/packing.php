@@ -20,13 +20,13 @@
 ?>
 
 <center class="wrapper">
-  <div id="Overview_Post" style="margin-bottom:150px;">
-    <i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-suitcase Foreground2" aria-hidden="true"></i>
+  <div id="Overview_Post" class="subPageHeader">
+    <i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-suitcase Foreground2 TopSymbol" aria-hidden="true"></i>
     <h1 style="color:white;">På Infected</h1>
     <h3 style="color:white;">Informasjon for deltakere, før og under arrangemanget</h3>
   </div>
 </center>
-<div id="onsite_information" class="Background2">
+<div style="padding-top:45px;" id="onsite_information" class="Background2">
   <center class="Banner_Post">
     <center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">
       <i class="fa fa-question-circle-o fa-5x Foreground1" aria-hidden="true"></i>
