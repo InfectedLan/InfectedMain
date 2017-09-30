@@ -1,0 +1,196 @@
+body {
+    background-color:black;
+}
+
+nav {
+    background-color:rgb(50,50,50);
+}
+
+footer {
+    background-color:rgb(25,25,25);
+}
+
+.Base {
+
+}
+
+.Foreground1 {
+    color:#21a80f;
+    /*color: #3e9ee7*/
+}
+
+.Foreground2 {
+    color:white;
+}
+
+.Foreground3 {
+    color:black;
+}
+
+.Background1 {
+    background-color:#21a80f;
+    /*background-color: #3e9ee7;*/
+}
+
+.Background2 {
+    background-color: white;
+}
+
+.Border1 {
+    /*border-color: #3e9ee7;*/
+    border-color:#21a80f;
+}
+
+
+a {
+    color: white;
+}
+
+#hamburger {
+    /*background-color: transparent;*/
+}
+
+#navtoggle:checked + label {
+    background-color:#21a80f!important;
+}
+
+
+#hamburger:hover {
+    /*background-color: #3e9ee7!important;*/
+    background-color:#21a80f!important;
+}
+
+
+a:hover {
+    background-color:rgb(25,25,25);
+}
+
+no_a:hover {
+    background-color: transparent;
+}
+
+.clear_a {
+    background-color: transparent;
+}
+
+.clear_a:hover {
+    background-color: transparent!important;
+}
+
+
+.bulletpoint_point {
+    color: #21a80f;
+}
+
+@media screen and (min-width: 320px)
+{
+    body
+    {
+        background-position-y: 100px;
+        background-image:url(Resources/img/Back_660.jpg);
+    }
+}
+
+@media screen and (min-width: 450px)
+{
+    body
+    {
+        background-position-y: -100px;
+        background-image:url(Resources/img/Back_660.jpg);
+    }
+}
+
+@media screen and (min-width: 660px)
+{
+        body
+    {
+        background-position-y: -50px;
+        background-image:url(Resources/img/Back_660.jpg);
+    }
+}
+
+@media screen and (min-width: 730px)
+{
+        body
+    {
+        background-position-y: -200px;
+        background-image:url(Resources/img/Back_660.jpg);
+    }
+}
+
+@media screen and (min-width: 919px)
+{
+    body
+    {
+        background-position-y:-100px;
+        background-image:url(Resources/img/Back.jpg);
+    }
+}
+
+
+
+@media screen and (min-width: 1390px)
+{
+    body
+    {
+        background-position-y:-250px;
+        background-image:url(Resources/img/Back.jpg);
+    }
+}
+
+
+
+@media screen and (min-width: 0px) {
+    #nav_Links_Top {
+        background-color:rgb(50,50,50);
+    }
+}
+@media screen and (min-width: 730px)
+{
+    #nav_Links_Top {
+        /*background-color:transparent; */
+    }
+}
+
+
+
+.Sponsor_h3 {
+    color:white;
+    border-bottom-color: white;
+}
+
+.signInInput {
+    border-style: none none solid;
+    border-color: white;
+    background-color: transparent;
+    color:white;
+}
+
+.signInButton, .signOutButton {
+    border:white 1px solid; color:white; background-color:transparent; color:white;
+}
+
+.navSignIn {
+    background-color: transparent;
+}
+
+.navSignIn:hover {
+    background-color: rgb(25,25,25);
+}
+
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;
+}
+
+:-ms-input-placeholder {
+   color: white;
+}
