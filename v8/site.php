@@ -45,6 +45,7 @@ class Site {
 		echo '<!DOCTYPE html>';
 		echo '<html>';
 			echo '<head>';
+				echo '<base href="/v8/">';
 				echo '<title>' . $this->getTitle() . '</title>';
 				echo '<meta name="description" content="' . Settings::description . '">';
 				echo '<meta name="keywords" content="' . Settings::keywords . '">';
