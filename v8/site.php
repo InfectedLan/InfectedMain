@@ -48,7 +48,7 @@ class Site {
 				echo '<title>' . $this->getTitle() . '</title>';
 				echo '<meta name="description" content="' . Settings::description . '">';
 				echo '<meta name="keywords" content="' . Settings::keywords . '">';
-				echo '<meta name="author" content="Brage, halvors and petterroea">';
+				echo '<meta name="author" content="Brage, Halvor and petterroea">';
 				echo '<meta charset="UTF-8">';
 				echo '<meta name="viewport" content="width=device-width, inition-scale=1.0">';
 				echo '<meta name="msapplication-TileColor" content="#00000000">';
@@ -211,7 +211,7 @@ class Site {
 						echo '<p style="color:white; text-align:center; padding-left:10px; padding-right:10px;">Denne nettsiden bruker cookies, ved videre bruk av siden aksepterer du at vi samler inn informasjon</p>';
 					echo '</center>';
 					echo '<center style="padding-bottom:10px; padding-top:10px; background-color:rgb(10,10,10);">';
-						echo '<p style="color:white; text-align:center;">Kopirett &copy; 2016 Brage, Halvor, Liam</p>';
+						echo '<p style="color:white; text-align:center;">Kopirett &copy; 2017 Brage, Halvor og Liam</p>';
 					echo '</center>';
 				echo '</footer>';
 			echo '</body>';
