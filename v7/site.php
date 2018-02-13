@@ -18,6 +18,9 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+//Maintenance trap
+require_once 'SiteMaintenanceTrap.php';
+
 require_once 'settings.php';
 require_once 'handlers/compohandler.php';
 require_once 'handlers/pagehandler.php';
