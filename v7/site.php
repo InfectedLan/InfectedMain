@@ -18,6 +18,9 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+//Maintenance trap
+require_once 'SiteMaintenanceTrap.php';
+
 require_once 'settings.php';
 require_once 'handlers/compohandler.php';
 require_once 'handlers/pagehandler.php';
@@ -175,8 +178,8 @@ class Site {
 							echo '</div>';
 							echo '<div class="infoTextContact">';
 								echo '<p><b>Noe du lurer på?</b><br>';
-								echo 'E-post: kontakt@infected.no<br>';
-								echo 'Telefon: 99 76 77 45<br>';
+								echo 'E-post: erling@nortiktak.no<br>';
+								echo 'Telefon: 95 01 83 05<br>';
 								echo 'Addresse: Strøket 15a, Asker</p>';
 							echo '</div>';
 						echo '</div>';

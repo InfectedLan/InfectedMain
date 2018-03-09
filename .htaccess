@@ -1,1 +1,2 @@
 php_value include_path .:/home/test.infected.no/public_html/api
+php_value session.cookie_domain .infected.no
