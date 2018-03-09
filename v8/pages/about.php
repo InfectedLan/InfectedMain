@@ -2,7 +2,7 @@
 /**
  * This file is part of InfectedMain.
  *
- * Copyright (C) 2013-2016 Infected <http://infected.no/>.
+ * Copyright (C) 2018 Infected <https://infected.no/>.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,24 +19,24 @@
  */
 ?>
 
-<center class="wrapper">
+<div class="wrapper" style="text-align: center;">
   <div id="Overview_Post" class="subPageHeader">
       <i id="main_emblem" style="padding:10px; padding-bottom:20px; border-bottom:white solid 1px; font-size:128px;" class="fa fa-circle-o-notch Foreground2 TopSymbol" aria-hidden="true"></i>
       <h1 style="color:white;">Om Infected</h1>
       <h3 style="color:white;">Infected er et LAN-party</h3>
   </div>
-</center>
+</div>
+
 <?php
 echo '<div class="Background2" style="padding-top:45px;">';
-  echo '<center class="Banner_Post">';
-    echo '<center style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px;">';
+  echo '<div class="Banner_Post" style="text-align: center;">';
+    echo '<div style="margin:0 auto; display:inline-block; padding-top:25px; padding-bottom:25px; text-align: center;">';
       echo '<i class="fa fa-info-circle fa-5x Foreground1" aria-hidden="true"></i>';
       echo '<h2 style="color:black;">Generelt om Infected</h2>';
       echo '<p style="text-align:center; color:black;">Her har du kort informasjon om Infected</p>';
-    echo '</center>';
-  echo '</center>';
+    echo '</div>';
+  echo '</div>';
 ?>
-
 
 <div style=" padding-top:50px; padding-bottom:50px;">
   <div class="information_content">
@@ -77,5 +77,4 @@ echo '<div class="Background2" style="padding-top:45px;">';
       </div>
     </div>
   </div>
-</div>
 </div>
